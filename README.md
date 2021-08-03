@@ -15,4 +15,11 @@ Mi nombre es Luis Fernando Rodríguez Hernández, soy estudiante de la Licenciat
     * Es uno de los mejores sitios relacionado con la venta de juguetes, ademas de que se relaciona mucho con la tematica de nuestro sitio de ventas. El diseño del menú es practico y el carrito de ventas es diferente a los de otros sitios.
     * https://epicland.com.mx/
 * ReinoDeJuguetes
-    * 
+    * Es una página que fue seleccionada debido a que es demasiado sencilla en relación a su estructura de elementos, sin embargo es lo que hace que sea interesante, ya que el modelo de "cajas" es algo que vamos a implementar en el diseño del proyecto. Adicionalmente, incluye efectos que resulta atractivos a la vista del usuario y es algo que podríamos implementar.
+    * https://www.reinodejuguetes.com/es/
+* Kichink
+    * El diseño de este sitio es minimalista, y destacamos el diseño de su menú de navegación, además de que su barra de busqueda tiene un buen diseño. Otra cosa que podriamos utilizar es el como se muestra su carrito de ventas, el cual no ocupa toda la pantalla y es atractivo a la vista.
+    * https://www.kichink.com/
+* Frikinerd
+    * La temática de este sitio de ventas, es muy parecida al resultado final que buscamos para nuestro proyecto. Aunque solo es el diseño, ya que, el sitio solo muestra otros artículos que ya fueron publicados en Amazon y redirige para comprar directamente en Amazon.
+    * https://www.frikinerd.com/
