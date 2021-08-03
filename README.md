@@ -7,6 +7,7 @@ Mi nombre es Silvia Elisa Gómez Hernández, tengo 29 años soy graduada de la U
 ### Luis Fernando Rodríguez Hernández
 Mi nombre es Luis Fernando Rodríguez Hernández, soy estudiante de la Licenciatura en Redes y Servicios de Cómputo en la UV. Estoy interesando en mejorar en mis habilidades como desarrollador para poder crear aplicaciones que automaticen la administración de servidores a través de sitios WEB dinámicos. Me considero una persona perseverante y con muchas ganas de aprender.
 ### Samara Zarco Goytortúa
+Me llamo Samara Zarco Goytortúa. Soy una diseñadora mexicana enfocada en la interacción tecnología-humano y el desarrollo de concepto. Me gusta saber sobre el diseño y la fotografía, sobre la energía y la tecnología. Uno de mis objetivos principales es tener una metodología que me permita manejar proyectos de diferentes áreas, siempre priorizando la experiencia del usuario.
 ## Sitios de referencia
 * Shop Disney
     * La tienda de disney tiene un estilo de diseño que se asemeja demasiado al resultado final que buscamos, la estructura del sitio y el acomodo de imágenes es demasiado compacto, sin dejar de lado lo agradable que es a la vista del usuario. Otra característica fundamental es el diseño del detalle del producto, el cual se asemeja mucho con los mejores sitios de ventas.
