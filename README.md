@@ -8,3 +8,11 @@ Mi nombre es Silvia Elisa Gómez Hernández, tengo 29 años soy graduada de la U
 Mi nombre es Luis Fernando Rodríguez Hernández, soy estudiante de la Licenciatura en Redes y Servicios de Cómputo en la UV. Estoy interesando en mejorar en mis habilidades como desarrollador para poder crear aplicaciones que automaticen la administración de servidores a través de sitios WEB dinámicos. Me considero una persona perseverante y con muchas ganas de aprender.
 ### Samara Zarco Goytortúa
 ## Sitios de referencia
+* Shop Disney
+    * La tienda de disney tiene un estilo de diseño que se asemeja demasiado al resultado final que buscamos, la estructura del sitio y el acomodo de imágenes es demasiado compacto, sin dejar de lado lo agradable que es a la vista del usuario. Otra característica fundamental es el diseño del detalle del producto, el cual se asemeja mucho con los mejores sitios de ventas.
+    * https://www.shopdisney.com/
+* Epicland
+    * Es uno de los mejores sitios relacionado con la venta de juguetes, ademas de que se relaciona mucho con la tematica de nuestro sitio de ventas. El diseño del menú es practico y el carrito de ventas es diferente a los de otros sitios.
+    * https://epicland.com.mx/
+* ReinoDeJuguetes
+    * 
