@@ -1,0 +1,19 @@
+{
+  "name": "grupo_7_playland",
+  "version": "0.0.1",
+  "description": "Proyecto para Digital House - PlayLand",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "JS",
+    "NodeJS",
+    "tienda-juguetes"
+  ],
+  "author": "LF236, samza-design, SElyg",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
