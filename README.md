@@ -24,3 +24,6 @@ Me llamo Samara Zarco Goytortúa. Soy una diseñadora mexicana enfocada en la in
 * Frikinerd
     * La temática de este sitio de ventas, es muy parecida al resultado final que buscamos para nuestro proyecto. Aunque solo es el diseño, ya que, el sitio solo muestra otros artículos que ya fueron publicados en Amazon y redirige para comprar directamente en Amazon.
     * https://www.frikinerd.com/
+
+### Link para tablero de Trello
+https://trello.com/b/yh7xMJHl/e-commerce
