@@ -13,6 +13,26 @@ app.get('/', (req, res) => {
     res.sendFile(routeHome);
 });
 
+app.get('/login', (req, res) => {
+    const routeLogin = path.resolve(__dirname + '/views/login.html');
+    res.sendFile(routeLogin);
+});
+
+app.get('/register', (req, res) => {
+    const routeRegister = path.resolve(__dirname + '/views/registro.html');
+    res.sendFile(routeRegister);
+});
+
+app.get('/shoppingCar', (req, res) => {
+    const routeShoppingCar = path.resolve(__dirname + '/views/shoppingcar.html');
+    res.sendFile(routeShoppingCar);
+});
+
+app.get('/detailproduct', (req, res) => {
+    const routeDetailProduct = path.resolve(__dirname + '/views/detalleproducto.html');
+    res.sendFile(routeDetailProduct);
+})
+
 //Listening Server
 app.listen(port, () => {
     console.log(`Servidor en http://localhost:${port}`);
