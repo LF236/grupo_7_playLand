@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?949xqb');
-  src:  url('fonts/icomoon.eot?949xqb#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?949xqb') format('truetype'),
-    url('fonts/icomoon.woff?949xqb') format('woff'),
-    url('fonts/icomoon.svg?949xqb#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?imzknm');
+  src:  url('fonts/icomoon.eot?imzknm#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?imzknm') format('truetype'),
+    url('fonts/icomoon.woff?imzknm') format('woff'),
+    url('fonts/icomoon.svg?imzknm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cart:before {
-  content: "\e93a";
+.icon-add_shopping_cart:before {
+  content: "\e901";
+}
+.icon-menu:before {
+  content: "\e900";
 }
 .icon-location:before {
   content: "\e947";
@@ -37,11 +40,11 @@
 .icon-mobile:before {
   content: "\e958";
 }
+.icon-user:before {
+  content: "\e971";
+}
 .icon-search:before {
   content: "\e986";
-}
-.icon-menu:before {
-  content: "\e9bd";
 }
 .icon-facebook:before {
   content: "\ea90";
