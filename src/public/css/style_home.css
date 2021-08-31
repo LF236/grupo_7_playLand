@@ -1,3 +1,7 @@
+:root {
+  --positionNow: 0%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +16,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 header .header-top {
@@ -105,12 +110,15 @@ header .header-top .session {
 header nav {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+  top: 183px;
+  z-index: 100;
 }
 
 header nav ul li {
@@ -190,12 +198,13 @@ header .menu_animate {
             align-items: center;
   }
   header .header-top .session .icon-user {
-    padding: 5px;
+    padding: 2px;
     border-radius: 20px;
     margin-right: 5px;
     background-color: #d1d1d1;
     color: #000000;
     display: block;
+    font-size: 1.2rem;
   }
   header .header-top .session a {
     font-size: 0.8rem;
@@ -214,6 +223,8 @@ header .menu_animate {
     background: #000000;
     padding-bottom: 25px;
     font-size: 1.1rem;
+    position: relative;
+    top: 0;
   }
   header nav ul {
     display: -webkit-box;
@@ -232,7 +243,96 @@ header .menu_animate {
   }
 }
 
-main {
+.carousel {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.carousel .carousel-content-images {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(var(--positionNow));
+          transform: translateX(var(--positionNow));
+}
+
+.carousel .carousel-content-images .carousel-content-images-item {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.carousel .carousel-content {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.carousel .carousel-content .title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.carousel .carousel-content .buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.carousel .carousel-content .buttons .images-i span {
+  font-size: 1em;
+  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.carousel .carousel-content .buttons .images-i #images-i-element-1 {
+  color: yellow;
+}
+
+main .exhibitor {
+  width: 100%;
+  background: steelblue;
+}
+
+main .recommendations, main aside, main .offers {
   display: none;
 }
 
