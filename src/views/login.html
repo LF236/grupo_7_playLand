@@ -7,63 +7,76 @@
     <link rel="shortcut icon" href="/img/Logo.jpeg" type="image/x-icon">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/icons/style.css">
+    <link rel="stylesheet" href="/css/style_home.css">
+    <link rel="stylesheet" href="/css/login.css">
+
     <title>Ingresa a PlayLand</title>
 </head>
 
 <body>
     <header>
         <!-- Form to search for an product -->
-        <form action="/">
-            <button><span class="icon icon-search"></span></button>
-            <input type="text" name="search" id="seach" placeholder="Buscar productos">
-        </form>
+        <div class="header-top">
+            <form action="/">
+                <!-- <button><span class="icon icon-search"></span></button> -->
+                <input type="text" name="search" id="search" placeholder="&#xe986; Search..." class="icon-search">
+            </form>
 
-        <div class="logo">
-            <img src="/img/Logo.jpeg" alt="logo_playland">
-            <img src="/img/logo.png" alt="logo_playland">
+            <span class="icon icon-menu" id="menu_button"></span>
+            <div class="logo">
+                <img src="/img/logo.png" alt="logo_playland">
+            </div>
+            <span class="icon icon-add_shopping_cart"></span>
+
+            <div class="session">
+                <span class="icon icon-user"></span>
+                <a href="#">LOG IN</a>
+                <span class="icon icon-add_shopping_cart carr"></span>
+            </div>
+
+
         </div>
 
-        <div class="session">
-            <a href="#">SING UP</a>
-            <a href="#">LOG IN</a>
-        </div>
         <!-- Menu -->
-        <nav>
+        <nav id="menu">
             <ul>
-                <li><a href="#">Label</a></li>
-                <li><a href="#">Label</a></li>
-                <li><a href="#">Label</a></li>
+                <li class="actual_page"><a href="#">Home</a></li>
+                <li><a href="#">Label II</a></li>
             </ul>
         </nav>
     </header>
     <!-- Login-->
     <main class="login">
-        <h3>LOGIN</h3>
-        <form action="/" method="GET">
-            <div>
-                <input class="log-user" type="text" name="user" placeholder="E-mail o Usuario">
-            </div>
-            <div>
-                <input class="log-user" type="password" name="pass" placeholder="Contraseña">
-            </div>
-            <p> ¿Olvidaste tu contraseña? </p>
-            <input class="button-log" href="/" type="submit" value="Ingresar">      
-        </form>
+        <h3>Log In</h3>
+       
+        <p>¿Eres nuevo?</p><a href="#">Sign Up</a>
+        
+      <form>
+        <!-- EMAIL INPUT -->
+        <label for="username">Email*</label>
+        <input type="email" >
+        <!-- PASSWORD INPUT -->
+        <label for="password">Contraseña*</label>
+        <input type="password">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+
+        <input type="submit" value="Log In">    
+      </form>
     </main>
 
+
     <footer>
-        <div class="footer-left">
-            <img src="/img/Logo.jpeg" alt="icon">
-            <img src="/img/logo.png" alt="icon">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, distinctio facere modi culpa natus corporis quas, doloremque eligendi, consequuntur fugit quos dicta molestiae illum assumenda enim consequatur quisquam a! Reiciendis.
-            </p>
-        </div>
-        <div class="footer-right">
+
+        <img src="/img/logo_white.png" alt="icon">
+
+
+        <div class="footer-icons">
             <span class="icon icon-facebook"></span>
             <span class="icon icon-instagram"></span>
             <span class="icon icon-twitter"></span>
         </div>
+
+        <span class="copy">©2021 by Group 7.</span>
     </footer>
 </body>
 </html>
