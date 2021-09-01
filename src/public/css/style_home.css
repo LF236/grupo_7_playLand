@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 :root {
   --positionNow: 0%;
 }
@@ -117,10 +118,10 @@ header nav {
   position: absolute;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   top: 183px;
   z-index: 100;
 }
@@ -128,8 +129,8 @@ header nav {
 header nav ul li {
   padding: 20px;
   list-style: none;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 header nav ul li a {
@@ -275,8 +276,8 @@ header .menu_animate {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .carousel .carousel-content {
@@ -323,8 +324,8 @@ header .menu_animate {
 .carousel .carousel-content .buttons .images-i span {
   font-size: 1em;
   color: #fff;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .carousel .carousel-content .buttons .images-i #images-i-element-1 {
@@ -448,6 +449,63 @@ main .po {
 }
 
 footer {
-  display: none;
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer img {
+  width: 70%;
+  padding: 30px 0;
+  margin: auto;
+}
+
+footer .footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+footer .footer-icons span {
+  margin: 10px;
+}
+
+footer .copy {
+  color: #fff;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 720px) {
+  footer img {
+    width: 20%;
+    margin: 0;
+  }
+  footer .footer-icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .copy {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=style_home.css.map */
