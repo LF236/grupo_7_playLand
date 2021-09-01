@@ -9,6 +9,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   display: -webkit-box;
@@ -324,15 +328,122 @@ header .menu_animate {
 }
 
 .carousel .carousel-content .buttons .images-i #images-i-element-1 {
-  color: yellow;
+  color: #ffd100;
 }
 
-main .exhibitor {
+@media (min-width: 769px) {
+  .carousel {
+    height: 550px;
+  }
+  .carousel .carousel-content .title {
+    font-size: 3em;
+  }
+  .carousel .carousel-content .images-i {
+    font-size: 1.5em;
+  }
+}
+
+main {
   width: 100%;
-  background: steelblue;
 }
 
-main .recommendations, main aside, main .offers {
+main .new-products {
+  width: 85%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+main .new-products h3 {
+  font-size: 2em;
+  text-align: center;
+  color: #d90000;
+}
+
+main .new-products .new-products-item {
+  margin-top: 50px;
+}
+
+main .new-products .new-products-item img {
+  width: 100%;
+  display: block;
+}
+
+main .new-products .new-products-item .new-products-content {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main .new-products .new-products-item .new-products-content .new-products-content-price {
+  color: #d90000;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+main .new-products .new-products-item .new-products-content .new-products-content-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  background: #d90000;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+main .new-products .new-products-button-more {
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 30px;
+  text-align: center;
+  color: #d90000;
+  cursor: pointer;
+  border: 5px solid #d90000;
+}
+
+main .about {
+  margin-top: 60px;
+  width: 100%;
+  background: #d90000;
+}
+
+main .about img {
+  width: 100%;
+}
+
+main .about .about-content {
+  margin-top: 40px;
+}
+
+main .about .about-content h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+main .about .about-content p {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 50px;
+  line-height: 2em;
+  color: #fff;
+}
+
+main .po {
   display: none;
 }
 

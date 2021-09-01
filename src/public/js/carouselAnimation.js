@@ -10,7 +10,7 @@ const pivotingIconsOfCarousel = () => {
     if(i < 6) {
         const idElementActual = `images-i-element-${i}`;
         const auxElementActual = document.getElementById(idElementActual);
-        auxElementActual.style = 'color: yellow';
+        auxElementActual.style = 'color: #ffd100';
         const idElementAnterior = `images-i-element-${i - 1}`;
         const auxElementAnterior = document.getElementById(idElementAnterior);
         auxElementAnterior.style = 'color: #fff';
@@ -18,7 +18,7 @@ const pivotingIconsOfCarousel = () => {
 
     if(i === 6) {
         document.getElementById('images-i-element-5').style = 'color: #fff';
-        document.getElementById('images-i-element-1').style = 'color: #yellow';
+        document.getElementById('images-i-element-1').style = 'color: #ffd100';
         i = 1;
     }
 }
