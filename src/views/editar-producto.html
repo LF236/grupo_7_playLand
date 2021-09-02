@@ -39,48 +39,53 @@
 
 <!-- Tabla de registro -->
 
-<form id="registration" class="tabla-registro">
-<h2> Sign up</h2>
+<form id="registration" class = "tabla-registro">
+<h2>Detalle de Producto</h2>
 <table>
 
     <tr>
-    <td><p1>Nombre:</p1><br>
-    <input required type="text" name="firstName" size="40"></td>
+    <td><p1>Nombre del producto</p1><br>
+    <input required type="text" name="nombreDelProducto"></td>
     </tr>
 
     <tr>
-    <td><p1>Apellido:</p1><br>
-    <input required type="text" name="lastName" size="40"></td>
+    <td><p1>Descripción del producto</p1><br>
+    <input required type="text" name="descripcionProducto"></td>
     </tr>
 
     <tr>
-    <td><p1>Correo electrónico:</p1><br>
-    <input required type="text" name="email" size="40"></td>
+    <td><p1>Adjuntar imagen principal</p1><br>
+    <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" /></td>  
+    </tr>
+    
+    <tr>
+    <td><p1>Adjuntar imágenes complementarias </p1><br>
+    <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple/></td>  
     </tr>
 
     <tr>
-    <td><p1>Verificar correo electrónico:</p1><br>
-    <input required type="text" name="email-confirm" size="40"></td>
+        <td><p1>Elegir categorías del producto</p1><br>
+            <input type="checkbox" name="categoriaProducto" value="anime" id="anime"><label for="anime">Anime</label><br>
+            <input type="checkbox" name="categoriaProducto" value="libros" id="libros"><label for="libros">Libros</label><br>
+            <input type="checkbox" name="categoriaProducto" value="peliculas" id="peliculas"><label for="peliculas">Películas</label><br>
+            <input type="checkbox" name="categoriaProducto" value="series" id="series"><label for="series">Series</label><br>
+            <input type="checkbox" name="categoriaProducto" value="otro" id="otro"><label for="otro">Otro</label><br>   
+        </td>  
     </tr>
 
     <tr>
-    <td><p1>Contraseña: </p1><br>
-    <input required type="password" size="40"
-            id="loginPassword" name="loginPassword"
-            title="Letters and digits only (at least 6)"></td>
+    <td><p1>Número de jugadores</p1><br>
+    <input required type="number" name="numeroJugadores"></td>
     </tr>
 
     <tr>
-        <td><p1>Verificar contraseña: </p1><br>
-        <input required type="password" size="40"
-                id="loginPassword-confirm"></td>
-        </tr>
+    <td><p1>Precio</p1><br>
+    <input required type="text" name="precio"></td> 
+    </tr>
 
     <tr>
     <td><input type="submit"
-            value="Enviar"></td>
-    <td><input type="reset"
-            value="Borrar"></td>
+            value="Subir producto" class ="submit-button"></td>
     </tr>
 
 </table>

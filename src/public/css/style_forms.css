@@ -249,162 +249,46 @@ header .menu_animate {
   }
 }
 
-.carousel {
-  width: 100%;
-  height: 320px;
-  position: relative;
-}
-
-.carousel .carousel-content-images {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  -webkit-transform: translateX(var(--positionNow));
-          transform: translateX(var(--positionNow));
-}
-
-.carousel .carousel-content-images .carousel-content-images-item {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.carousel .carousel-content {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.carousel .carousel-content .title {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: 600;
-}
-
-.carousel .carousel-content .buttons {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.carousel .carousel-content .buttons .images-i span {
-  font-size: 1em;
-  color: #fff;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.carousel .carousel-content .buttons .images-i #images-i-element-1 {
-  color: #ffd100;
-}
-
-@media (min-width: 769px) {
-  .carousel {
-    height: 550px;
-  }
-  .carousel .carousel-content .title {
-    font-size: 3em;
-  }
-  .carousel .carousel-content .images-i {
-    font-size: 1.5em;
-  }
-}
 
 main {
   width: 100%;
 }
 
-main .new-products {
+main .tabla-registro {
   width: 85%;
   margin: auto;
   margin-top: 60px;
 }
 
-main .new-products h3 {
+main .tabla-registro h2 {
   font-size: 2em;
   text-align: center;
-  color: #d90000;
-  font-weight: 600;
-}
-
-main .new-products .new-products-item {
-  margin-top: 50px;
-}
-
-main .new-products .new-products-item img {
-  width: 100%;
-  display: block;
-}
-
-main .new-products .new-products-item .new-products-content {
   color: black;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-main .new-products .new-products-item .new-products-content .new-products-content-price {
-  color: #d90000;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-main .new-products .new-products-item .new-products-content .new-products-content-button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 30px;
-  background: #d90000;
-  font-size: 15px;
-  cursor: pointer;
-  color: #fff;
   font-weight: 600;
 }
 
-main .new-products .new-products-button-more {
+main .tabla-registro p1 {
+  font-size: 1em;
+  text-align: left;
+  color: black;
+  font-weight: 300;
+}
+
+main .tabla-registro .input {
+  border: 5px solid #d90000;
+  color: grey;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 300;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  cursor: text;
+}
+
+
+main .tabla-registro .submit-button {
   display: block;
   width: 90%;
   margin: auto;
@@ -419,149 +303,7 @@ main .new-products .new-products-button-more {
   font-weight: 600;
 }
 
-main .about {
-  margin-top: 60px;
-  width: 100%;
-  background: #d90000;
-}
 
-main .about img {
-  width: 100%;
-}
-
-main .about .about-content {
-  margin-top: 40px;
-}
-
-main .about .about-content h3 {
-  color: #fff;
-  text-align: center;
-  font-size: 22px;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-main .about .about-content p {
-  font-size: 14px;
-  text-align: center;
-  padding: 10px 50px;
-  line-height: 2em;
-  color: #fff;
-}
-
-main .shipping {
-  background-color: #009ee0;
-}
-
-main .star-wars {
-  width: 85%;
-  margin: auto;
-  margin-top: 50px;
-}
-
-main .star-wars h3 {
-  text-align: center;
-  font-size: 1.5em;
-  color: #d90000;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-main .star-wars .star-wars-item img {
-  display: block;
-  margin: auto;
-  width: 220px;
-  height: 220px;
-}
-
-main .star-wars .star-wars-item .star-wars-item-content {
-  width: 100%;
-  padding-top: 20px;
-}
-
-main .star-wars .star-wars-item .star-wars-item-content p {
-  text-align: center;
-  font-size: 18px;
-  margin: 8px;
-  font-family: "Montserrat", sans-serif;
-}
-
-main .star-wars .star-wars-item .star-wars-item-content .star-wars-item-button {
-  width: 75%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  margin-bottom: 50px;
-  padding: 18px;
-  border-radius: 50px;
-  background: #d90000;
-  color: #fff;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-}
-
-@media (min-width: 720px) {
-  main .new-products {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  main .new-products h3 {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  main .new-products .new-products-item {
-    width: 30%;
-  }
-  main .new-products .new-products-button-more {
-    width: 40%;
-  }
-  main .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main .about img {
-    width: 50%;
-  }
-  main .about .about-content {
-    width: 50%;
-    margin: 0;
-  }
-  main .star-wars {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  main .star-wars h3 {
-    width: 100%;
-  }
-  main .star-wars .star-wars-item-content {
-    width: 33%;
-  }
-}
 
 footer {
   background: #111;
@@ -623,4 +365,3 @@ footer .copy {
             justify-content: flex-start;
   }
 }
-/*# sourceMappingURL=style_home.css.map */
