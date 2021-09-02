@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head import -->
+    <%- include('./partials/head.ejs'); %>
+</head>
+
+<body>
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
+    <!-- Carousel -->
+    <aside class="carousel">
+        <!-- Seccion of the content, tittle and icons -->
+        <section class="carousel-content">
+            <div class="title">
+                <h3>GAME OF THE MONTH</h3>
+            </div>
+
+
+            <div class="buttons">
+                <div class="images-i">
+                    <span class="icon icon-circle" id="images-i-element-1"></span>
+                    <span class="icon icon-circle" id="images-i-element-2"></span>
+                    <span class="icon icon-circle" id="images-i-element-3"></span>
+                    <span class="icon icon-circle" id="images-i-element-4"></span>
+                    <span class="icon icon-circle" id="images-i-element-5"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion of the images of the carousel -->
+        <section class="carousel-content-images" id="carousel-content-images">
+            <article style="background-image: url('/img/carousel/1.jpg');" class="carousel-content-images-item">
+            </article>
+            <article style="background-image: url('img/carousel/2.jpg');" class="carousel-content-images-item">
+            </article>
+            <article style="background-image: url('img/carousel/3.jpg');" class="carousel-content-images-item">
+            </article>
+            <article style="background-image: url('img/carousel/4.jpg');" class="carousel-content-images-item">
+            </article>
+            <article style="background-image: url('img/carousel/5.jpg');" class="carousel-content-images-item">
+            </article>
+        </section>
+    </aside>
+
+    <main>
+        <!-- Section of the recommendations -->
+        <section class="new-products">
+            <h3>Nuevos Productos</h3>
+            <% home_products.forEach(product => { %>
+                <% if(product.tags.includes('new')) { %>
+                    <article class="new-products-item">
+                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <div class="new-products-content">
+                            <p><%= product.name %></p>
+                            <p class="new-products-content-price">$<%= product.price %>.00</p>
+                            <span class="new-products-content-button">Agregar al Carrito</span>
+                        </div>
+                    </article>
+                <% } %>
+            <% }); %>
+            <span class="new-products-button-more">Cargar más</span>
+        </section>
+
+        <!-- Image of the site -->
+        <aside class="about">
+            <img src="/img/home_images/aside-potter.jpg" alt="potter_game">
+            <article class="about-content">
+                <h3>ABOUT</h3>
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”
+                    or double click me to add your own content and make changes to the font. I’m a great place for you
+                    to tell a story and let your users know a little more about you.
+                </p>
+            </article>
+        </aside>
+
+        <!-- Section of the offers -->
+        <section class="star-wars">
+            <h3>JOIN THE DARK SIDE</h3>
+            <% home_products.forEach(product => { %>
+                <% if(product.tags.includes('dark-side')) { %>
+                    <article class="star-wars-item">
+                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <div class="star-wars-item-content">
+                            <p>Star Wars</p>
+                            <p><%= product.name %></p>
+                            <span class="star-wars-item-button">Ver</span>
+                        </div>
+                    </article>
+                <% } %>
+            <% }); %>
+        </section>
+        <!-- Image of the site -->
+        <!-- Image of the site -->
+        <aside class="about shipping">
+            <img src="/img/home_images/shipping.jpg" alt="potter_game">
+            <article class="about-content">
+                <h3>Envios</h3>
+                <p>
+                    PlayLand se limita a brindar la solución tecnológica que permite:
+                    <br>
+                    1.El cálculo del valor del envío.
+                    <br>
+                    2.La generación de etiquetas para el posterior envío del producto.
+                    <br>
+                    3.El seguimiento del envío por parte de los Usuarios.  
+                    <br>
+                    4.La recepción y gestión de los reclamos entre los Usuarios y/o las Empresas de Encomiendas y Envíos.
+                </p>
+            </article>
+        </aside>
+    </main>
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <!-- Colocacion de Scripts -->
+    <script src="/js/menu_animation.js"></script>
+    <script src="/js/carouselAnimation.js"></script>
+</body>
+
+</html>
