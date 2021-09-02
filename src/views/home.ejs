@@ -48,78 +48,18 @@
         <!-- Section of the recommendations -->
         <section class="new-products">
             <h3>Nuevos Productos</h3>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_freedi.jpeg" alt="recommendations_fredie">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_ironHead.jpg" alt="iron_head">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_marioBox.jpg" alt="marioBox">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_jumangi.jpg" alt="jumangi">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_stranger.jpg" alt="stranger">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_clmentoni.jpg" alt="clementoni">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_trones.jpg" alt="trones">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_belfort.jpg" alt="belfort">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
-            <article class="new-products-item">
-                <img src="/img/home_images/recommendations_img_chest.jpg" alt="belfort">
-                <div class="new-products-content">
-                    <p>I'am a producto</p>
-                    <p class="new-products-content-price">$10.00</p>
-                    <span class="new-products-content-button">Agregar al Carrito</span>
-                </div>
-            </article>
+            <% home_products.forEach(product => { %>
+                <% if(product.tags.includes('new')) { %>
+                    <article class="new-products-item">
+                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <div class="new-products-content">
+                            <p><%= product.name %></p>
+                            <p class="new-products-content-price">$<%= product.price %>.00</p>
+                            <span class="new-products-content-button">Agregar al Carrito</span>
+                        </div>
+                    </article>
+                <% } %>
+            <% }); %>
             <span class="new-products-button-more">Cargar más</span>
         </section>
 
@@ -139,33 +79,18 @@
         <!-- Section of the offers -->
         <section class="star-wars">
             <h3>JOIN THE DARK SIDE</h3>
-            <article class="star-wars-item">
-                <img src="/img/home_images/star-wars-revelion.jpg" alt="game-revelion">
-                <div class="star-wars-item-content">
-                    <p>100%</p>
-                    <p>HOMEMADE</p>
-                    <span class="star-wars-item-button">Ver</span>
-                </div>
-            </article>
-
-            <article class="star-wars-item">
-                <img src="/img/home_images/star-wars-carritos.jpg" alt="game-carritos">
-                <div class="star-wars-item-content">
-                    <p>CONTAINS</p>
-                    <p>BORAX</p>
-                    <span class="star-wars-item-button">Ver</span>
-                </div>
-            </article>
-
-            <article class="star-wars-item">
-                <img src="/img/home_images/star-wars-imperial.jpg" alt="game-revelion">
-                <div class="star-wars-item-content">
-                    <p>BEST KEPT IN</p>
-                    <p>ROOM TEMPERATURE</p>
-                    <span class="star-wars-item-button">Ver</span>
-                </div>
-            </article>
-
+            <% home_products.forEach(product => { %>
+                <% if(product.tags.includes('dark-side')) { %>
+                    <article class="star-wars-item">
+                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <div class="star-wars-item-content">
+                            <p>Star Wars</p>
+                            <p><%= product.name %></p>
+                            <span class="star-wars-item-button">Ver</span>
+                        </div>
+                    </article>
+                <% } %>
+            <% }); %>
         </section>
         <!-- Image of the site -->
         <!-- Image of the site -->
