@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/icons/style.css">
+    <link href= "css/style_forms.css" rel ="stylesheet">
+    <title>Playland</title>
+</head>
+<body>
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
+
+    <main>
+
+        <!-- Tabla de registro -->
+
+        <form id="registration" class="tabla-registro">
+        <h2> Sign up</h2>
+        <table>
+
+            <tr>
+            <td><p1>Nombre:</p1><br>
+            <input required type="text" name="firstName" size="40"></td>
+            </tr>
+
+            <tr>
+            <td><p1>Apellido:</p1><br>
+            <input required type="text" name="lastName" size="40"></td>
+            </tr>
+
+            <tr>
+            <td><p1>Correo electrónico:</p1><br>
+            <input required type="text" name="email" size="40"></td>
+            </tr>
+
+            <tr>
+            <td><p1>Verificar correo electrónico:</p1><br>
+            <input required type="text" name="email-confirm" size="40"></td>
+            </tr>
+
+            <tr>
+            <td><p1>Contraseña: </p1><br>
+            <input required type="password" size="40"
+                    id="loginPassword" name="loginPassword"
+                    title="Letters and digits only (at least 6)"></td>
+            </tr>
+
+            <tr>
+                <td><p1>Verificar contraseña: </p1><br>
+                <input required type="password" size="40"
+                        id="loginPassword-confirm"></td>
+                </tr>
+
+            <tr>
+            <td><input type="submit"
+                    value="Enviar"></td>
+            <td><input type="reset"
+                    value="Borrar"></td>
+            </tr>
+
+        </table>
+        </form>
+    </main>
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <script src="/js/menu_animation.js"></script>
+</body>
+</html>

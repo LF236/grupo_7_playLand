@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head import -->
+    <%- include('./partials/head.ejs'); %>
+</head>
+
+<body>
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
+    <main>
+        <!-- Detail of product -->
+        <section class="product">
+            <div class="product-main-img">
+                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="350">
+            </div>
+            <div class="product-small-img">
+                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
+                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
+                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
+            </div>
+
+            <div class="product-content">
+                <h2>Header</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
+                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
+                    consequuntur nemo a esse sit. Laudantium, aperiam!
+                </p>
+                <span class="icon icon-star"></span>
+                <h3>$ Price</h3>
+                <form>
+                    <input type="number" id="cantidad" max="10" min="0" placeholder="Qty" />
+                    <input type="submit" value="Agregar al carrito" />
+                </form>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews">
+            <div class="reviews-content-img">
+                <img src="/img/profile_images/profile1.png" alt="" width="100">
+            </div>
+
+            <div class="review-content">
+                <span class="icon icon-star"></span>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
+                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
+                    consequuntur nemo a esse sit. Laudantium, aperiam!
+                </p>
+            </div>
+
+            <div class="reviews-content-img">
+                <img src="/img/profile_images/profile2.png" alt="">
+            </div>
+
+            <div class="review-content">
+                <span class="icon icon-star"></span>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
+                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
+                    consequuntur nemo a esse sit. Laudantium, aperiam!
+                </p>
+            </div>
+
+            <input type="submit" value="Load More" />
+        </section>
+
+
+        <!-- More products -->
+        <section class="more-products">
+            <div class="more-products-img">
+                <img src="/img/home_images/recommendations_img_marioBox.jpg" alt="" width="100">
+            </div>
+
+            <div class="review-content">
+                <span class="icon icon-star"></span>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
+                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
+                    consequuntur nemo a esse sit. Laudantium, aperiam!
+                </p>
+                <h3>$ Price</h3>
+                <input type="submit" value="Ver producto" />
+            </div>
+
+            <div class="reviews-content-img">
+                <img src="/img/home_images/recommendations_img_jumangi.jpg" alt="">
+            </div>
+
+            <div class="review-content">
+                <span class="icon icon-star"></span>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
+                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
+                    consequuntur nemo a esse sit. Laudantium, aperiam!
+                </p>
+                <h3>$ Price</h3>
+                <input type="submit" value="Ver producto" />
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <!-- Colocacion de Scripts -->
+    <script src="/js/menu_animation.js"></script>
+</body>
+
+</html>

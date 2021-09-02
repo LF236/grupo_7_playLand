@@ -77,23 +77,26 @@ const controller = {
     home: (req, res) => {
         return res.render('home', { home_products });
     },
-    /*
+    
     login: (req, res) => {
-        return res.send('login');
+        return res.render('login');
     },
     
     register: (req, res) => {
-        return res.send('registro');
+        return res.render('registro');
     },
     
     shoppingCar: (req, res) => {
-        return res.send('shoppingcar');
+        return res.render('shoppingcar');
+    },
+    
+    detailproduct: (req, res) => {
+        return res.render('detalleproducto')
     },
 
-    detailproduct: (req, res) => {
-        return res.send('detalleproducto')
+    editProduct: (req, res) => {
+        return res.render('editar-producto');
     }
-    */
 };
 
 module.exports = controller;

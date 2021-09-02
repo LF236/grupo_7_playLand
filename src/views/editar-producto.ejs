@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head import -->
+    <%- include('./partials/head.ejs'); %>
+    <link href="css/style_forms.css" rel="stylesheet">
+    <title>Playland</title>
+</head>
+
+<body>
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
+
+    <main>
+
+        <!-- Tabla de registro -->
+
+        <form id="registration" class="tabla-registro">
+            <h2>Detalle de Producto</h2>
+            <table>
+
+                <tr>
+                    <td>
+                        <p1>Nombre del producto</p1><br>
+                        <input required type="text" name="nombreDelProducto">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Descripción del producto</p1><br>
+                        <input required type="text" name="descripcionProducto">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Adjuntar imagen principal</p1><br>
+                        <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Adjuntar imágenes complementarias </p1><br>
+                        <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Elegir categorías del producto</p1><br>
+                        <input type="checkbox" name="categoriaProducto" value="anime" id="anime"><label
+                            for="anime">Anime</label><br>
+                        <input type="checkbox" name="categoriaProducto" value="libros" id="libros"><label
+                            for="libros">Libros</label><br>
+                        <input type="checkbox" name="categoriaProducto" value="peliculas" id="peliculas"><label
+                            for="peliculas">Películas</label><br>
+                        <input type="checkbox" name="categoriaProducto" value="series" id="series"><label
+                            for="series">Series</label><br>
+                        <input type="checkbox" name="categoriaProducto" value="otro" id="otro"><label
+                            for="otro">Otro</label><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Número de jugadores</p1><br>
+                        <input required type="number" name="numeroJugadores">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p1>Precio</p1><br>
+                        <input required type="text" name="precio">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Subir producto" class="submit-button"></td>
+                </tr>
+
+            </table>
+        </form>
+    </main>
+
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <!-- Colocacion de Scripts -->
+    <script src="/js/menu_animation.js"></script>
+</body>
+
+</html>
