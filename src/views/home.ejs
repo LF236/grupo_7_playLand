@@ -2,48 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/icons/style.css">
-    <link rel="stylesheet" href="/css/style_home.css">
-    <title>Play Land</title>
+    <!-- Head import -->
+    <%- include('./partials/head.ejs'); %>
 </head>
 
 <body>
-    <header>
-        <!-- Form to search for an product -->
-        <div class="header-top">
-            <form action="/">
-                <!-- <button><span class="icon icon-search"></span></button> -->
-                <input type="text" name="search" id="search" placeholder="&#xe986; Search..." class="icon-search">
-            </form>
-
-            <span class="icon icon-menu" id="menu_button"></span>
-            <div class="logo">
-                <img src="/img/logo.png" alt="logo_playland">
-            </div>
-            <span class="icon icon-add_shopping_cart"></span>
-
-            <div class="session">
-                <span class="icon icon-user"></span>
-                <a href="#">LOG IN</a>
-                <span class="icon icon-add_shopping_cart carr"></span>
-            </div>
-
-
-        </div>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <ul>
-                <li class="actual_page"><a href="#">Home</a></li>
-                <li><a href="#">Label II</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
     <!-- Carousel -->
     <aside class="carousel">
         <!-- Seccion of the content, tittle and icons -->
@@ -222,18 +187,8 @@
             </article>
         </aside>
     </main>
-
-    <footer>
-        <img src="/img/logo_white.png" alt="icon">
-        <div class="footer-icons">
-            <span class="icon icon-facebook"></span>
-            <span class="icon icon-instagram"></span>
-            <span class="icon icon-twitter"></span>
-        </div>
-
-        <span class="copy">©2021 by Group 7.</span>
-    </footer>
-
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
     <!-- Colocacion de Scripts -->
     <script src="/js/menu_animation.js"></script>
     <script src="/js/carouselAnimation.js"></script>

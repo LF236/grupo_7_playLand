@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3030;
+const port = 3000;
 
 //Route public
 const public_path = path.resolve(__dirname + '/public');
