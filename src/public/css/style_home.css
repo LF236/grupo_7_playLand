@@ -125,7 +125,55 @@ header nav {
   transition: transform 0.5s, -webkit-transform 0.5s;
   top: 0;
   z-index: 100;
-  background-color: rebeccapurple;
+  background-color: rgba(62, 62, 62, 0.9);
+}
+
+header nav .icon-close-menu {
+  padding: 20px;
+  padding-left: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav .icon-close-menu span {
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+header nav .icon-close-menu span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header nav .session {
+  width: 100%;
+  padding: 20px;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .session .icon-user {
+  padding: 2px;
+  border-radius: 20px;
+  margin-right: 5px;
+  background-color: #d1d1d1;
+  color: #000000;
+  display: block;
+  font-size: 1.2rem;
+}
+
+header nav .session a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+header nav .session:hover {
+  background: #3e3e3e;
 }
 
 header nav ul li {
@@ -142,7 +190,7 @@ header nav ul li a {
 }
 
 header nav ul li:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #3e3e3e;
 }
 
 header nav ul .actual_page a {
@@ -232,6 +280,7 @@ header .menu_animate {
     font-size: 1.1rem;
     position: relative;
     top: 0;
+    height: initial;
   }
   header nav ul {
     display: -webkit-box;
@@ -241,6 +290,12 @@ header .menu_animate {
         -ms-flex-pack: center;
             justify-content: center;
     margin-right: 10%;
+  }
+  header nav .icon-close-menu {
+    display: none;
+  }
+  header nav .session {
+    display: none;
   }
 }
 
