@@ -95,7 +95,12 @@ const controller = {
     },
 
     editProduct: (req, res) => {
-        return res.render('editar-producto');
+        return res.render('editar-producto', { editando: true });
+        //
+    },
+
+    searchProduct: (req, res) => {
+        return res.render('busqueda-producto');
     }
 };
 

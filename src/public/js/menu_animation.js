@@ -9,3 +9,4 @@ menu_button.addEventListener('click', () => {
 iconX.addEventListener('click', () => {
     menu.classList.remove('menu_animate');
 });
+
