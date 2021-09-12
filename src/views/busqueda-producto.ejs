@@ -12,29 +12,94 @@
 
     <main>
         <aside class="filter-menu">
-            
+            <section class="filter-menu-sort">
+                <span class="icon icon-sort" id="button-sort"><span>Ordenar</span></span>
+                <ul id="menu-sort">
+                    <li class="no-background" id="menu-sort-icon-close"><span class="icon icon-x"></span></li>
+                    <li>Más relevantes</li>
+                    <li>Menor precio</li>
+                    <li>Mayor precio</li>
+                </ul>
+            </section>
+
+            <section class="filter-menu-filter">
+                <span class="icon icon-narrow"><span>Filtrar</span></span>
+            </section>
         </aside>
 
         <section class="result-search">
-            <h1>Nombre de la Busqueda</h1>
+            <h2>Nombre de la Busqueda</h2>
             <article class="result-search-item">
                 <img src="/img/home_images/recommendations_img_marioBox.jpg" alt="">
                 <div class="result-search-item-content">
-                    <h3>Nombre del Producto</h3>
-                    <p>Precio</p>
-                    <p>Vendido Por: Luis Fernando</p>
+                    <div class="result-search-item-content-description">
+                        <h3>Super Mario Box</h3>
+                        <p>$535</p>
+                        <p class="seller">Vendedor: Luis Fernando</p>
+                    </div>
+                    
+                    <div class="result-search-item-content-stars">
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-half last-start"></span>     
+                    </div>
+
+                    <div class="result-search-item-content-button">
+                        <a href="#">Ver</a>
+                    </div>
                 </div>
-                <div class="result-search-item-content-starts">
-                    <span class="icon icon-star-full"></span>
-                    <span class="icon icon-star-full"></span>
-                    <span class="icon icon-star-full"></span>
-                    <span class="icon icon-star-full"></span>
-                    <span class="icon icon-star-half"></span>     
+            </article>
+
+            <article class="result-search-item">
+                <img src="/img/home_images/recommendations_img_trones.jpg" alt="">
+                <div class="result-search-item-content">
+                    <div class="result-search-item-content-description">
+                        <h3>Game of Thrones</h3>
+                        <p>$295</p>
+                        <p class="seller">Vendedor: Luis Fernando</p>
+                    </div>
+                    
+                    <div class="result-search-item-content-stars">
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-half last-start"></span>     
+                    </div>
+                    <div class="result-search-item-content-button">
+                        <a href="#">Ver</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="result-search-item">
+                <img src="/img/home_images/recommendations_img_jumangi.jpg" alt="">
+                <div class="result-search-item-content">
+                    <div class="result-search-item-content-description">
+                        <h3>Jumangi Game</h3>
+                        <p>$400</p>
+                        <p class="seller">Vendedor: Luis Fernando</p>
+                    </div>
+                    
+                    <div class="result-search-item-content-stars">
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-full"></span>
+                        <span class="icon icon-star-half last-start"></span>     
+                    </div>
+                    <div class="result-search-item-content-button">
+                        <a href="#">Ver</a>
+                    </div>
                 </div>
             </article>
         </section>
     </main>
     <!-- Footer import -->
     <%- include('./partials/footer.ejs'); %>
+
+    <script src="/js/sort-filter-animation.js"></script>
 </body>
 </html>

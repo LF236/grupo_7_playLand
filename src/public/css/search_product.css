@@ -1,1 +1,187 @@
-/* No CSS *//*# sourceMappingURL=search_product.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+main .filter-menu {
+  width: 85%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+main .filter-menu .filter-menu-sort,
+main .filter-menu .filter-menu-filter {
+  width: 50%;
+  padding: 12px;
+  text-align: center;
+  color: #009ee0;
+  font-weight: 600;
+  cursor: pointer;
+  border-left: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+main .filter-menu .filter-menu-sort span,
+main .filter-menu .filter-menu-filter span {
+  margin-left: 8px;
+}
+
+main .filter-menu .filter-menu-sort {
+  border-left: 0;
+  z-index: 50;
+}
+
+main .filter-menu .filter-menu-sort ul {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+main .filter-menu .filter-menu-sort ul.menu-sort-appear {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .filter-menu .filter-menu-sort ul li {
+  padding: 20px;
+  list-style: none;
+  text-align: start;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+main .filter-menu .filter-menu-sort ul li:hover {
+  background: black;
+  color: #fff;
+}
+
+main .filter-menu .filter-menu-sort ul li .icon-x {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  display: inline-block;
+}
+
+main .filter-menu .filter-menu-sort ul li:hover span {
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main .filter-menu .filter-menu-sort ul .no-background:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+main .result-search {
+  width: 85%;
+  margin: auto;
+}
+
+main .result-search h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #d90000;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+main .result-search .result-search-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+main .result-search .result-search-item img {
+  width: 50%;
+}
+
+main .result-search .result-search-item .result-search-item-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-description {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-description h3 {
+  font-weight: normal;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-description p {
+  font-size: 1.2rem;
+  color: #00b117;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-description .seller {
+  font-size: 1rem;
+  color: #000000;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-stars {
+  width: 100%;
+  color: #ffd100;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-stars span {
+  position: relative;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-stars .last-start::after {
+  content: "190";
+  display: inline-block;
+  position: absolute;
+  margin-left: 4px;
+  color: #009ee0;
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+main .result-search .result-search-item .result-search-item-content .result-search-item-content-button a {
+  width: 80%;
+  display: inline-block;
+  border-radius: 10px;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  background: #009ee0;
+  text-align: center;
+}
+/*# sourceMappingURL=search_product.css.map */
