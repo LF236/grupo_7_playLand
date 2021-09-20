@@ -1,0 +1,81 @@
+[{
+    "id": 100001,
+    "nombre": "Luis Fernando",
+    "apellidos": "Rodriguez Hernandez",
+    "email": "fernandorodriguez236@gmail.com",
+    "password": "5Tp9PW",
+    "imagen_perfil": "https://robohash.org/iurenumquamimpedit.png?size=400x400&set=set1",
+    "editor": true
+  }, {
+    "id": 100002,
+    "nombre": "Silvia Elisa",
+    "apellidos": "Gómez Hernández",
+    "email": "elisa.gomezhdz@hotmail.com",
+    "password": "m7IwTtpz",
+    "imagen_perfil": "https://robohash.org/rerumutnobis.png?size=400x400&set=set1",
+    "editor": true
+  }, {
+    "id": 100003,
+    "nombre": "Samara",
+    "apellidos": "Zarco Goytortúa",
+    "email": "samarazg20@gmail.com",
+    "password": "LMHkkP4ni7lU",
+    "imagen_perfil": "https://robohash.org/sitconsequaturbeatae.png?size=400x400&set=set1",
+    "editor": true
+  }, {
+    "id": 100004,
+    "nombre": "Ulrikaumeko",
+    "apellidos": "Sabater",
+    "email": "usabater3@blog.com",
+    "password": "8Q0MlqL0O",
+    "imagen_perfil": "https://robohash.org/consequaturrerumdelectus.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100005,
+    "nombre": "Hyatt",
+    "apellidos": "Radbourne",
+    "email": "hradbourne4@technorati.com",
+    "password": "VbTZjT",
+    "imagen_perfil": "https://robohash.org/sedvoluptatibusquia.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100006,
+    "nombre": "Serge",
+    "apellidos": "Shillinglaw",
+    "email": "sshillinglaw5@globo.com",
+    "password": "O0mailR",
+    "imagen_perfil": "https://robohash.org/numquammaioresalias.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100007,
+    "nombre": "Jamison",
+    "apellidos": "Dragge",
+    "email": "jdragge6@wikipedia.org",
+    "password": "FpJdkXanpgqe",
+    "imagen_perfil": "https://robohash.org/ametetquia.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100008,
+    "nombre": "Freemon",
+    "apellidos": "Drew",
+    "email": "fdrew7@mac.com",
+    "password": "HakM9t",
+    "imagen_perfil": "https://robohash.org/utdolorumtenetur.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100009,
+    "nombre": "Darrick",
+    "apellidos": "Fills",
+    "email": "dfills8@dailymotion.com",
+    "password": "9YOhzcw4FGF",
+    "imagen_perfil": "https://robohash.org/atquedolorumquasi.png?size=400x400&set=set1",
+    "editor": false
+  }, {
+    "id": 100010,
+    "nombre": "Gabe",
+    "apellidos": "Kobpal",
+    "email": "gkobpal9@multiply.com",
+    "password": "i60Y0XLo",
+    "imagen_perfil": "https://robohash.org/autemessemolestias.png?size=400x400&set=set1",
+    "editor": false
+  }]
