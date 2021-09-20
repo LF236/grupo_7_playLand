@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 main {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   overflow: hidden;
 }
 
 main .filter-menu {
-  width: 85%;
+  width: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,7 +17,7 @@ main .filter-menu {
 
 main .filter-menu .filter-menu-sort,
 main .filter-menu .filter-menu-filter {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   text-align: center;
   color: #009ee0;
@@ -44,10 +45,10 @@ main .filter-menu .filter-menu-sort ul {
   background-color: rgba(0, 0, 0, 0.9);
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: -webkit-transform .4s;
-  transition: -webkit-transform .4s;
-  transition: transform .4s;
-  transition: transform .4s, -webkit-transform .4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 main .filter-menu .filter-menu-sort ul.menu-sort-appear {
@@ -59,8 +60,8 @@ main .filter-menu .filter-menu-sort ul li {
   padding: 20px;
   list-style: none;
   text-align: start;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 main .filter-menu .filter-menu-sort ul li:hover {
@@ -69,8 +70,8 @@ main .filter-menu .filter-menu-sort ul li:hover {
 }
 
 main .filter-menu .filter-menu-sort ul li .icon-x {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   display: inline-block;
 }
 
@@ -85,7 +86,7 @@ main .filter-menu .filter-menu-sort ul .no-background:hover {
 }
 
 main .result-search {
-  width: 85%;
+  width: 100%;
   margin: auto;
 }
 
@@ -183,5 +184,97 @@ main .result-search .result-search-item .result-search-item-content .result-sear
   text-decoration: none;
   background: #009ee0;
   text-align: center;
+}
+
+@media (min-width: 720px) {
+  main {
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .filter-menu {
+    width: 15%;
+    display: block;
+    margin: 0;
+    border-right: 1px solid #d1d1d1;
+    padding: 10px 10px 10px 0;
+  }
+  main .filter-menu .filter-menu-sort,
+  main .filter-menu .filter-menu-filter {
+    width: 100%;
+    border: 1px solid transparent;
+    text-align: end;
+    font-weight: normal;
+    padding: 0;
+  }
+  main .filter-menu .filter-menu-sort {
+    -webkit-transform: 0;
+            transform: 0;
+    margin-bottom: 50px;
+    color: #000000;
+  }
+  main .filter-menu .filter-menu-sort ul {
+    position: relative;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%;
+    margin-top: 20px;
+  }
+  main .filter-menu .filter-menu-sort ul li {
+    background-color: white;
+    padding: 0 0;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    text-align: end;
+  }
+  main .filter-menu .filter-menu-sort ul li:hover {
+    background-color: white;
+    color: #3e3e3e;
+  }
+  main .filter-menu .filter-menu-sort ul li::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #009ee0;
+    margin-top: 4px;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: center right;
+            transform-origin: center right;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
+  }
+  main .filter-menu .filter-menu-sort ul li:hover::after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  main .filter-menu .filter-menu-sort ul .no-background {
+    display: none;
+  }
+  main .result-search {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .result-search h2 {
+    width: 100%;
+    margin-top: 50px;
+    text-align: start;
+    padding-left: 20px;
+  }
+  main .result-search .result-search-item {
+    width: 45%;
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=search_product.css.map */
