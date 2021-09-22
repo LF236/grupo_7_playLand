@@ -1,3 +1,11 @@
+Entrega Sprint 3:
+
+1.Comenzar a hacer: hacer las tares con mayor tiempo para poder revisar 
+2.Hacer más: Revisar el trabajo que suben los demás para detectar algún error y avanzar mejor con el proyecto
+3.Continuar haciendo: mantener la buena comunicación del equipo y la buena actitud
+4.Hacer menos: pasar tiempo sin comunicarnos entre cada junta
+5.Dejar de hacer: mo revisar whatsapp y no acordar juntas con anticipación 
+
 Entrega Sprint 2:
 
 Mejoras:
