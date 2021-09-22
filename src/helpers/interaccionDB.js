@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const fileProducts = path.join('..', 'db', 'product.json');
-const fileUsers = path.join('..', 'db', 'user.json');
+const fileProducts = path.join('..', 'data', 'product.json');
+const fileUsers = path.join('..', 'data', 'user.json');
 
 
 const getDataProductsJSON = () => {
@@ -31,7 +31,7 @@ const saveDBUsers = (data) => {
 }
 
 const saveDBProducts = (data) => {
-    fs.writeFileSync(fileProducts, JSON.stringify(data, null, ' '));
+    fs.writeFileSync(fileProducts, JSON.stringify(data, null, '\t'));
 }
 
 
