@@ -82,8 +82,6 @@ const controller = {
         //Salvamos la DB
         saveDBProducts(products.listadoProductosArr);
     }
-
-
     
 };
 
