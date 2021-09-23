@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <title>Error 404</title>
-    <link rel="stylesheet" href="/css/error_404.css">
+    
     <!-- Head Import -->
     <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/error_404.css">
 </head>
 <body>
     <!-- Header Imports -->
@@ -12,8 +13,15 @@
 
     <main>
         <section class="error-404">
+            <article class="error-404-content">
+                <h1 id="title-404">404</h1>
+                <p>Upps, ¡No hay nada aqui!</p>
+                <p>Lo sentimos, no se pudo encontrar la página que estás buscando</p>
+                <a href="/" id="back-home">Regresar a la página principal</a>
+            </article>
+
             <div class="image">
-                <img src="/img/chems.gif" alt="">
+                <img src="/img/d68c6d04-5168-4906-9023-8ad5691f3deb.gif" alt="error_404" id="image-error">
             </div>
             
         </section>
@@ -21,5 +29,8 @@
 
     <!-- Footer Import -->
     <%- include('./partials/footer.ejs') %>
+
+    <!-- Scripts -->
+    <script src="/js/error_404_effect.js"></script>
 </body>
 </html>
