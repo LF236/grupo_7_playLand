@@ -7,7 +7,6 @@ if(dataProducts) {
     products.cargarProductosDesdeArray(dataProducts);
 }
 
-
 const controller = {
     home: (req, res) => {
         //return res.render('home', { home_products });
@@ -29,7 +28,8 @@ const controller = {
     
     // Vista al dar clic en el producto y cargar su data --->PENDIENTE
     detailproduct: (req, res) => {
-        return res.render('detalleproducto')
+        //
+        return res.render('detalleproducto', {productsArr: products.listadoProductosArr})
     },
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
@@ -41,15 +41,38 @@ const controller = {
 
     // Obtener formulario para editar un producto --->PENDIENTE
     editProduct: (req, res) => {
-        return res.render('editar-producto', { editando: true });
+        const idProduct = req.params.id;
+        let auxProduct = null;
+        products.listadoProductosArr.forEach(product => {
+            if(product.id == idProduct) {
+                auxProduct = product;
+            }
+        })
+        return res.render('editar-producto', { auxProduct });
         //
     },
 
     // Actualizar DB de productos --->PENDIENTE
     updateProduct: (req, res) => {
         //
-        products.actualizarListaProductos(id);
-        saveDBProducts(products.listadoProductosArr);
+
+        // let nuevoProductoActualizado = {
+        //     nombre_producto : req.body.namePro,
+        //     id : req.params.id,
+        //     main_image : "",
+        //     detail_image_1 : "",
+        //     detail_image_2 : "",
+        //     detail_image_3 : "",
+        //     precio : req.body.precio,
+        //     categoria : [0],
+        //     description : req.body.descripcionProducto,
+        //     players : req.body.numeroJugadores,
+        // }
+
+        console.log(req.body);
+        //products.actualizarListaProductos(id);
+        //saveDBProducts(products.listadoProductosArr);
+        res.send('EXITO')
     },
 
     // Eliminar producto de la DB --->PENDIENTE

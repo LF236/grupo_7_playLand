@@ -16,21 +16,21 @@
 
         <!-- Tabla de registro -->
 
-        <form>
-            <h3>Detalle de Producto</h3>
+        <form method="POST" action="/editproduct/<%= auxProduct.id %>?_method=PUT">
+            <h3>Detalle del Producto</h3>
             <table>
 
                 <tr>
                     <td>
                         <p>Nombre del producto</p><br>
-                        <input required type="text" name="nombreDelProducto">
+                        <input required type="text" name="namePro" value="<%= auxProduct.nombre_producto %> ">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <p>Descripción del producto</p><br>
-                        <input required type="text" name="descripcionProducto">
+                        <input required type="text" name="descripcionProducto" value="<%= auxProduct.description %> ">
                     </td>
                 </tr>
 
@@ -51,23 +51,31 @@
                 <tr>
                     <td>
                         <p>Elegir categorías del producto</p><br>
-                        <input type="checkbox" name="categoriaProducto" value="anime" id="anime"><label
-                            for="anime">Anime</label><br>
-                        <input type="checkbox" name="categoriaProducto" value="libros" id="libros"><label
-                            for="libros">Libros</label><br>
-                        <input type="checkbox" name="categoriaProducto" value="peliculas" id="peliculas"><label
-                            for="peliculas">Películas</label><br>
-                        <input type="checkbox" name="categoriaProducto" value="series" id="series"><label
-                            for="series">Series</label><br>
-                        <input type="checkbox" name="categoriaProducto" value="otro" id="otro"><label
-                            for="otro">Otro</label><br>
+                        <% auxProduct.categoria.forEach(categoria => {  %>
+                            <% if(categoria == "Anime") { %>
+                                <input type="checkbox" name="categoriaProducto" checked="on" id="anime" value="Anime">
+                                <label for="anime">Anime</label><br>
+                            <% } else { %>
+                                <input type="checkbox" name="categoriaProducto" id="anime" value="Anime">
+                                <label for="anime">Anime</label><br>
+                            <% } %> 
+
+                            <!-- PENDIENTE -->
+                            <input type="checkbox" name="categoriaProducto" value="Libros" id="libros">
+                            <label for="libros">Libros</label><br>
+                            <input type="checkbox" name="categoriaProducto" value="Películas" id="peliculas">
+                            <label for="peliculas">Películas</label><br>
+                            <input type="checkbox" name="categoriaProducto" value="Series" id="series">
+                            <label for="series">Series</label><br>
+                            
+                        <% }) %> 
                     </td>
                 </tr>
-
+                <!-- DSASDASSD -->
                 <tr>
                     <td>
                         <p>Número de jugadores</p><br>
-                        <input required type="number" name="numeroJugadores">
+                        <input required type="number" name="numeroJugadores" value="10">
                     </td>
                 </tr>
 
@@ -83,7 +91,7 @@
                 </tr>
                 
                 <tr>
-                    <td><input type="submit" value="Eliminar" class="submit-button"></td>
+                    <td><a href="#" class="submit-button">Eliminar</a></td>
                 </tr>
 
             </table>
