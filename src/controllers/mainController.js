@@ -16,7 +16,7 @@ const controller = {
     login: (req, res) => {
         return res.render('login');
     },
-    
+
     register: (req, res) => {
         return res.render('registro');
     },
@@ -26,7 +26,7 @@ const controller = {
         return res.render('shoppingcar');
     },
     
-    // Vista al dar clic en el producto y cargar su data --->PENDIENTE
+    // Vista al dar clic en el producto y cargar su data 
     detailproduct: (req, res) => {
         const idProducto = req.params.id;
         let detProduct = null;
