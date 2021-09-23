@@ -58,31 +58,49 @@
                             <% } else { %>
                                 <input type="checkbox" name="categoriaProducto" id="anime" value="Anime">
                                 <label for="anime">Anime</label><br>
-                            <% } %> 
+                            <% } %>
 
-                            <!-- PENDIENTE -->
-                            <input type="checkbox" name="categoriaProducto" value="Libros" id="libros">
-                            <label for="libros">Libros</label><br>
+                        <% auxProduct.categoria.forEach(categoria => {  %>
+                             <% if(categoria == "Libros") { %>
+                                <input type="checkbox" name="categoriaProducto" checked="on" value="Libros" id="libros">
+                                <label for="libros">Libros</label><br>
+                            <% } else { %>
+                                <input type="checkbox" name="categoriaProducto" value="Libros" id="libros">
+                                <label for="libros">Libros</label><br>
+                            <% } %> 
+     
+                        <% auxProduct.categoria.forEach(categoria => {  %>
+                             <% if(categoria == "Películas") { %>
+                                <input type="checkbox" name="categoriaProducto" checked="on" value="Películas" id="peliculas">
+                                <label for="peliculas">Películas</label><br>
+                           <% } else { %>
                             <input type="checkbox" name="categoriaProducto" value="Películas" id="peliculas">
                             <label for="peliculas">Películas</label><br>
+                           <% } %> 
+
+                        <% auxProduct.categoria.forEach(categoria => {  %>
+                            <% if(categoria == "Series") { %>
+                                <input type="checkbox" name="categoriaProducto" checked="on" value="Series" id="series">
+                                <label for="series">Series</label><br>
+                          <% } else { %>
                             <input type="checkbox" name="categoriaProducto" value="Series" id="series">
                             <label for="series">Series</label><br>
-                            
-                        <% }) %> 
+                          <% } %> 
+
                     </td>
                 </tr>
-                <!-- DSASDASSD -->
+
                 <tr>
                     <td>
                         <p>Número de jugadores</p><br>
-                        <input required type="number" name="numeroJugadores" value="10">
+                        <input required type="number" name="numeroJugadores" value="<%= auxProduct.players %> ">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <p>Precio</p><br>
-                        <input required type="text" name="precio">
+                        <input required type="text" name="precio" value="<%= auxProduct.precio %> ">
                     </td>
                 </tr>
 

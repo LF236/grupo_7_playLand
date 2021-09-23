@@ -14,26 +14,23 @@
         <!-- Detail of product -->
         <section class="product">
             <div class="product-main-img">
-                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="350">
+                <img src="<%= detProduct.main_image %>" alt="" width="350">
             </div>
             <div class="product-small-img">
-                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
-                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
-                <img src="/img/home_images/exhibitor_img_lordOfTheRings.jpg" alt="" width="120">
+                <img src="<%= detProduct.detail_image_1 %>" alt="" width="120">
+                <img src="<%= detProduct.detail_image_2 %>" alt="" width="120">
+                <img src="<%= detProduct.detail_image_3 %>" alt="" width="120">
             </div>
 
             <div class="product-content">
-                <h3>Header</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odio pariatur officiis consectetur
-                    obcaecati neque molestias nemo temporibus. Reprehenderit sapiente perferendis odio magni
-                    consequuntur nemo a esse sit. Laudantium, aperiam!
-                </p>
+                <h3><%= detProduct.nombre_producto %></h3>
+                <p><%= detProduct.description %></p>
                 <span class="icon icon-star"></span>
-                <h3>$ Price</h3>
+                <h3>$ <%= detProduct.precio %></h3>
                 <form>
                     <input type="number" id="cantidad" max="10" min="0" placeholder="Qty" />
                     <input type="submit" value="Agregar al carrito" />
+                    <a href="/editproduct/ <%= detProduct.id %>" class="submit-button">Editar</a>
                 </form>
             </div>
         </section>
