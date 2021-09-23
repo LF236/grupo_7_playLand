@@ -7,36 +7,47 @@
     <link rel ="stylesheet" href= "/css/detalle.css">
 </head>
 
-<body>
+<body class="is-preload">
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
     <main>
-        <!-- Detail of product -->
-        <section class="product">
-            <div class="product-main-img">
-                <img src="<%= detProduct.main_image %>" alt="" width="350">
-            </div>
-            <div class="product-small-img">
-                <img src="<%= detProduct.detail_image_1 %>" alt="" width="120">
-                <img src="<%= detProduct.detail_image_2 %>" alt="" width="120">
-                <img src="<%= detProduct.detail_image_3 %>" alt="" width="120">
-            </div>
 
-            <div class="product-content">
-                <h3><%= detProduct.nombre_producto %></h3>
+    <!-- Main -->
+    <div id="main">
+        <div class="wrapper">
+          <div class="inner">
+      
+        <!-- Elements -->
+            <div class="row gtr-200">
+              <div class="col-6 col-12-medium">
+                <span class="image fit"><img src="<%= detProduct.main_image %>" alt="" /></span>
+                <div class="box alt">
+                  <div class="row gtr-50 gtr-uniform">
+                    <div class="col-4"><span class="image fit"><img src="<%= detProduct.detail_image_1 %>" alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><img src="<%= detProduct.detail_image_2 %>" alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><img src="<%= detProduct.detail_image_3 %>" alt="" /></span></div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-6 col-12-medium">
+      
+                <h2><%= detProduct.nombre_producto %></h2>
+                <br>
                 <p><%= detProduct.description %></p>
-                <span class="icon icon-star"></span>
-                <h3>$ <%= detProduct.precio %></h3>
+                <br>
+                <h4>$ <%= detProduct.precio %></h4>
+                <br>
                 <form>
-                    <input type="number" id="cantidad" max="10" min="0" placeholder="Qty" />
-                    <input type="submit" value="Agregar al carrito" />
-                    <a href="/editproduct/ <%= detProduct.id %>" class="submit-button">Editar</a>
+                  <input type="number" id="cantidad" max="10" min="0" placeholder="Qty" />
+                  <input type="submit" value="Agregar al carrito" />
+                  <a href="/editproduct/ <%= detProduct.id %>" class="submit-button">Editar</a>
                 </form>
+              </div>
             </div>
-        </section>
+      
 
-    </main>
-
+        </main>
 
     <!-- Footer import -->
     <%- include('./partials/footer.ejs'); %>
