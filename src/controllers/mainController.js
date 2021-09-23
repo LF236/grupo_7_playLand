@@ -28,8 +28,14 @@ const controller = {
     
     // Vista al dar clic en el producto y cargar su data --->PENDIENTE
     detailproduct: (req, res) => {
-        //
-        return res.render('detalleproducto', {productsArr: products.listadoProductosArr})
+        const idProducto = req.params.id;
+        let detProduct = null;
+        products.listadoProductosArr.forEach(product => {
+            if(product.id == idProducto) {
+                detProduct = product;
+            }
+        })
+        return res.render('detalleproducto', {detProduct})
     },
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
