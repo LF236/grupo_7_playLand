@@ -62,21 +62,21 @@ const controller = {
     updateProduct: (req, res) => {
         //
 
-        // let nuevoProductoActualizado = {
-        //     nombre_producto : req.body.namePro,
-        //     id : req.params.id,
-        //     main_image : "",
-        //     detail_image_1 : "",
-        //     detail_image_2 : "",
-        //     detail_image_3 : "",
-        //     precio : req.body.precio,
-        //     categoria : [0],
-        //     description : req.body.descripcionProducto,
-        //     players : req.body.numeroJugadores,
-        // }
+        let nuevoProductoActualizado = {
+            nombre_producto : req.body.namePro,
+            id : req.params.id,
+            main_image : "",
+            detail_image_1 : "",
+            detail_image_2 : "",
+            detail_image_3 : "",
+            precio : req.body.precio,
+            categoria : req.body.categoriaProducto,
+            description : req.body.descripcionProducto,
+            players : req.body.numeroJugadores,
+        }
 
-        console.log(req.body);
-        //products.actualizarListaProductos(id);
+        //console.log(nuevoProductoActualizado);
+        products.actualizarListaProductos(nuevoProductoActualizado);
         //saveDBProducts(products.listadoProductosArr);
         res.send('EXITO')
     },

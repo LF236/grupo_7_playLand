@@ -26,9 +26,13 @@ class Productos {
     }
 
     // CRUD 
-    actualizarListaProductos(id) {
-        //CODIGO
-        
+    actualizarListaProductos(productoActualizado) {
+        // CODIGO
+        console.log(productoActualizado);
+        // Buscamos el producto que coincida con el ID
+        if(this._listadoProductos[productoActualizado.id]) {
+            console.log(this._listadoProductos[productoActualizado.id]);
+        }
     }
 
     eliminarProductoDeLaLista(id) {
