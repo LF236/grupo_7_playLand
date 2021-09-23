@@ -5,19 +5,7 @@
     box-sizing: border-box;
   }
 
-.registro {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-}
-
-.registro h3 {
+  h3 {
     margin: 0;
     text-align: center;
     font-size: 22px;
@@ -27,14 +15,26 @@
     padding-top: 20px;
   }
 
-.registro p{
-  font-size: 16px;
-  display: inline;
+
+p {
+    font-size: 16px;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+  }
+
+.product {
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  width: 100%;
 }
 
-.registro input[type="text"] {
+.product .product-main-img {
+    width: 50%
+}
+
+
+.product input[type="text"] {
   border: none;
   border-bottom: 1px solid #fa0000;
   background: transparent;
@@ -44,14 +44,14 @@
   width: 20%;
 }
 
-.registro input{
+.product input{
   width: 50%;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.registro input[type="email"]{
+.product input[type="email"]{
   border: none;
   border-bottom: 1px solid #fa0000;
   background: transparent;
@@ -61,7 +61,7 @@
   width: 20%;
 }
 
-.registro input[type="password"]{
+.product input[type="password"]{
   border: none;
   border-bottom: 1px solid #fa0000;
   background: transparent;
@@ -105,7 +105,6 @@
   text-align: center;
 
 }
-
 
 .registro input[type="submit"]:hover {
   cursor: pointer;
