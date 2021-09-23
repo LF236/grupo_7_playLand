@@ -540,10 +540,12 @@ main .star-wars .star-wars-item .star-wars-item-content p {
   font-size: 18px;
   margin: 8px;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
 }
 
 main .star-wars .star-wars-item .star-wars-item-content .star-wars-item-button {
   width: 75%;
+  max-width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const fileProducts = path.join('..', 'data', 'product.json');
+const fileProducts = path.join(__dirname + '/../data/product.json');
 const fileUsers = path.join('..', 'data', 'user.json');
 
 
 const getDataProductsJSON = () => {
+    console.log(fileProducts);
     if(!fs.existsSync(fileProducts)) {
         return null;
     }

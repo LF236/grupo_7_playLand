@@ -19,7 +19,20 @@ class Productos {
         this._listadoProductos[producto.id] = producto;
     }
 
-    cargarProductosDesdeArray();
+    cargarProductosDesdeArray(lista_productos = []) {
+        lista_productos.forEach(producto => {
+            this._listadoProductos[producto.id] = producto;
+        });
+    }
+
+    // CRUD 
+    actualizarListaProductos(id) {
+
+    }
+
+    eliminarProductoDeLaLista(id) {
+
+    }
 }
 
 module.exports = Productos;

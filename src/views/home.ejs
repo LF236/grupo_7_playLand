@@ -47,22 +47,20 @@
     <main>
         <!-- Section of the recommendations -->
         <section class="new-products">
-            <h3>Nuevos Productos</h3>
-            <% home_products.forEach(product => { %>
-                <% if(product.tags.includes('new')) { %>
+            <h3>Productos de Peliculas</h3>
+            <% productsArr.forEach(product => { %> 
+                <% if(product.categoria.includes("Películas")) { %>
                     <article class="new-products-item">
-                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <img src="<%= product.main_image %>" alt="<%= product.name %>">
                         <div class="new-products-content">
-                            <p><%= product.name %></p>
-                            <p class="new-products-content-price">$<%= product.price %>.00</p>
+                            <p><%= product.nombre_producto %></p>
+                            <p class="new-products-content-price">$<%= product.precio %>.00</p>
                             <span class="new-products-content-button">Agregar al Carrito</span>
                         </div>
                     </article>
-                <% } %>
-            <% }); %>
-            <span class="new-products-button-more">Cargar más</span>
+                <% } %>  
+            <% }) %> 
         </section>
-
         <!-- Image of the site -->
         <aside class="about">
             <img src="/img/home_images/aside-potter.jpg" alt="potter_game">
@@ -79,18 +77,18 @@
         <!-- Section of the offers -->
         <section class="star-wars">
             <h3>JOIN THE DARK SIDE</h3>
-            <% home_products.forEach(product => { %>
-                <% if(product.tags.includes('dark-side')) { %>
+            <% productsArr.forEach(product => { %>
+                <% if(product.nombre_producto.includes("Star")) { %> 
                     <article class="star-wars-item">
-                        <img src="<%= product.img %>" alt="<%= product.name %>">
+                        <img src="<%= product.main_image %>" alt="<%= product.name %>">
                         <div class="star-wars-item-content">
                             <p>Star Wars</p>
-                            <p><%= product.name %></p>
+                            <p><%= product.nombre_producto %></p>
                             <span class="star-wars-item-button">Ver</span>
                         </div>
                     </article>
-                <% } %>
-            <% }); %>
+                <% } %> 
+            <% }) %> 
         </section>
         <!-- Image of the site -->
         <!-- Image of the site -->

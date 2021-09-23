@@ -11,9 +11,15 @@ router.get('/register', mainController.register);
 
 router.get('/shoppingCar', mainController.shoppingCar);
 
+
 router.get('/detailproduct', mainController.detailproduct);
-
-router.get('/editproduct', mainController.editProduct);
-
 router.get('/searchproduct', mainController.searchProduct);
+
+// Routes of products CRUD
+ 
+router.get('/editproduct/:id', mainController.editProduct);
+router.post('/editproduct/:id', mainController.updateProduct);
+router.delete('/editproduct/:id', mainController.deleteProduct);
+
+
 module.exports = router;

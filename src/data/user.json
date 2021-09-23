@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 100001,
     "nombre": "Luis Fernando",
     "apellidos": "Rodriguez Hernandez",
@@ -6,7 +7,8 @@
     "password": "5Tp9PW",
     "imagen_perfil": "https://robohash.org/iurenumquamimpedit.png?size=400x400&set=set1",
     "editor": true
-  }, {
+  },
+  {
     "id": 100002,
     "nombre": "Silvia Elisa",
     "apellidos": "Gómez Hernández",
@@ -14,7 +16,8 @@
     "password": "m7IwTtpz",
     "imagen_perfil": "https://robohash.org/rerumutnobis.png?size=400x400&set=set1",
     "editor": true
-  }, {
+  },
+  {
     "id": 100003,
     "nombre": "Samara",
     "apellidos": "Zarco Goytortúa",
@@ -22,7 +25,8 @@
     "password": "LMHkkP4ni7lU",
     "imagen_perfil": "https://robohash.org/sitconsequaturbeatae.png?size=400x400&set=set1",
     "editor": true
-  }, {
+  },
+  {
     "id": 100004,
     "nombre": "Ulrikaumeko",
     "apellidos": "Sabater",
@@ -30,7 +34,8 @@
     "password": "8Q0MlqL0O",
     "imagen_perfil": "https://robohash.org/consequaturrerumdelectus.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100005,
     "nombre": "Hyatt",
     "apellidos": "Radbourne",
@@ -38,7 +43,8 @@
     "password": "VbTZjT",
     "imagen_perfil": "https://robohash.org/sedvoluptatibusquia.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100006,
     "nombre": "Serge",
     "apellidos": "Shillinglaw",
@@ -46,7 +52,8 @@
     "password": "O0mailR",
     "imagen_perfil": "https://robohash.org/numquammaioresalias.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100007,
     "nombre": "Jamison",
     "apellidos": "Dragge",
@@ -54,7 +61,8 @@
     "password": "FpJdkXanpgqe",
     "imagen_perfil": "https://robohash.org/ametetquia.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100008,
     "nombre": "Freemon",
     "apellidos": "Drew",
@@ -62,7 +70,8 @@
     "password": "HakM9t",
     "imagen_perfil": "https://robohash.org/utdolorumtenetur.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100009,
     "nombre": "Darrick",
     "apellidos": "Fills",
@@ -70,7 +79,8 @@
     "password": "9YOhzcw4FGF",
     "imagen_perfil": "https://robohash.org/atquedolorumquasi.png?size=400x400&set=set1",
     "editor": false
-  }, {
+  },
+  {
     "id": 100010,
     "nombre": "Gabe",
     "apellidos": "Kobpal",
@@ -78,4 +88,5 @@
     "password": "i60Y0XLo",
     "imagen_perfil": "https://robohash.org/autemessemolestias.png?size=400x400&set=set1",
     "editor": false
-  }]
+  }
+]
