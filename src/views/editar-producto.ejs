@@ -4,7 +4,7 @@
 <head>
     <!-- Head import -->
     <%- include('./partials/head.ejs'); %>
-    <link href="css/style_forms.css" rel="stylesheet">
+    <link href="css/edit_product.css" rel="stylesheet">
     <title>Playland</title>
 </head>
 
@@ -12,45 +12,45 @@
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
 
-    <main>
+    <main class="edit">
 
         <!-- Tabla de registro -->
 
-        <form id="registration" class="tabla-registro">
-            <h2>Detalle de Producto</h2>
+        <form>
+            <h3>Detalle de Producto</h3>
             <table>
 
                 <tr>
                     <td>
-                        <p1>Nombre del producto</p1><br>
+                        <p>Nombre del producto</p><br>
                         <input required type="text" name="nombreDelProducto">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p1>Descripción del producto</p1><br>
+                        <p>Descripción del producto</p><br>
                         <input required type="text" name="descripcionProducto">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p1>Adjuntar imagen principal</p1><br>
+                        <p>Adjuntar imagen principal</p><br>
                         <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" />
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p1>Adjuntar imágenes complementarias </p1><br>
+                        <p>Adjuntar imágenes complementarias </p><br>
                         <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple />
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p1>Elegir categorías del producto</p1><br>
+                        <p>Elegir categorías del producto</p><br>
                         <input type="checkbox" name="categoriaProducto" value="anime" id="anime"><label
                             for="anime">Anime</label><br>
                         <input type="checkbox" name="categoriaProducto" value="libros" id="libros"><label
@@ -66,14 +66,14 @@
 
                 <tr>
                     <td>
-                        <p1>Número de jugadores</p1><br>
+                        <p>Número de jugadores</p><br>
                         <input required type="number" name="numeroJugadores">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p1>Precio</p1><br>
+                        <p>Precio</p><br>
                         <input required type="text" name="precio">
                     </td>
                 </tr>
