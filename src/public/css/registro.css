@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+:root {
+  --positionNow: 0%;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.registro {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registro h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+.registro p{
+  font-size: 16px;
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+.registro input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fa0000;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  width: 20%;
+}
+
+.registro input{
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.registro input[type="email"]{
+  border: none;
+  border-bottom: 1px solid #fa0000;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  width: 20%;
+}
+
+.registro input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fa0000;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  width: 20%;
+}
+
+.registro input[type="email"]:hover {
+    background-color:#E8E8E8;
+    border-bottom: 1px solid black;
+}
+
+.registro input[type="password"]:hover {
+  background-color:#E8E8E8;
+  border-bottom: 1px solid black;
+}
+
+.registro input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fa0000;
+  font-size: 18px;
+  transition: 0.5s;
+  color: #fff;
+  width: 20%;
+  text-align: center;
+}
+
+.registro input[type="submit-2"]{
+  border-color: #a00000;
+  border-width: 2px;
+  outline: none;
+  height: 40px;
+  background: #fff;
+  font-size: 18px;
+  transition: 0.5s;
+  color: #a00000;
+  width: 20%;
+  text-align: center;
+
+}
+
+
+.registro input[type="submit"]:hover {
+  cursor: pointer;
+  background: #a00000;
+}
+
+.registro input[type="submit-2"]:hover {
+ 	cursor: pointer;
+  background: #a00000;
+  color: #fff;
+}
