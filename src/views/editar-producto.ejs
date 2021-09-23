@@ -51,49 +51,23 @@
                 <tr>
                     <td>
                         <p>Elegir categorías del producto</p><br>
-                        <% auxProduct.categoria.forEach(categoria => {  %>
-                            <% if(categoria == "Anime") { %>
-                                <input type="checkbox" name="categoriaProducto" checked="on" id="anime" value="Anime">
-                                <label for="anime">Anime</label><br>
-                            <% } else { %>
-                                <input type="checkbox" name="categoriaProducto" id="anime" value="Anime">
-                                <label for="anime">Anime</label><br>
-                            <% } %>
-
-                        <% auxProduct.categoria.forEach(categoria => {  %>
-                             <% if(categoria == "Libros") { %>
-                                <input type="checkbox" name="categoriaProducto" checked="on" value="Libros" id="libros">
-                                <label for="libros">Libros</label><br>
-                            <% } else { %>
-                                <input type="checkbox" name="categoriaProducto" value="Libros" id="libros">
-                                <label for="libros">Libros</label><br>
-                            <% } %> 
-     
-                        <% auxProduct.categoria.forEach(categoria => {  %>
-                             <% if(categoria == "Películas") { %>
-                                <input type="checkbox" name="categoriaProducto" checked="on" value="Películas" id="peliculas">
-                                <label for="peliculas">Películas</label><br>
-                           <% } else { %>
-                            <input type="checkbox" name="categoriaProducto" value="Películas" id="peliculas">
-                            <label for="peliculas">Películas</label><br>
-                           <% } %> 
-
-                        <% auxProduct.categoria.forEach(categoria => {  %>
-                            <% if(categoria == "Series") { %>
-                                <input type="checkbox" name="categoriaProducto" checked="on" value="Series" id="series">
-                                <label for="series">Series</label><br>
-                          <% } else { %>
-                            <input type="checkbox" name="categoriaProducto" value="Series" id="series">
-                            <label for="series">Series</label><br>
-                          <% } %> 
-
+                        <% const lista_categorias = ["Libros", "Películas", "Series", "Anime"] %> 
+                        <% lista_categorias.forEach(categoria => {  %> 
+                            <% if(auxProduct.categoria.includes(categoria)) {%>
+                                <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoria %>" id="<% categoria.toLowerCase() %> ">
+                                <label for="anime"><%= categoria %> </label><br>
+                            <% } else {%>
+                                <input type="checkbox" name="categoriaProducto"  value="<%= categoria %>" id="<% categoria.toLowerCase() %> ">
+                                <label for="anime"><%= categoria %> </label><br>
+                            <% } %>   
+                        <% }) %> 
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <p>Número de jugadores</p><br>
-                        <input required type="number" name="numeroJugadores" value="<%= auxProduct.players %> ">
+                        <input required type="number" name="numeroJugadores" value="<%= auxProduct.players %>">
                     </td>
                 </tr>
 
