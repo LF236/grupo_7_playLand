@@ -27,11 +27,13 @@ class Productos {
 
     // CRUD 
     actualizarListaProductos(id) {
-
+        //CODIGO
+        
     }
 
     eliminarProductoDeLaLista(id) {
-
+        //CODIGO
+        
     }
 }
 

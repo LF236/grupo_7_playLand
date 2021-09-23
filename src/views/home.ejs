@@ -50,12 +50,14 @@
             <h3>Productos de Peliculas</h3>
             <% productsArr.forEach(product => { %> 
                 <% if(product.categoria.includes("Películas")) { %>
-                    <article class="new-products-item">
-                        <img src="<%= product.main_image %>" alt="<%= product.name %>">
+                    <article class="new-products-item" href="#">
+                        <a href="/detailproduct/<%= product.id %> ">
+                            <img src="<%= product.main_image %>" alt="<%= product.name %>">
+                        </a>
                         <div class="new-products-content">
                             <p><%= product.nombre_producto %></p>
                             <p class="new-products-content-price">$<%= product.precio %>.00</p>
-                            <span class="new-products-content-button">Agregar al Carrito</span>
+                            <a class="new-products-content-button" href="#">Agregar al Carrito</a>
                         </div>
                     </article>
                 <% } %>  

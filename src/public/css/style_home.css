@@ -425,6 +425,13 @@ main .new-products .new-products-item {
 main .new-products .new-products-item img {
   width: 100%;
   display: block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .new-products .new-products-item a:hover img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 main .new-products .new-products-item .new-products-content {
