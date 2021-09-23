@@ -1,0 +1,14 @@
+main {
+  width: 100%;
+}
+
+main .error-404 {
+  background-color: steelblue;
+  width: 85%;
+  margin: auto;
+}
+
+main .error-404 .image img {
+  width: 50%;
+}
+/*# sourceMappingURL=error_404.css.map */

@@ -21,35 +21,38 @@ const controller = {
     register: (req, res) => {
         return res.render('registro');
     },
-    
+
+    // Inciar con la carga del shopping car --->PENDIENTE
     shoppingCar: (req, res) => {
         return res.render('shoppingcar');
     },
     
+    // Vista al dar clic en el producto y cargar su data --->PENDIENTE
     detailproduct: (req, res) => {
         return res.render('detalleproducto')
     },
 
+    // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
     searchProduct: (req, res) => {
         return res.render('busqueda-producto');
     },
 
     // CRUD - Products
 
-    // Obtener formulario para editar un producto
+    // Obtener formulario para editar un producto --->PENDIENTE
     editProduct: (req, res) => {
         return res.render('editar-producto', { editando: true });
         //
     },
 
-    // Actualizar DB de productos
+    // Actualizar DB de productos --->PENDIENTE
     updateProduct: (req, res) => {
         //
         products.actualizarListaProductos(id);
         saveDBProducts(products.listadoProductosArr);
     },
 
-    // Eliminar producto de la DB
+    // Eliminar producto de la DB --->PENDIENTE
     deleteProduct: (req, res) => {
         //
         products.eliminarProductoDeLaLista(id);
