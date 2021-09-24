@@ -24,7 +24,7 @@ router.post('/products/createnew', mainController.createNewProduct);
 // Routes of products CRUD
 
 router.get('/editproduct/:id', mainController.editProduct);
-router.post('/editproduct/:id', mainController.updateProduct);
+router.put('/editproduct/:id', mainController.updateProduct);
 router.delete('/editproduct/:id', mainController.deleteProduct);
 
 
