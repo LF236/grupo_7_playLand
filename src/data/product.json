@@ -23,28 +23,6 @@
 		]
 	},
 	{
-		"nombre_producto": "Star Wars Imperio Vs Rebelión. Juego De Mesa En Español",
-		"id": "a608e133-7f7b-4b29-83a4-e96b8281db50",
-		"main_image": "https://http2.mlstatic.com/D_NQ_NP_2X_668817-MLM43337169486_092020-F.webp",
-		"detail_image_1": "https://http2.mlstatic.com/D_NQ_NP_2X_987006-MLM43337148663_092020-F.webp",
-		"detail_image_2": "https://http2.mlstatic.com/D_NQ_NP_2X_861260-MLM43337148665_092020-F.webp",
-		"detail_image_3": "",
-		"precio": 689,
-		"categoria": [
-			"Películas"
-		],
-		"rating": 4.3,
-		"description": "En Star Wars: Imperio vs. Rebelión los jugadores controlan los agentes y naves estelares de la Guerra Civil Galáctica. Reclutando para su causa a héroes como Luke Skywalker, Leia Organa y Darth Vader, cada bando deberá decidir su estrategia y superar en astucia a su oponente en los momentos cruciales del conflicto. ¡El destino de la galaxia está en tus manos! Un juego de cartas de aproximadamente 60 minutos de duración y exclusivo para 2 jugadores.",
-		"players": "2",
-		"reviews": [
-			{
-				"rating": "",
-				"titulo": "",
-				"texto": ""
-			}
-		]
-	},
-	{
 		"nombre_producto": "Ajedrez Figuras Star Wars",
 		"id": "a35c9235-3574-4f86-9524-e6e4d0af9eab",
 		"main_image": "https://cdn.shopify.com/s/files/1/0025/9384/9457/products/ajedrez-figuras-star-wars-juegos-de-mesa-novelty-815785_900x.jpg?v=1593013706",
@@ -111,19 +89,19 @@
 		]
 	},
 	{
-		"nombre_producto": "Harry Potter: Hogwarts Battle",
+		"nombre_producto": "Harry Potter: Hogwarts Battle Juego De Mesa",
 		"id": "7758e6d4-aeff-4106-9db4-6d9663f2f56a",
 		"main_image": "https://http2.mlstatic.com/D_NQ_NP_2X_677984-MLM31599086942_072019-F.webp",
 		"detail_image_1": "https://http2.mlstatic.com/D_NQ_NP_2X_862627-MLM31599115268_072019-F.webp",
 		"detail_image_2": "",
 		"detail_image_3": "",
-		"precio": "1598 ",
+		"precio": 1598,
 		"categoria": [
-			"Libros",
-			"Películas"
+			"Películas",
+			"Libros"
 		],
 		"rating": 5,
-		"description": "Las fuerzas sdel mal amenazan con invadir el castillo de Hogwarts en Harry Potter: Hogwarts Battle, un juego cooperativo de construcción de mazos, y es hasta cuatro estudiantes garantizar la seguridad de la escuela al derrotar a los villanos y consolidar sus defensas; en el juego, los jugadores asumen el papel de un estudiante de Hogwarts: Harry, Ron, Hermione o Neville, cada uno con su propio mazo de cartas personal que se utiliza para adquirir recursos. ",
+		"description": "Las fuerzas sdel mal amenazan con invadir el castillo de Hogwarts en Harry Potter: Hogwarts Battle, un juego cooperativo de construcción de mazos, y es hasta cuatro estudiantes garantizar la seguridad de la escuela al derrotar a los villanos y consolidar sus defensas; en el juego, los jugadores asumen el papel de un estudiante de Hogwarts: Harry, Ron, Hermione o Neville, cada uno con su propio mazo de cartas personal que se utiliza para adquirir recursos.",
 		"players": "3.9",
 		"reviews": [
 			{

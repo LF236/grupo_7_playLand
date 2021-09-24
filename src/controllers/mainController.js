@@ -94,11 +94,12 @@ const controller = {
 
     // Eliminar producto de la DB --->PENDIENTE
     deleteProduct: (req, res) => {
-        //
-        //products.eliminarProductoDeLaLista(id);
+        // Obtenemos el id
+        const id = req.params.id;
+        products.eliminarProductoDeLaLista(id);
         //Salvamos la DB
-        //saveDBProducts(products.listadoProductosArr);
-        res.send('Eliminado')
+        saveDBProducts(products.listadoProductosArr);
+        res.render('deleted-product');
     }
     
 };

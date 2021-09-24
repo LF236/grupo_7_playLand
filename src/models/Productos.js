@@ -63,8 +63,9 @@ class Productos {
     }
 
     eliminarProductoDeLaLista(id) {
-        //CODIGO
-
+        if(this._listadoProductos[id]) {
+            delete this._listadoProductos[id];
+        }
     }
 }
 
