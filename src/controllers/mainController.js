@@ -46,6 +46,9 @@ const controller = {
             if(producto.nombre_producto.includes(patronBusqueda)) {
                 auxProducts.push(producto);
             }
+            if (producto.categoria.includes(patronBusqueda)){
+                auxProducts.push(producto);
+            }
         })
         return res.render('busqueda-producto', {auxProducts, patronBusqueda});
         

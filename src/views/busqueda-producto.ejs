@@ -29,28 +29,30 @@
 
         <section class="result-search">
             <h2><%= patronBusqueda %> </h2>
-            <article class="result-search-item">
-                <img src="/img/home_images/recommendations_img_marioBox.jpg" alt="">
-                <div class="result-search-item-content">
-                    <div class="result-search-item-content-description">
-                        <h3>Super Mario Box</h3>
-                        <p>$535</p>
-                        <p class="seller">Vendedor: Luis Fernando</p>
-                    </div>
-                    
-                    <div class="result-search-item-content-stars">
-                        <span class="icon icon-star-full"></span>
-                        <span class="icon icon-star-full"></span>
-                        <span class="icon icon-star-full"></span>
-                        <span class="icon icon-star-full"></span>
-                        <span class="icon icon-star-half last-start"></span>     
-                    </div>
-
-                    <div class="result-search-item-content-button">
-                        <a href="#">Ver</a>
+            <% auxProducts.forEach(product => { %> 
+                <article class="result-search-item">
+                    <img src="<%= product.main_image %>" alt="<%= product.name %>">
+                    <div class="result-search-item-content">
+                        <div class="result-search-item-content-description">
+                            <p><%= product.nombre_producto %></p>
+                            <p>$<%= product.precio %>.00</p>
+                            <p class="seller">Vendedor: Luis Fernando</p>
+                        </div>
+                        
+                        <div class="result-search-item-content-stars">
+                            <span class="icon icon-star-full"></span>
+                            <span class="icon icon-star-full"></span>
+                            <span class="icon icon-star-full"></span>
+                            <span class="icon icon-star-full"></span>
+                            <span class="icon icon-star-half last-start"></span>     
+                        </div>
+    
+                        <div class="result-search-item-content-button">
+                            <a href="#">Ver</a>
                     </div>
                 </div>
-            </article>
+                </article>
+            <% }) %> 
             
             <!-- auxProducts -->
 
