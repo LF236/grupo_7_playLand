@@ -40,7 +40,15 @@ const controller = {
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
     searchProduct: (req, res) => {
-        return res.render('busqueda-producto');
+        const patronBusqueda = req.query.search;
+        const auxProducts = [];
+        products.listadoProductosArr.forEach(producto => {
+            if(producto.nombre_producto.includes(patronBusqueda)) {
+                auxProducts.push(producto);
+            }
+        })
+        return res.render('busqueda-producto', {auxProducts, patronBusqueda});
+        
     },
 
     // CRUD - Products
@@ -87,9 +95,10 @@ const controller = {
     // Eliminar producto de la DB --->PENDIENTE
     deleteProduct: (req, res) => {
         //
-        products.eliminarProductoDeLaLista(id);
+        //products.eliminarProductoDeLaLista(id);
         //Salvamos la DB
-        saveDBProducts(products.listadoProductosArr);
+        //saveDBProducts(products.listadoProductosArr);
+        res.send('Eliminado')
     }
     
 };

@@ -83,9 +83,17 @@
                 </tr>
                 
                 <tr>
-                    <td><a href="#" class="submit-button">Eliminar</a></td>
+                    <td><a href="/editproduct/<%= auxProduct.id %>?_method=delete" class="submit-button">Eliminar</a></td>
                 </tr>
 
+            </table>
+        </form>
+
+        <form method="POST" action="/editproduct/<%= auxProduct.id %>?_method=delete">
+            <table>
+                <tr>
+                    <td><input type="submit" value="Eliminar" class="submit-button"></td>
+                </tr>
             </table>
         </form>
     </main>
