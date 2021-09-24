@@ -76,9 +76,12 @@ const controller = {
         }
 
         //console.log(nuevoProductoActualizado);
-        products.actualizarListaProductos(nuevoProductoActualizado);
+        if(products.actualizarListaProductos(nuevoProductoActualizado)) {
+            res.redirect(`/detailproduct/${req.params.id}`);
+        }
+        
         //saveDBProducts(products.listadoProductosArr);
-        res.send('EXITO')
+        res.send('Fallo :c')
     },
 
     // Eliminar producto de la DB --->PENDIENTE
