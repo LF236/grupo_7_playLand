@@ -26,7 +26,7 @@ const controller = {
         return res.render('shoppingcar');
     },
     
-    // Vista al dar clic en el producto y cargar su data 
+    // Vista al dar clic en el producto y cargar su data ---> LISTO
     detailproduct: (req, res) => {
         const idProducto = req.params.id;
         let detProduct = null;
@@ -45,7 +45,7 @@ const controller = {
 
     // CRUD - Products
 
-    // Obtener formulario para editar un producto --->PENDIENTE
+    // Obtener formulario para editar un producto ---> LISTO
     editProduct: (req, res) => {
         const idProduct = req.params.id;
         let auxProduct = null;
@@ -58,7 +58,7 @@ const controller = {
         //
     },
 
-    // Actualizar DB de productos --->PENDIENTE
+    // Actualizar DB de productos ---> LISTO
     updateProduct: (req, res) => {
         //
 
@@ -80,7 +80,7 @@ const controller = {
             res.redirect(`/detailproduct/${req.params.id}`);
         }
         
-        //saveDBProducts(products.listadoProductosArr);
+        saveDBProducts(products.listadoProductosArr);
         res.send('Fallo :c')
     },
 

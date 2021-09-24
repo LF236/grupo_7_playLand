@@ -111,19 +111,19 @@
 		]
 	},
 	{
-		"nombre_producto": "Harry Potter: Hogwarts Battle Juego De Mesa",
+		"nombre_producto": "Harry Potter: Hogwarts Battle",
 		"id": "7758e6d4-aeff-4106-9db4-6d9663f2f56a",
 		"main_image": "https://http2.mlstatic.com/D_NQ_NP_2X_677984-MLM31599086942_072019-F.webp",
 		"detail_image_1": "https://http2.mlstatic.com/D_NQ_NP_2X_862627-MLM31599115268_072019-F.webp",
 		"detail_image_2": "",
 		"detail_image_3": "",
-		"precio": 1598,
+		"precio": "1598 ",
 		"categoria": [
-			"Películas",
-			"Libros"
+			"Libros",
+			"Películas"
 		],
 		"rating": 5,
-		"description": "Las fuerzas sdel mal amenazan con invadir el castillo de Hogwarts en Harry Potter: Hogwarts Battle, un juego cooperativo de construcción de mazos, y es hasta cuatro estudiantes garantizar la seguridad de la escuela al derrotar a los villanos y consolidar sus defensas; en el juego, los jugadores asumen el papel de un estudiante de Hogwarts: Harry, Ron, Hermione o Neville, cada uno con su propio mazo de cartas personal que se utiliza para adquirir recursos.",
+		"description": "Las fuerzas sdel mal amenazan con invadir el castillo de Hogwarts en Harry Potter: Hogwarts Battle, un juego cooperativo de construcción de mazos, y es hasta cuatro estudiantes garantizar la seguridad de la escuela al derrotar a los villanos y consolidar sus defensas; en el juego, los jugadores asumen el papel de un estudiante de Hogwarts: Harry, Ron, Hermione o Neville, cada uno con su propio mazo de cartas personal que se utiliza para adquirir recursos. ",
 		"players": "3.9",
 		"reviews": [
 			{
