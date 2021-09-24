@@ -80,7 +80,9 @@ const controller = {
     },
 
     createNewProduct: (req, res) => {
-        return res.render('home');
+         const allProduct = products.crearProducto (req.body.nombre_producto, "","","","", req.body.precio, req.body.categoria, "",req.body.description, req.body.players)
+         saveDBProducts(products.listadoProductosArr);
+         return res.send(products.listadoProductosArr);
     },
 
     // Actualizar DB de productos ---> LISTO
