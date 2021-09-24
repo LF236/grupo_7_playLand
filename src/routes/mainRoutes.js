@@ -9,11 +9,17 @@ router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
 
+router.get('/profile', mainController.profile);
+
 router.get('/shoppingCar', mainController.shoppingCar);
 
 
 router.get('/detailproduct/:id', mainController.detailproduct);
 router.get('/searchproduct', mainController.searchProduct);
+
+router.get('/products/create', mainController.createProduct);
+router.post('/products/createnew', mainController.createNewProduct);
+
 
 // Routes of products CRUD
 

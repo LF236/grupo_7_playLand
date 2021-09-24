@@ -221,6 +221,16 @@ body {
 			color: #a00000;
 		}
 
+  a #special {
+      color: #fa0000;
+      border: 5px solid;
+      padding: .5rem;
+    }
+  
+      a #special:hover {
+        color: #a00000;
+      }
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #000;
 	}
@@ -336,6 +346,12 @@ label {
   position: relative;
 }
 
+  .image img {
+    border-radius: 4px;
+    display: block;
+  }
+
+
   .image.fit {
     display: block;
     margin: 0 0 2rem 0;
@@ -345,6 +361,7 @@ label {
     .image.fit img {
       width: 100%;
     }
+
 
 /* Inner */
 
@@ -406,6 +423,10 @@ label {
 
 .wrapper {
   padding: 6rem 0 4rem 0 ;
+}
+
+.wrapper.style3 {
+  background: #fafafa;
 }
 
 
@@ -840,117 +861,83 @@ label {
 
   }
 
-  
 
-/* Previous CSS */
-  h3 {
-    margin: 0;
+/* Profiles */
+
+.profiles {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-align-items: -moz-stretch;
+  -webkit-align-items: -webkit-stretch;
+  -ms-align-items: -ms-stretch;
+  align-items: stretch;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: center;
+}
+
+  .profiles .profile {
     text-align: center;
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 15px 59px -20px rgba(0, 0, 0, 0.35);
+    margin-bottom: 2rem;
+    padding: 3rem 2rem;
+    position: relative;
+    width: 50%;
+  }
+
+  .profiles .profile:before {
+    background: #fa0000;
+    border-radius: 4px 4px 0 0;
+    content: '';
+    height: 9rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
 
-p {
-    font-size: 16px;
-    display: inline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    .profiles .profile .image {
+      margin: 1rem 1rem ;
+    }
+
+        .profiles .profile .image img {
+          border-radius: 0%;
+        }
+
+    .profiles .profile .content > :last-child {
+      margin-bottom: 0;
+    }
+
+  @media screen and (max-width: 980px) {
+
+    .profiles {
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+      .profiles .profile {
+        margin-bottom: 5rem;
+        width: 100%;
+      }
+
+        .profiles .profile:last-child {
+          margin-bottom: 2rem;
+        }
+
   }
 
-.product {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-}
+  @media screen and (max-width: 736px) {
 
-.product .product-main-img {
-    width: 50%
-}
+    .profiles .profile {
+      margin-bottom: 2rem;
+    }
 
-
-.product input[type="text"] {
-  border: none;
-  border-bottom: 1px solid #fa0000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  width: 20%;
-}
-
-.product input{
-  width: 50%;
-  margin-bottom: 50px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.product input[type="email"]{
-  border: none;
-  border-bottom: 1px solid #fa0000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  width: 20%;
-}
-
-.product input[type="password"]{
-  border: none;
-  border-bottom: 1px solid #fa0000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  width: 20%;
-}
-
-.registro input[type="email"]:hover {
-    background-color:#E8E8E8;
-    border-bottom: 1px solid black;
-}
-
-.registro input[type="password"]:hover {
-  background-color:#E8E8E8;
-  border-bottom: 1px solid black;
-}
-
-.registro input[type="submit"]{
-  border: none;
-  outline: none;
-  height: 40px;
-  background: #fa0000;
-  font-size: 18px;
-  transition: 0.5s;
-  color: #fff;
-  width: 20%;
-  text-align: center;
-}
-
-.registro input[type="submit-2"]{
-  border-color: #a00000;
-  border-width: 2px;
-  outline: none;
-  height: 40px;
-  background: #fff;
-  font-size: 18px;
-  transition: 0.5s;
-  color: #a00000;
-  text-align: center;
-
-}
-
-.registro input[type="submit"]:hover {
-  cursor: pointer;
-  background: #a00000;
-}
-
-.registro input[type="submit-2"]:hover {
- 	cursor: pointer;
-  background: #a00000;
-  color: #fff;
-}
+  }

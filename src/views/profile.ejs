@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head import -->
+    <%- include('./partials/head.ejs'); %>
+</head>
+
+<body class="is-preload">
+    <link rel ="stylesheet" href= "/css/detalle.css">
+    <!-- Header import -->
+    <%- include('./partials/header.ejs'); %>
+
+    <div class="wrapper style3">
+        <div class="inner">
+            <div class="profiles">
+                <div class="profile">
+                    <div class="image">
+                        <img src="img/profile_images/profile1.png" alt="profile_pic" width= 100% />
+                    </div>
+                    <div class="content">
+                        <h3>User name</h3>
+                        <p>user@email.com</p>
+                        <br>
+                        <a href="/products/create" id="special" class="special">Nuevo producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <!-- Colocacion de Scripts -->
+    <script src="/js/menu_animation.js"></script>
+</body>
+
+</html>

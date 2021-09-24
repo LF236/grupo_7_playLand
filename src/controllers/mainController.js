@@ -21,6 +21,11 @@ const controller = {
         return res.render('registro');
     },
 
+    profile: (req, res) => {
+        return res.render('profile');
+    },
+
+
     // Inciar con la carga del shopping car --->PENDIENTE
     shoppingCar: (req, res) => {
         return res.render('shoppingcar');
@@ -56,6 +61,15 @@ const controller = {
         })
         return res.render('editar-producto', { auxProduct });
         //
+    },
+
+    //Formulario para CREAR un producto ---> PENDIENTE
+    createProduct: (req, res) => {
+        return res.render('crear-producto');
+    },
+
+    createNewProduct: (req, res) => {
+        return res.render('home');
     },
 
     // Actualizar DB de productos ---> LISTO
