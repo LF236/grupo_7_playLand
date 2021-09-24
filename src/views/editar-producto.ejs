@@ -16,7 +16,7 @@
 
         <!-- Tabla de registro -->
 
-        <form method="POST" action="/editproduct/<%= auxProduct.id %>?_method=PUT">
+        <form method="POST" action="/products/<%= auxProduct.id %>?_method=PUT">
             <h3>Detalle del Producto</h3>
             <table>
 
@@ -87,7 +87,7 @@
             </table>
         </form>
 
-        <form method="POST" action="/editproduct/<%= auxProduct.id %>?_method=delete">
+        <form method="POST" action="/products/<%= auxProduct.id %>?_method=delete">
             <table>
                 <tr>
                     <td><input type="submit" value="Eliminar" class="submit-button"></td>

@@ -1,28 +1,5 @@
 [
 	{
-		"nombre_producto": "el harrys",
-		"id": "242fb2a2-1db2-4d21-ac24-852b95463c51",
-		"main_image": "https://http2.mlstatic.com/D_NQ_NP_2X_689057-MLM40259641364_122019-F.webp",
-		"detail_image_1": "https://http2.mlstatic.com/D_NQ_NP_2X_624230-MLM40259641365_122019-F.webp",
-		"detail_image_2": "https://http2.mlstatic.com/D_NQ_NP_2X_753973-MLM40259641363_122019-F.webp",
-		"detail_image_3": "",
-		"precio": "349 ",
-		"categoria": [
-			"Libros",
-			"Películas"
-		],
-		"rating": 4.5,
-		"description": "2 Piezas de plástico,2 Bases de juego, 2 Fichas con 24 personajes para elegir ",
-		"players": "4",
-		"reviews": [
-			{
-				"rating": "4.5",
-				"titulo": "Excelente Compra",
-				"texto": "Fue una compra que hice para regalarle a una amiga, y la verdad es que le encantó, estoy muy feliz por haber adquirido este producto, el cual ha brindado grandes momentos de diversión entre amigos"
-			}
-		]
-	},
-	{
 		"nombre_producto": "Ajedrez Figuras Star Wars",
 		"id": "a35c9235-3574-4f86-9524-e6e4d0af9eab",
 		"main_image": "https://cdn.shopify.com/s/files/1/0025/9384/9457/products/ajedrez-figuras-star-wars-juegos-de-mesa-novelty-815785_900x.jpg?v=1593013706",
@@ -648,5 +625,41 @@
 				"texto": ""
 			}
 		]
+	},
+	{
+		"nombre_producto": "TEST",
+		"id": "ee4a67d3-0c22-4bcd-85e6-361e1e894ca1",
+		"main_image": "",
+		"detail_image_1": "",
+		"detail_image_2": "",
+		"detail_image_3": "",
+		"precio": "31231312",
+		"categoria": [
+			"anime",
+			"libros",
+			"peliculas"
+		],
+		"rating": "",
+		"description": "DASDA",
+		"players": "2312",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "test",
+		"id": "37c8ad8b-a9f0-4971-83da-5e9c85b2d63e",
+		"main_image": "",
+		"detail_image_1": "",
+		"detail_image_2": "",
+		"detail_image_3": "",
+		"precio": "2131",
+		"categoria": [
+			"libros",
+			"peliculas",
+			"series"
+		],
+		"rating": "",
+		"description": "dsds",
+		"players": "321",
+		"reviews": []
 	}
 ]

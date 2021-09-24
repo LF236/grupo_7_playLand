@@ -3,7 +3,7 @@ const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = r
 
 const products = new Productos();
 const dataProducts = getDataProductsJSON();
-if(dataProducts) {
+if (dataProducts) {
     products.cargarProductosDesdeArray(dataProducts);
 }
 
@@ -12,7 +12,7 @@ const controller = {
         //return res.render('home', { home_products });
         return res.render('home', { productsArr: products.listadoProductosArr });
     },
-    
+
     login: (req, res) => {
         return res.render('login');
     },
@@ -30,33 +30,36 @@ const controller = {
     shoppingCar: (req, res) => {
         return res.render('shoppingcar');
     },
-    
+
     // Vista al dar clic en el producto y cargar su data ---> LISTO
     detailproduct: (req, res) => {
         const idProducto = req.params.id;
         let detProduct = null;
         products.listadoProductosArr.forEach(product => {
-            if(product.id == idProducto) {
+            if (product.id == idProducto) {
                 detProduct = product;
             }
         })
-        return res.render('detalleproducto', {detProduct})
+        return res.render('detalleproducto', { detProduct })
     },
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
     searchProduct: (req, res) => {
         const patronBusqueda = req.query.search;
-        const auxProducts = [];
-        products.listadoProductosArr.forEach(producto => {
-            if(producto.nombre_producto.includes(patronBusqueda)) {
-                auxProducts.push(producto);
-            }
-            if (producto.categoria.includes(patronBusqueda)){
-                auxProducts.push(producto);
-            }
-        })
-        return res.render('busqueda-producto', {auxProducts, patronBusqueda});
-        
+        let auxProducts = [];
+        if(patronBusqueda) {
+            products.listadoProductosArr.forEach(producto => {
+                if (producto.nombre_producto.includes(patronBusqueda)) {
+                    auxProducts.push(producto);
+                }
+                if (producto.categoria.includes(patronBusqueda)) {
+                    auxProducts.push(producto);
+                }
+            })
+            return res.render('busqueda-producto', { auxProducts, patronBusqueda });
+        }
+        auxProducts = products.listadoProductosArr;
+        return res.render('busqueda-producto', { auxProducts, patronBusqueda: "Todos los productos" });
     },
 
     // CRUD - Products
@@ -66,7 +69,7 @@ const controller = {
         const idProduct = req.params.id;
         let auxProduct = null;
         products.listadoProductosArr.forEach(product => {
-            if(product.id == idProduct) {
+            if (product.id == idProduct) {
                 auxProduct = product;
             }
         })
@@ -80,9 +83,9 @@ const controller = {
     },
 
     createNewProduct: (req, res) => {
-         const allProduct = products.crearProducto (req.body.nombre_producto, "","","","", req.body.precio, req.body.categoria, "",req.body.description, req.body.players)
-         saveDBProducts(products.listadoProductosArr);
-         return res.send(products.listadoProductosArr);
+        const allProduct = products.crearProducto(req.body.nombre_producto, "", "", "", "", req.body.precio, req.body.categoria, "", req.body.description, req.body.players)
+        saveDBProducts(products.listadoProductosArr);
+        return res.redirect(`/detailproduct/${allProduct.id}`);
     },
 
     // Actualizar DB de productos ---> LISTO
@@ -90,24 +93,25 @@ const controller = {
         //
 
         let nuevoProductoActualizado = {
-            nombre_producto : req.body.namePro,
-            id : req.params.id,
-            main_image : "",
-            detail_image_1 : "",
-            detail_image_2 : "",
-            detail_image_3 : "",
-            precio : req.body.precio,
-            categoria : req.body.categoriaProducto,
-            description : req.body.descripcionProducto,
-            players : req.body.numeroJugadores,
+            nombre_producto: req.body.namePro,
+            id: req.params.id,
+            main_image: "",
+            detail_image_1: "",
+            detail_image_2: "",
+            detail_image_3: "",
+            precio: req.body.precio,
+            categoria: req.body.categoriaProducto,
+            description: req.body.descripcionProducto,
+            players: req.body.numeroJugadores,
         }
 
         //console.log(nuevoProductoActualizado);
-        if(products.actualizarListaProductos(nuevoProductoActualizado)) {
-            res.redirect(`/detailproduct/${req.params.id}`);
+        if (products.actualizarListaProductos(nuevoProductoActualizado)) {
+            saveDBProducts(products.listadoProductosArr);
+            return res.redirect(`/detailproduct/${req.params.id}`);
         }
-        
-        saveDBProducts(products.listadoProductosArr);
+
+
         res.send('Fallo :c')
     },
 
@@ -120,7 +124,7 @@ const controller = {
         saveDBProducts(products.listadoProductosArr);
         res.render('deleted-product');
     }
-    
+
 };
 
 module.exports = controller;

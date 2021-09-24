@@ -13,9 +13,9 @@ router.get('/profile', mainController.profile);
 
 router.get('/shoppingCar', mainController.shoppingCar);
 
-
+router.get('/products', mainController.searchProduct);
 router.get('/detailproduct/:id', mainController.detailproduct);
-router.get('/searchproduct', mainController.searchProduct);
+
 
 router.get('/products/create', mainController.createProduct);
 router.post('/products/createnew', mainController.createNewProduct);
@@ -23,9 +23,9 @@ router.post('/products/createnew', mainController.createNewProduct);
 
 // Routes of products CRUD
 
-router.get('/editproduct/:id', mainController.editProduct);
-router.put('/editproduct/:id', mainController.updateProduct);
-router.delete('/editproduct/:id', mainController.deleteProduct);
+router.get('/products/:id/edit', mainController.editProduct);
+router.put('/products/:id', mainController.updateProduct);
+router.delete('/products/:id', mainController.deleteProduct);
 
 
 module.exports = router;
