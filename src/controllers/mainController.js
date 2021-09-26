@@ -3,6 +3,7 @@ const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = r
 
 const products = new Productos();
 const dataProducts = getDataProductsJSON();
+
 if (dataProducts) {
     products.cargarProductosDesdeArray(dataProducts);
 }

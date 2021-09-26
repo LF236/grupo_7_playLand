@@ -16,13 +16,9 @@ router.get('/shoppingCar', mainController.shoppingCar);
 router.get('/products', mainController.searchProduct);
 router.get('/detailproduct/:id', mainController.detailproduct);
 
-
+// Routes of products CRUD
 router.get('/products/create', mainController.createProduct);
 router.post('/products/createnew', mainController.createNewProduct);
-
-
-// Routes of products CRUD
-
 router.get('/products/:id/edit', mainController.editProduct);
 router.put('/products/:id', mainController.updateProduct);
 router.delete('/products/:id', mainController.deleteProduct);
