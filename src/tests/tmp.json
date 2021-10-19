@@ -45,6 +45,28 @@
         ]
     },
     {
+        "nombre_producto": "Ajedrez Figuras Star Wars",
+        "id": "a35c9235-3574-4f86-9524-e6e4d0af9eab",
+        "main_image": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/main_image.webp",
+        "detail_image_1": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_1.webp",
+        "detail_image_2": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_2.webp",
+        "detail_image_3": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_3.webp",
+        "precio": 1,
+        "categoria": [
+            "Películas"
+        ],
+        "rating": 5,
+        "description": "¿Parte de la resistencia o del imperio? Toma tu lugar y juega estratégicamente con este incre­ble Ajedrez que aguarda por ti en Epicland. El increíble Ajedrez Figuras Star Wars es ideal para todo fan o coleccionista, con piezas de alta calidad inspiradas en tus personajes favoritos, ideal para una buena partida. ¡El destino de la galaxia está en tus manos!  No esperes más y llévate el tuyo, recuerda que los mejores juegos de mesa te espera en Epicland.  Especificaciones: 32 Piezas, 1 Tablero",
+        "players": "2",
+        "reviews": [
+            {
+                "rating": "",
+                "titulo": "",
+                "texto": ""
+            }
+        ]
+    },
+    {
         "nombre_producto": "Juego De Mesa Monopoly Sailor Moon | Basado En El Popular",
         "id": "b2e9659a-713e-4c85-8719-9ec41fabc6ec",
         "main_image": "/img/products_img/b2e9659a-713e-4c85-8719-9ec41fabc6ec/main_image.webp",
