@@ -1,14 +1,19 @@
 const express = require('express');
 const router = express.Router();
-
 const mainController = require('../controllers/mainController.js');
-//Routes
+const multer = require('multer');
+
+// Config files update
+const storage = multer.diskStorage({
+    
+});
+// Routes
 router.get('/', mainController.home);
 
 router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
-
+router.post('/register', mainController.registerCreateUser)
 router.get('/profile', mainController.profile);
 
 router.get('/shoppingCar', mainController.shoppingCar);

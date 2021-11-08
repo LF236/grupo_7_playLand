@@ -1,3 +1,4 @@
+require('colors');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -29,5 +30,5 @@ app.use((req, res, next) => {
 
 //Listening Server
 app.listen(port, () => {
-    console.log(`Servidor en http://localhost:${port}`);
+    console.log(`Servidor en http://localhost:${port}`.blue);
 });

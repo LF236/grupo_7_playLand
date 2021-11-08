@@ -15,9 +15,11 @@
   "author": "LF236, samza-design, SElyg",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.4.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
+    "multer": "^1.4.3",
     "uuid": "^8.3.2",
     "wget-improved": "^3.2.1"
   }

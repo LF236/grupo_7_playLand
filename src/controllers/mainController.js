@@ -22,6 +22,12 @@ const controller = {
         return res.render('registro');
     },
 
+    registerCreateUser: (req, res) => {
+        console.log(req);
+        console.log(req.body);
+        console.log(req.files);
+    },
+
     profile: (req, res) => {
         return res.render('profile');
     },

@@ -1,72 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Head import -->
     <%- include('./partials/head.ejs'); %>
-    <link rel ="stylesheet" href= "/css/registro.css">
-    <title>Playland</title>
+        <link rel="stylesheet" href="/css/registro.css">
+        <title>Playland</title>
 </head>
 
 
 <body>
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
+        <main class="registro">
+            <h3> Sign up</h3>
 
-    <main class="registro">
-        <h3> Sign up</h3>
+            <form method="POST" action="/register">
+                <label for="firstName">Nombre</label>
+                <input required type="text" name="firstName" size="40" id="firstName">
 
-        <!-- Tabla de registro -->
+                <label for="lastName">Apellido</label>
+                <input required type="text" name="lastName" size="40" id="lastName">
 
-        <form>
-       
-        <table>
-            <tr>
-            <td><p>Nombre:</p><br>
-            <input required type="text" name="firstName" size="40"></td>
-            </tr>
+                <label for="email">Correo electrónico</label>
+                <input required type="email" name="email" size="40" id="email">
 
-            <tr>
-            <td><p>Apellido:</p><br>
-            <input required type="text" name="lastName" size="40"></td>
-            </tr>
+                <label for="email-confirm">Verificar correo electrónico</label>
+                <input required type="email" name="email-confirm" size="40" id="email-confirm">
 
-            <tr>
-            <td><p>Correo electrónico:</p><br>
-            <input required type="email" name="email" size="40"></td>
-            </tr>
+                <label for="loginPassword">Contraseña</label>
+                <input required type="password" size="40" id="loginPassword" name="loginPassword"
+                    title="Letters and digits only (at least 6)">
 
-            <tr>
-            <td><p>Verificar correo electrónico:</p><br>
-            <input required type="email" name="email-confirm" size="40"></td>
-            </tr>
+                <label for="loginPassword-confirm">Verificar contraseña</label>
+                <input required type="password" size="40" id="loginPassword-confirm" name="loginPassword-confirm">
 
-            <tr>
-            <td><p>Contraseña: </p><br>
-            <input required type="password" size="40"
-                    id="loginPassword" name="loginPassword"
-                    title="Letters and digits only (at least 6)"></td>
-            </tr>
+                <label for="avatar">Adjunte Foto de perfil</label>
+                <input type="file" name="avatar" id="avatar" accept=".png, .jpg, .gif, .webp" required>
 
-            <tr>
-                <td><p>Verificar contraseña: </p><br>
-                <input required type="password" size="40"
-                        id="loginPassword-confirm"></td>
-                </tr>
-
-            <tr>
-            <td><input type="submit"
-                    value="Enviar"></td>
-           </tr>
-           <tr>
-            <td><input type="submit-2"
-                    value="Borrar"></td>
-            </tr>
-
-        </table>
-        </form>
-    </main>
-    <!-- Footer import -->
-    <%- include('./partials/footer.ejs'); %>
-    <script src="/js/menu_animation.js"></script>
+                <input type="submit" value="Enviar">
+                <input type="submit-2" value="Borrar">
+            </form>
+        </main>
+        <!-- Footer import -->
+        <%- include('./partials/footer.ejs'); %>
+            <script src="/js/menu_animation.js"></script>
 </body>
+
 </html>
