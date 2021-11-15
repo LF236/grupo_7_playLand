@@ -20,16 +20,19 @@ const storage = multer.diskStorage({
 
     filename: (req, file, callback) => {
         const id_user = req.body.id_user;
+        console.log(id_user);
         callback(null, `perfil_${id_user}`);
     }
 });
+
+const upload = multer({ storage });
 // Routes
 router.get('/', mainController.home);
 
 router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
-router.post('/register', mainController.registerCreateUser)
+router.post('/register', upload.fields([ { name: 'avatar', maxCount: 1 } ]), mainController.registerCreateUser)
 router.get('/profile', mainController.profile);
 
 router.get('/shoppingCar', mainController.shoppingCar);

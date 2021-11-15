@@ -23,9 +23,25 @@ const controller = {
     },
 
     registerCreateUser: (req, res) => {
-        console.log(req);
-        console.log(req.body);
-        console.log(req.files);
+        const nameAvatar = req.files.avatar[0].filename;
+        let usuario_auxiliar = {
+            id: req.body.id_user,
+            nombre: req.body.firstName,
+            apellidos: req.body.lastName,
+            email: req.body.email,
+            password: req.body.loginPassword,
+            imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
+            editor: false
+        }
+        let userData = getDataUsersJSON();
+        userData.push(usuario_auxiliar);
+        //console.log(userData);
+        //saveDBUsers();
+        //console.log(usuario_auxiliar);
+        saveDBUsers(userData);
+        res.render('mensaje-usuario-registrado', {
+            'email': usuario_auxiliar.email
+        })
     },
 
     profile: (req, res) => {
@@ -54,7 +70,7 @@ const controller = {
     searchProduct: (req, res) => {
         const patronBusqueda = req.query.search;
         let auxProducts = [];
-        if(patronBusqueda) {
+        if (patronBusqueda) {
             products.listadoProductosArr.forEach(producto => {
                 if (producto.nombre_producto.includes(patronBusqueda)) {
                     auxProducts.push(producto);

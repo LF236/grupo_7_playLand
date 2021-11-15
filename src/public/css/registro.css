@@ -18,7 +18,15 @@
   font-weight: bolder;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.registro #error-message {
+  display: block;
+  color: #d90000;
+  margin: 10px 0;
   margin-bottom: 20px;
+  text-align: center;
+  display: none;
 }
 
 .registro form {

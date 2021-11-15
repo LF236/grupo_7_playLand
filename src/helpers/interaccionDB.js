@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const fileProducts = path.join(__dirname + '/../data/product.json');
-const fileUsers = path.join('..', 'data', 'user.json');
+const fileUsers = path.join(__dirname + '/../data/user.json');
 
 
 const getDataProductsJSON = () => {

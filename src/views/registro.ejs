@@ -13,38 +13,39 @@
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
         <main class="registro">
-            <h3> Sign up</h3>
-
-            <form method="POST" action="/register">
+            <h3 id="title_register">Sign up</h3>
+            <h2 id="error-message">Mensaje Error</h2>
+            <form method="POST" action="/register" enctype="multipart/form-data">
                 <label for="firstName">Nombre</label>
-                <input required type="text" name="firstName" size="40" id="firstName">
+                <input type="text" name="firstName" size="40" id="firstName">
 
                 <label for="lastName">Apellido</label>
-                <input required type="text" name="lastName" size="40" id="lastName">
+                <input type="text" name="lastName" size="40" id="lastName">
 
                 <label for="email">Correo electrónico</label>
-                <input required type="email" name="email" size="40" id="email">
+                <input type="email" name="email" size="40" id="email">
 
-                <label for="email-confirm">Verificar correo electrónico</label>
-                <input required type="email" name="email-confirm" size="40" id="email-confirm">
+                <label for="emailConfirm">Verificar correo electrónico</label>
+                <input type="email" name="emailConfirm" size="40" id="emailConfirm">
 
                 <label for="loginPassword">Contraseña</label>
-                <input required type="password" size="40" id="loginPassword" name="loginPassword"
+                <input type="password" size="40" id="loginPassword" name="loginPassword"
                     title="Letters and digits only (at least 6)">
 
-                <label for="loginPassword-confirm">Verificar contraseña</label>
-                <input required type="password" size="40" id="loginPassword-confirm" name="loginPassword-confirm">
+                <label for="loginPasswordConfirm">Verificar contraseña</label>
+                <input type="password" size="40" id="loginPasswordConfirm" name="loginPasswordConfirm">
 
                 <label for="avatar">Adjunte Foto de perfil</label>
-                <input type="file" name="avatar" id="avatar" accept=".png, .jpg, .gif, .webp" required>
+                <input type="file" name="avatar" id="avatar" accept=".png, .jpg, .gif, .webp">
 
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" id="registrar_usuario">
                 <input type="submit-2" value="Borrar">
             </form>
         </main>
-        <!-- Footer import -->
-        <%- include('./partials/footer.ejs'); %>
-            <script src="/js/menu_animation.js"></script>
+    <!-- Footer import -->
+    <%- include('./partials/footer.ejs'); %>
+    <script src="/js/menu_animation.js"></script>
+    <script src="/js/check_fields_userRegister.js"></script>
 </body>
 
 </html>
