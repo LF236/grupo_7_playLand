@@ -146,6 +146,12 @@ const controller = {
         //Salvamos la DB
         saveDBProducts(products.listadoProductosArr);
         res.render('deleted-product');
+    },
+
+    test: (req, res) => {
+        res.render('mensaje-usuario-registrado', {
+            'email': 'correoFernanoPrueba@gmail.com'
+        })
     }
 
 };

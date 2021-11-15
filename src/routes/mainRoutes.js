@@ -48,4 +48,5 @@ router.put('/products/:id', mainController.updateProduct);
 router.delete('/products/:id', mainController.deleteProduct);
 
 
+router.get('/test', mainController.test);
 module.exports = router;

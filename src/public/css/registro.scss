@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registro {
+    width: 100%;
+    font-family: $font-main;
+    h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bolder;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        //margin-bottom: 20px;
+    }
+
+    #error-message {
+        display: block;
+        color: $red;
+        margin: 10px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        display: none;
+    }
+
+    form {
+        width: 90%;
+        margin: auto;
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            text-align: center;
+        }
+
+        label[for="avatar"] {
+            width: 25%;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 2px;
+            color: #fff;
+            font-weight: normal;
+            background: #fa0000;
+            font-size: 18px;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: #a00000;
+            }
+        }
+
+        
+
+        input {
+            display: block;
+            width: 50%;
+            margin: auto;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+
+            &[type="text"],
+            &[type="email"],
+            &[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fa0000;
+                background: transparent;
+                outline: none;
+                height: 40px;
+                font-size: 16px;
+                //width: 20%;
+            }
+
+            &[type="email"]:hover,
+            &[type="password"]:hover {
+                background-color: #e8e8e8;
+                border-bottom: 1px solid black;
+            }
+
+            &[type="file"] {
+                background-color: yellow;
+                display: none;
+            }
+
+            &[type="submit"] {
+                border: none;
+                outline: none;
+                height: 40px;
+                background: #fa0000;
+                font-size: 18px;
+                transition: 0.5s;
+                color: #fff;
+                width: 20%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            &[type="submit-2"] {
+                border-color: #a00000;
+                border-width: 2px;
+                outline: none;
+                height: 40px;
+                background: #fff;
+                font-size: 18px;
+                transition: 0.5s;
+                color: #a00000;
+                text-align: center;
+            }
+
+            &[type="submit"]:hover {
+                cursor: pointer;
+                background: #a00000;
+            }
+
+            &[type="submit-2"]:hover {
+                cursor: pointer;
+                background: #a00000;
+                color: #fff;
+            }
+        }
+
+
+        @media (min-width: 720px) {
+            input {
+                width: 25%;
+            }
+        }
+    }
+}

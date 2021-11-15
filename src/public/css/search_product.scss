@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+//Search Product Style
+main {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    .filter-menu {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        margin-bottom: 20px;
+        position: relative;
+
+        .filter-menu-sort,
+        .filter-menu-filter {
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            color: $blue;
+            font-weight: 600;
+            cursor: pointer;
+            border-left: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            span {
+                margin-left: 8px;
+            }
+        }
+
+        .filter-menu-sort {
+            border-left: 0;
+            z-index: 50;
+
+            ul {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba($dark, 0.9);
+                transform: translateY(-100%);
+                transition: transform 0.4s;
+                &.menu-sort-appear {
+                    transform: translateY(0);
+                }
+
+                li {
+                    padding: 20px;
+                    list-style: none;
+                    text-align: start;
+                    transition: all 0.1s;
+                    &:hover {
+                        background: rgba($dark, 1);
+                        color: #fff;
+                    }
+
+                    .icon-x {
+                        transition: all 0.5s;
+                        display: inline-block;
+                    }
+
+                    &:hover span {
+                        color: #fff;
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .no-background:hover {
+                    background: rgba($dark, 0);
+                }
+            }
+        }
+    }
+
+    .result-search {
+        width: 100%;
+        margin: auto;
+        //background: red;
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            color: $red;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .result-search-item {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            img {
+                width: 50%;
+            }
+
+            .result-search-item-content {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px;
+                .result-search-item-content-description {
+                    align-self: flex-start;
+                    h3 {
+                        font-weight: normal;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        color: $green;
+                    }
+
+                    .seller {
+                        font-size: 1rem;
+                        color: $dark;
+                    }
+                }
+                .result-search-item-content-stars {
+                    width: 100%;
+                    //background: blue;
+                    color: $yellow;
+                    span {
+                        //display: block;
+                        position: relative;
+                    }
+                    .last-start::after {
+                        content: "190";
+                        display: inline-block;
+                        position: absolute;
+                        margin-left: 4px;
+                        color: $blue;
+                        font-size: 0.7rem;
+                        font-family: $font-main;
+                        font-weight: 600;
+                    }
+                }
+
+                .result-search-item-content-button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                    a {
+                        width: 80%;
+                        display: inline-block;
+                        border-radius: 10px;
+                        color: #fff;
+                        padding: 5px;
+                        text-decoration: none;
+                        background: $blue;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//version Escritorio
+@media (min-width: 720px) {
+    main {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        
+        .filter-menu {
+            width: 15%;
+            display: block;
+            //background: violet;
+            margin: 0;
+            
+            //background-color: rebeccapurple;
+            border-right: 1px solid $gray;
+            padding: 10px 10px 10px 0;
+            .filter-menu-sort,
+            .filter-menu-filter {
+                width: 100%;
+                border: 1px solid transparent;
+                text-align: end;
+                font-weight: normal;
+                //background: red;
+                padding: 0;
+            }
+
+            .filter-menu-sort {
+                transform: 0;
+                margin-bottom: 50px;
+                color: $dark;
+                ul {
+                    position: relative;
+                    transform: translateY(0);
+                    width: 100%;
+                    margin-top: 20px;
+                    
+                    li {
+                        background-color: white;
+                        padding: 0 0;
+                        padding-bottom: 10px;
+                        font-size: 0.9rem;
+                        text-align: end;
+                        &:hover {
+                            background-color: white;
+                            color: $grayStrong
+                        }
+                        &::after {
+                            display: block;
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background-color: $blue;
+                            
+                            margin-top: 4px;
+                            transform: scale(0,1);
+                            transform-origin: center right;
+                            transition: transform .4s;
+                        }
+                        
+                        &:hover::after {
+                            transform: scale(1);
+                        }
+                    }
+                    .no-background {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .result-search {
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            h2 {
+                width: 100%;
+                margin-top: 50px;
+                text-align: start;
+                padding-left: 20px;
+            }
+            .result-search-item {
+                width: 45%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

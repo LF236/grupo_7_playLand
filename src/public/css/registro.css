@@ -134,4 +134,10 @@
   background: #a00000;
   color: #fff;
 }
+
+@media (min-width: 720px) {
+  .registro form input {
+    width: 25%;
+  }
+}
 /*# sourceMappingURL=registro.css.map */

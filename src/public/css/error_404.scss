@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+
+main {
+    width: 100%;
+    .error-404 {
+        //background-color: steelblue;
+        width: 85%;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        .error-404-content {
+            
+            width: 100%;
+            text-align: center;
+            //background: red;
+            align-self: center;
+       
+            h1 {
+                display: inline-block;
+                font-size: 5rem;
+                font-weight: 700;
+                color: $red;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            a {
+                display: inline-block;
+                font-size: 0.75rem;
+                padding: 10px 12px;
+                margin: 15px 0;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                background: $blue;
+                text-decoration: none;
+                color: #fff;
+                transition: all .5s;
+                &:hover{
+                    border-color: $red;
+                }
+            }
+        }
+        .image {
+            width: 100%;
+            img {
+                display: block;
+                margin: auto;
+                width: 100%;
+            }
+        }
+        
+    }
+
+    @media (min-width: 590px) {
+        .error-404 {
+           
+            .error-404-content {
+                width: 50%;
+
+                h1 {
+                    font-size: 8rem;
+
+                    &.effect {
+                        animation: iconsMove 1s 1;
+                    }
+                }
+
+                a {
+                    padding: 15px 15px;;
+                    font-size: 1.3rem;
+                    border: 5px solid transparent;
+                    &:hover {
+                        border-color: $red;
+                    }
+                }
+
+                a:hover &h1{
+                    background: blue;
+                }
+            }
+            
+            .image {
+                width: 50%;
+                img {
+                    display: block;
+                    &.effect {
+                        animation: iconsMove 1s 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Animations
+@keyframes iconsMove{
+    20%{
+        transform: rotate(20deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+    60%{
+        transform: rotate(10deg);
+    }
+    80%{
+        transform: rotate(-5deg);
+    }
+}

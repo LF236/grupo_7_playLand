@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+
+main {
+    //background-color: blue;
+    text-align: center;
+    font-family: $font-main;
+
+    h1 {
+        color: $red;
+        margin-top: 50px;
+        font-size: 2rem;
+    }
+
+    .email {
+        font-weight: 700;
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    .mensaje-registrado {
+        color: $red;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+
+    a {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $blue;
+        margin-top: 15px;
+    }
+}
