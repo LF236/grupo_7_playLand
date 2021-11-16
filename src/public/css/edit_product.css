@@ -1,75 +1,181 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
-:root {
-  --positionNow: 0%;
-}
-
-*{
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .edit {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .edit h3 {
-    margin: 0;
-    text-align: center;
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-
-.edit p {
-  font-size: 16px;
-  display: inline;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
-.edit [type="text"] {
-  border: none;
-  border-bottom: 1px solid #fa0000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  width: 20%;
+.edit #error-message {
+  display: block;
+  color: #d90000;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  display: none;
 }
 
-.edit input{
+.edit form {
+  width: 90%;
+  margin: auto;
+}
+
+.edit form label {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+
+.edit form label[for="main_image"],
+.edit form label[for="imagenPrincipal"] {
   width: 50%;
-  margin-bottom: 50px;
+  height: 50px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  padding: 2px;
+  color: #fff;
+  font-weight: normal;
+  background: #fa0000;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.edit input[type="number"]{
+.edit form label[for="main_image"]:hover,
+.edit form label[for="imagenPrincipal"]:hover {
+  background: #a00000;
+}
+
+@media (min-width: 837px) {
+  .edit form label[for="main_image"],
+  .edit form label[for="imagenPrincipal"] {
+    width: 25%;
+  }
+}
+
+.edit form input {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit form input[type="text"], .edit form input[type="email"], .edit form input[type="password"] {
   border: none;
   border-bottom: 1px solid #fa0000;
   background: transparent;
   outline: none;
   height: 40px;
   font-size: 16px;
-  width: 20%;
 }
 
+.edit form input[type="email"]:hover, .edit form input[type="password"]:hover {
+  background-color: #e8e8e8;
+  border-bottom: 1px solid black;
+}
 
-.edit input[type="submit"]{
+.edit form input[type="file"] {
+  background-color: yellow;
+  display: none;
+}
+
+.edit form input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
   background: #fa0000;
   font-size: 18px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #fff;
+  width: 20%;
   text-align: center;
+  margin-bottom: 15px;
 }
 
+.edit form input[type="reset"] {
+  border-color: #a00000;
+  border-width: 2px;
+  outline: none;
+  height: 40px;
+  background: #fff;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #a00000;
+  text-align: center;
+  cursor: pointer;
+}
 
-.edit input[type="submit"]:hover {
+.edit form input[type="submit"]:hover {
   cursor: pointer;
   background: #a00000;
 }
+
+.edit form input[type="reset"]:hover {
+  cursor: pointer;
+  background: #a00000;
+  color: #fff;
+}
+
+.edit form .categoria-label,
+.edit form .players-label {
+  margin: 20px 0;
+}
+
+.edit form .check-productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit form .check-productos label {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.edit form .check-productos input {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .edit form input {
+    width: 25%;
+  }
+}
+/*# sourceMappingURL=edit_product.css.map */

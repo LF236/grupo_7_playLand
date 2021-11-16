@@ -25,6 +25,10 @@ const storage = multer.diskStorage({
     }
 });
 
+const storage_images = multer.diskStorage({
+
+});
+
 const upload = multer({ storage });
 // Routes
 router.get('/', mainController.home);
