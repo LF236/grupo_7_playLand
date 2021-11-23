@@ -670,44 +670,5 @@
 				"texto": ""
 			}
 		]
-	},
-	{
-		"nombre_producto": "Lus Fernando",
-		"id": "32bc70e9-bf83-4bbf-90b8-e3e9daf591d5",
-		"main_image": "",
-		"detail_image_1": "",
-		"detail_image_2": "",
-		"detail_image_3": "",
-		"precio": "21",
-		"rating": "",
-		"description": "Rodrifguez",
-		"players": "5",
-		"reviews": []
-	},
-	{
-		"nombre_producto": "Lus Fernando",
-		"id": "4776d298-60b2-4edb-a21c-825aa950112f",
-		"main_image": "",
-		"detail_image_1": "",
-		"detail_image_2": "",
-		"detail_image_3": "",
-		"precio": "21",
-		"rating": "",
-		"description": "Rodrifguez",
-		"players": "5",
-		"reviews": []
-	},
-	{
-		"nombre_producto": "Lus Fernando",
-		"id": "075dff52-a96a-470d-828d-f368d0dda673",
-		"main_image": "",
-		"detail_image_1": "",
-		"detail_image_2": "",
-		"detail_image_3": "",
-		"precio": "21",
-		"rating": "",
-		"description": "Rodrifguez",
-		"players": "5",
-		"reviews": []
 	}
 ]
