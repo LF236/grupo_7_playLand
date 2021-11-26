@@ -12,7 +12,7 @@
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
     <main class="edit">
-        <form method="POST" action='/products/createnew'>
+        <form method="POST" action='/products/createnew' enctype="multipart/form-data">
             <h3>Detalle del Producto</h3>
             <h2 id="error-message">Mensaje Error</h2>
             <label for="nombre_producto">Nombre del producto</label>
@@ -24,8 +24,8 @@
             <label for="main_image">Adjuntar imagen principal</label>
             <input type="file" name="main_image" accept=".jpeg,.jpg,.png" id="main_image">
 
-            <label for="imagenPrincipal">Adjuntar imágenes complementarias </label>
-            <input type="file" name="imagenPrincipal" id="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple />
+            <label for="imagenesComplementarias">Adjuntar imágenes complementarias </label>
+            <input type="file" name="imagenesComplementarias" id="imagenesComplementarias" accept=".jpeg,.jpg,.png" multiple />
             <!-- Este es el select -->
             <label class="categoria-label">Elegir categorías del producto</label>
             <div class="check-productos">

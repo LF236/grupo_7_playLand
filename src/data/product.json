@@ -670,5 +670,34 @@
 				"texto": ""
 			}
 		]
+	},
+	{
+		"nombre_producto": "AYUWOKI",
+		"id": "e7569ece-e6cf-47c5-9682-4a79ff6f8f61",
+		"main_image": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/main_image.png",
+		"detail_image_1": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210505_200153.png",
+		"detail_image_2": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210217_072103.png",
+		"detail_image_3": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210217_072102.png",
+		"precio": "250",
+		"categoria": [
+			"peliculas",
+			"series"
+		],
+		"rating": "",
+		"description": "HEHEHEHEHEHEHE",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "GameBoy SP",
+		"id": "cb1aaa58-7863-4a87-b7b0-8d921facfff0",
+		"main_image": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/main_image.jpg",
+		"detail_image_1": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_1.jpg",
+		"detail_image_2": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_2.jpeg",
+		"detail_image_3": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_3.jpg",
+		"precio": "21",
+		"categoria": "peliculas",
+		"rating": "",
+		"description": "Consola de videojuegos portatil",
+		"reviews": []
 	}
 ]

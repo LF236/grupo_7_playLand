@@ -12,8 +12,8 @@ class Producto {
     description = "";
     players = "";
     reviews = [];
-    constructor(nombre_producto, main_image, detail_image_1, detail_image_2, detail_image_3, precio, categoria, rating, description, players) {
-        this.id = uuid();
+    constructor(id, nombre_producto, main_image, detail_image_1, detail_image_2, detail_image_3, precio, categoria, rating, description, players) {
+        this.id = id;
         this.nombre_producto = nombre_producto;
         this.main_image = main_image;
         this.detail_image_1 = detail_image_1;

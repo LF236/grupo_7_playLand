@@ -1,4 +1,5 @@
 const Productos = require("../models/Productos");
+const path = require('path');
 const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = require("../helpers/interaccionDB");
 
 const products = new Productos();
@@ -106,7 +107,16 @@ const controller = {
     },
 
     createNewProduct: (req, res) => {
-        const allProduct = products.crearProducto(req.body.nombre_producto, "", "", "", "", req.body.precio, req.body.categoria, "", req.body.description, req.body.players)
+        // Almacenamos la ruta de la imagen principal
+        const route_delete_string = path.join(__dirname + '/../public')
+        let main_img_route = `${req.files.main_image[0].path}`.replace(route_delete_string, '');
+        const id_product = req.id;
+        // Recorremos el arreglo de imágenes secundarias y las asignamos a su respeciva variable
+        const arrRoutesImagenesComplementarias = ["", "", ""];
+        req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
+            arrRoutesImagenesComplementarias[i]= `${imgComplementaria.path}`.replace(route_delete_string, '');
+        });
+        const allProduct = products.crearProducto(id_product,req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0],arrRoutesImagenesComplementarias[1],arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
         saveDBProducts(products.listadoProductosArr);
         return res.redirect(`/detailproduct/${allProduct.id}`);
     },

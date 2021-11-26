@@ -97,5 +97,14 @@
   "password": "a123",
   "imagen_perfil": "/img/profile_images/30c34cfc-8f50-46b1-82b0-a6c976233e99/perfil_30c34cfc-8f50-46b1-82b0-a6c976233e99",
   "editor": false
+ },
+ {
+  "id": "322d5f14-eea0-440e-bc5a-f49e062ba718",
+  "nombre": "Juan",
+  "apellidos": "Martinez",
+  "email": "juanco@gmail.com",
+  "password": "1234",
+  "imagen_perfil": "/img/profile_images/322d5f14-eea0-440e-bc5a-f49e062ba718/perfil_322d5f14-eea0-440e-bc5a-f49e062ba718",
+  "editor": false
  }
 ]
