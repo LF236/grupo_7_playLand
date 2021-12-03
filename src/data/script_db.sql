@@ -4,7 +4,7 @@ CREATE DATABASE play_land;
 
 USE play_land;
 
-CREATE TABLE Products(id varchar(36) NOT NULL, PRIMARY KEY(id),name varchar(50) NOT NULL, price INT NOT NULL, description TEXT NOT NULL, image TEXT NOT NULL, descImgI TEXT, descImgII TEXT, descImgIII TEXT, idCategory varchar(36));
+CREATE TABLE Products(id varchar(36) NOT NULL, PRIMARY KEY(id),name varchar(50) NOT NULL, price INT NOT NULL, description TEXT NOT NULL, image TEXT NOT NULL, descImgI TEXT, descImgII TEXT, descImgIII TEXT, idCategory varchar(36), players INT NOT NULL, rating FLOAT NOT NULL);
 
 CREATE TABLE Category(id varchar(36) NOT NULL, PRIMARY KEY(id),name varchar(50));
 
@@ -18,5 +18,5 @@ CREATE TABLE Purchase_Details(id varchar(36) NOT NULL, purchase_id varchar(36) N
 
 CREATE TABLE Product_User(id varchar(36) NOT NULL, PRIMARY KEY(id), product_id varchar(36) NOT NULL, category_id varchar(36) NOT NULL, FOREIGN KEY(product_id) REFERENCES Products(id), FOREIGN KEY(category_id) REFERENCES Category(id));
 
-
+CREATE TABLE Reviews(id varchar(36) NOT NULL, PRIMARY KEY(id), title varchar(50), rating FLOAT NOT NULL, review TEXT, product_id varchar(36), FOREIGN KEY(product_id) REFERENCES Products(id), userId varchar(36), FOREIGN KEY(userId) REFERENCES User(id));
 
