@@ -16,18 +16,18 @@
 
         <p>¿Eres nuevo?</p><a href="/register">Sign Up</a>
 
-        <form>
+        <form method="POST" action="/login">
             <!-- EMAIL INPUT -->
-            <label for="username">Email*</label>
-            <input type="email">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email">
 
             
             <!-- PASSWORD INPUT -->
             <label for="password">Contraseña*</label>
-            <input type="password">
+            <input type="password" name="password" id="password">
             <a href="#">¿Olvidaste tu contraseña?</a>
 
-            <input type="submit" value="Log In">
+            <input type="submit" value="Login">
         </form>
     </main>
 

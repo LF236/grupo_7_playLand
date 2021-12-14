@@ -59,6 +59,7 @@ const upload = multer({ storage });
 router.get('/', mainController.home);
 
 router.get('/login', mainController.login);
+router.post('/login', mainController.processLogin);
 
 router.get('/register', mainController.register);
 router.post('/register', upload.fields([ { name: 'avatar', maxCount: 1 } ]), mainController.registerCreateUser)

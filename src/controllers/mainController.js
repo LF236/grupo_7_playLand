@@ -19,6 +19,35 @@ const controller = {
         return res.render('login');
     },
 
+    processLogin: (req, res) => {        
+        const { email, password } = req.body;
+        const usuarios = getDataUsersJSON();
+        let usuarioBandera = null;
+        for(let usuario of usuarios) {
+            if(usuario.email == email) {
+                usuarioBandera = usuario;
+                break;
+            }
+        }
+        if(usuarioBandera) {
+            console.log(usuarioBandera);
+            console.log(password);
+            if(usuarioBandera.password == password) {
+                console.log('ENTRASTE');
+                res.send('ENTRASTE');
+            }
+            else {
+                console.log('PASSWORD INVALIDO');
+                res.send('PASSWORD INVALIDO');
+            }
+        }
+        else {
+            res.send('Correo Invalido');
+        }
+        //console.log(usuarioBandera);
+        console.log(email);
+    },
+
     register: (req, res) => {
         return res.render('registro');
     },
