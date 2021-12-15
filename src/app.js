@@ -4,6 +4,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+// Configuracion para el uso de sesion
+const session = require('express-session');
+app.use(session({ secret: 'play_land' }));
 // Route public
 const public_path = path.resolve(__dirname + '/public');
 app.use(express.static(public_path));

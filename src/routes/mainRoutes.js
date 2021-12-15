@@ -63,7 +63,7 @@ router.post('/login', mainController.processLogin);
 
 router.get('/register', mainController.register);
 router.post('/register', upload.fields([ { name: 'avatar', maxCount: 1 } ]), mainController.registerCreateUser)
-router.get('/profile', mainController.profile);
+router.get('/profile/:idUsuario', mainController.profile);
 
 router.get('/shoppingCar', mainController.shoppingCar);
 

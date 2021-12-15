@@ -19,8 +19,7 @@
         <form method="POST" action="/login">
             <!-- EMAIL INPUT -->
             <label for="email">Email*</label>
-            <input type="email" name="email" id="email">
-
+            <input type="email" name="email" id="email" value="<%= dataRecibida ? dataRecibida.email : '' %> ">
             
             <!-- PASSWORD INPUT -->
             <label for="password">Contraseña*</label>
@@ -29,6 +28,12 @@
 
             <input type="submit" value="Login">
         </form>
+        <% if(errorMessage) { %>
+            <aside class="error-login">
+                <p><%= errorMessage %> </p>
+            </aside>    
+        <% } %>
+        
     </main>
 
     <!-- Footer import -->

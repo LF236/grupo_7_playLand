@@ -16,11 +16,11 @@
             <div class="profiles">
                 <div class="profile">
                     <div class="image">
-                        <img src="img/profile_images/profile1.png" alt="profile_pic" width= 100% />
+                        <img src="<%= infoPerfilUsuario.img %> " alt="profile_pic" width= 100% />
                     </div>
                     <div class="content">
-                        <h3>User name</h3>
-                        <p>user@email.com</p>
+                        <h3><%= nombreUsuario %> </h3>
+                        <p><%= infoPerfilUsuario.email %></p>
                         <br>
                         <a href="/products/create" id="special" class="special">Nuevo producto</a>
                     </div>

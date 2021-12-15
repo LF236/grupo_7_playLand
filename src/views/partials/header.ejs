@@ -14,12 +14,17 @@
 
         <div class="session">
         <a href="/profile" class="icon icon-user"></a>
-            <a href="/login">LOG IN</a>
+            <% if(!nombreUsuario) { %> 
+                <a href="/login">LOG IN</a>
+            <% } %> 
+            <% if(nombreUsuario) { %> 
+                <a href=<%= `/profile/${ idUsuario }` %>><%= nombreUsuario %> </a>
+            <% } %> 
             <span class="icon icon-add_shopping_cart carr"></span>
         </div>
     </div>
 
-    <!-- Menu -->
+    <!-- Menu Dispositivos Mobiles -->
     <nav id="menu">
         <!-- Este icono de x y la sección "session" solo es para el diseño movil -->
         <div class="icon-close-menu"><span class="icon icon-x" id="icon-x"></span></div>

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$redStrong: #a00000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.login {
+    position: relative;
+	text-align: center;
+	font-family: $font-main;
+	p {
+		font-size: 12px;
+		display: inline;
+	}
+	h3 {
+		margin: 0;
+		text-align: center;
+		font-size: 22px;
+		font-family: "Montserrat", sans-serif;
+		font-weight: bolder;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	label {
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		display: block;
+		text-align: center;
+	}
+	input {
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	input[type="email"] {
+		border: none;
+		border-bottom: 1px solid $red;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		font-size: 16px;
+		width: 20%;
+		&:hover {
+			background-color: #e8e8e8;
+			border-bottom: 1px solid black;
+		}
+	}
+	input[type="password"] {
+		border: none;
+		border-bottom: 1px solid $red;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		font-size: 16px;
+		width: 20%;
+		&:hover {
+			background-color: #e8e8e8;
+			border-bottom: 1px solid $dark;
+		}
+	}
+	input[type="submit"] {
+		border: none;
+		outline: none;
+		height: 40px;
+		background: $red;
+		font-size: 18px;
+		transition: 0.5s;
+		color: #fff;
+		width: 20%;
+		&:hover {
+			cursor: pointer;
+			background: $redStrong;
+		}
+	}
+	a {
+		text-align: center;
+		font-size: 12px;
+		line-height: 20px;
+		color: $dark;
+		width: 100%;
+		display: block;
+		padding-bottom: 20px;
+	}
+
+    // Estilos del mensaje de error
+    .error-login {
+        width: 100%;
+        position: absolute;
+        display: block;
+        top: 0;
+        background: rgba($red, 0.9);
+        font-family: $font-bold;
+        font-weight: 600;
+        
+        p {
+            color: #fff;
+            padding: 15px;
+            display: block;
+        }
+    }
+}
