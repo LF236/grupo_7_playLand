@@ -106,5 +106,14 @@
   "password": "1234",
   "imagen_perfil": "/img/profile_images/322d5f14-eea0-440e-bc5a-f49e062ba718/perfil_322d5f14-eea0-440e-bc5a-f49e062ba718",
   "editor": false
+ },
+ {
+  "id": "4515217d-b874-4f65-8989-0e64999604f6",
+  "nombre": "Elon",
+  "apellidos": "Musk",
+  "email": "elon@gmail.com",
+  "password": "123",
+  "imagen_perfil": "/img/profile_images/4515217d-b874-4f65-8989-0e64999604f6/perfil_4515217d-b874-4f65-8989-0e64999604f6",
+  "editor": false
  }
 ]

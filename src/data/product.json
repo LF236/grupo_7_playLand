@@ -634,12 +634,10 @@
 		"detail_image_1": "/img/products_img/62526b05-3e67-4c23-b5ff-490fc8689834/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/62526b05-3e67-4c23-b5ff-490fc8689834/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/62526b05-3e67-4c23-b5ff-490fc8689834/detail_image_3.webp",
-		"precio": 443,
-		"categoria": [
-			"Películas"
-		],
+		"precio": "443  ",
+		"categoria": "Películas",
 		"rating": 3.5,
-		"description": "Un juego que permite jugar a toda la familia. Tablero rígido con 63 casillas con 2 peones para armar 2 equipos de 3 hasta 15 jugadores en el que avanzarán en función a la cantidad de respuestas que contesten en el lapso de 1 minuto con ayuda del reloj de arena. Este juego de trivia y mímica incluye 90 tarjetas con los pósters originales de cada una de las películas de Pixar inclusive los dos lanzamientos del 2020: Onward y Soul.",
+		"description": "Un juego que permite jugar a toda la familia. Tablero rígido con 63 casillas con 2 peones para armar 2 equipos de 3 hasta 15 jugadores en el que avanzarán en función a la cantidad de respuestas que contesten en el lapso de 1 minuto con ayuda del reloj de arena. Este juego de trivia y mímica incluye 90 tarjetas con los pósters originales de cada una de las películas de Pixar inclusive los dos lanzamientos del 2020: Onward y Soul.  ",
 		"players": "4",
 		"reviews": [
 			{

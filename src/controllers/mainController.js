@@ -21,7 +21,6 @@ const controller = {
             });
         }
         // Si ya esta iniciada la sesión, buscar la información
-
         const usuarioBandera = getDataUserById(req.session.idUsuario);
         console.log(usuarioBandera);
         // Renderizamos con la sesión del usuario
@@ -126,7 +125,8 @@ const controller = {
         userData.push(usuario_auxiliar);
         saveDBUsers(userData);
         res.render('mensaje-usuario-registrado', {
-            'email': usuario_auxiliar.email
+            'email': usuario_auxiliar.email,
+            'nombreUsuario': null
         })
     },
 
@@ -141,7 +141,7 @@ const controller = {
         // Buscamos toda la información del usuario a través del ID
         const usuarioBandera = getDataUserById(req.session.idUsuario);
         /* 
-            Rendereizamos la vista correspondiente, añadiendo el obteto infoPerfilUsuario 
+            Renderizamos la vista correspondiente, añadiendo el objeto infoPerfilUsuario 
             a la estructura original
         */
         return res.render('profile', {
@@ -160,7 +160,7 @@ const controller = {
         return res.render('shoppingcar');
     },
 
-    // Vista al dar clic en el producto y cargar su data ---> LISTO
+    // Vista al dar clic en el producto y cargar su data
     detailproduct: (req, res) => {
         const idProducto = req.params.id;
         let detProduct = null;
@@ -169,7 +169,25 @@ const controller = {
                 detProduct = product;
             }
         })
-        return res.render('detalleproducto', { detProduct })
+
+        /* 
+            Verificamos si no hay una sesión activa, si no hay renderizamos la vista de manera normal
+            pasando el nombreUsuario con el valor de null
+        */
+        if (req.session.idUsuario == undefined) {
+            return res.render('detalleproducto', {
+                detProduct,
+                'nombreUsuario': null
+            })
+        }
+        // Si la sesión esta activa, buscamos la información del usuario y la mandamos al hacer el render
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('detalleproducto', {
+            detProduct,
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id
+        })
+
     },
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
@@ -185,16 +203,50 @@ const controller = {
                     auxProducts.push(producto);
                 }
             })
-            return res.render('busqueda-producto', { auxProducts, patronBusqueda });
+            // Verificamos si hay sesión antes de renderizar la vista
+            if (req.session.idUsuario == undefined) {
+                return res.render('busqueda-producto', {
+                    auxProducts,
+                    patronBusqueda,
+                    "nombreUsuario": null,
+                });
+            }
+            // Si la sesión esta activa, hacemos la busqueda del usuario correspondiente
+            const usuarioBandera = getDataUserById(req.session.idUsuario);
+            return res.render('busqueda-producto', {
+                auxProducts,
+                patronBusqueda,
+                "nombreUsuario": usuarioBandera.nombre,
+                "idUsuario": usuarioBandera.id
+            });
         }
+        // Verificamos si hay sesión antes de renderizar la vista
         auxProducts = products.listadoProductosArr;
-        return res.render('busqueda-producto', { auxProducts, patronBusqueda: "Todos los productos" });
+        if (req.session.idUsuario == undefined) {
+            return res.render('busqueda-producto', { 
+                auxProducts, 
+                patronBusqueda: "Todos los productos",
+                "nombreUsuario": null,
+            });
+        }
+        // Si la sesión esta activa, buscamos la información del usuario actual y la mandamos a la vista
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('busqueda-producto', { 
+            auxProducts, 
+            patronBusqueda: "Todos los productos",
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id
+        });
     },
 
     // CRUD - Products
 
     // Obtener formulario para editar un producto ---> LISTO
     editProduct: (req, res) => {
+        // Verificamos que haya una sesión activa, si no la hay mandar mensaje de error
+        if (req.session.idUsuario == undefined) {
+            res.send('No tiene los permisos necesarios para esta operación');
+        }
         const idProduct = req.params.id;
         let auxProduct = null;
         products.listadoProductosArr.forEach(product => {
@@ -202,15 +254,32 @@ const controller = {
                 auxProduct = product;
             }
         })
-        return res.render('editar-producto', { auxProduct });
+
+        // Obtenemos la información del usuario activo actual
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('editar-producto', {
+            auxProduct,
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id
+        });
         //
     },
 
-    //Formulario para CREAR un producto ---> PENDIENTE
+    //Formulario para CREAR un producto
     createProduct: (req, res) => {
-        return res.render('crear-producto');
+        // Verificamos si hay una sesión activa, si no la hay mandar mensaje de NO permisos
+        if (req.session.idUsuario == undefined) {
+            return res.send('Si quiere agregar un producto para ser puesto a la venta favor de iniciar sesión');
+        }
+        // Si ya esta iniciada la sesión, buscar la información
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('crear-producto', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id
+        });
     },
 
+    // Creamos un nuevo producto POST
     createNewProduct: (req, res) => {
         // Almacenamos la ruta de la imagen principal
         const route_delete_string = path.join(__dirname + '/../public')
@@ -226,10 +295,8 @@ const controller = {
         return res.redirect(`/detailproduct/${allProduct.id}`);
     },
 
-    // Actualizar DB de productos ---> LISTO
+    // Actualizar DB de productos PUT 
     updateProduct: (req, res) => {
-        //
-
         let nuevoProductoActualizado = {
             nombre_producto: req.body.namePro,
             id: req.params.id,
@@ -253,14 +320,23 @@ const controller = {
         res.send('Fallo :c')
     },
 
-    // Eliminar producto de la DB --->PENDIENTE
+    // Eliminar producto de la DB ---> REVISAR
     deleteProduct: (req, res) => {
+        // Verificamos si la sesión esta activa, si no mandamos un error
+        if (req.session.idUsuario == undefined) {
+            res.send('No tienes privilegios para realizar esta operación');
+        }
         // Obtenemos el id
         const id = req.params.id;
         products.eliminarProductoDeLaLista(id);
         //Salvamos la DB
         saveDBProducts(products.listadoProductosArr);
-        res.render('deleted-product');
+        // Buscamos la información del usuario activo
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        res.render('deleted-product', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id
+        });
     },
 
     test: (req, res) => {
