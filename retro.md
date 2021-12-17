@@ -26,3 +26,38 @@ Entrega Sprint 3:
 -Continuar haciendo: Trabajando en equipo. Colaborar fácilmente y tomar decisiones rápidas
 -Hacer menos: No reportar avances en el grupo. Esperar que los demás compañeros manden mensaje para comenzar
 -Dejar de hacer: Atrasar las cosas.
+
+Entrega Sprint 4:
+-Comenzar a hacer: Administrar más el tiempo.
+-Hacer más: Agendar con mayor frecuencia las reuniones y participar más en ellas. 
+-Continuar haciendo: Resolver dudas entre nosotros y tomar decisiones rápidas.
+-Hacer menos: No reportar avances en el grupo.
+-Dejar de hacer: Atrasar las cosas.
+
+Entrega Sprint 5:
+-Comenzar a hacer: Definir las tareas del sprint y fijar fechas para trabajar las tareas que son en equipo.
+-Hacer más: Comunicarnos para poder apoyarnos más y avanzar de manera rápida.
+-Continuar haciendo: Continuar investiagando sobre los temas que se nos complican o que desconocemos y aportarlo en nuestras reuniones.
+-Hacer menos: Distraernos del sprint que se debe entregar.
+-Dejar de hacer: No empezar otro sprint hasta no terminar completamente el anterior.
+
+Entrega Sprint 6:
+-Comenzar a hacer: Definir las tareas del sprint. 
+-Hacer más: Comunicarnos para poder apoyarnos más y avanzar de manera rápida.
+-Continuar haciendo: Continuar investiagando sobre los temas que se nos complican o que desconocemos y aportarlo en nuestras reuniones.
+-Hacer menos: Distraernos del sprint que se debe entregar.
+-Dejar de hacer: Empezar otro sprint hasta no terminar completamente el anterior
+
+Entrega Sprint 7:
+-Comenzar a hacer: Definir las tareas del sprint y completar tareas faltantes rápidas del sprint anterior.
+-Hacer más: Agilizar la manera de trabajo en equipo.
+-Continuar haciendo: Tener las reuniones cada tercer día para completar las tareas del sprint.
+-Dejar de hacer: Dejar pequeñas funcionalidades para despues ya que representar un considerable retraso.
+
+Entrega Sprint 8:
+-Comenzar a hacer: Definir las tareas del sprint y completar tareas faltantes rápidas del sprint anterior.
+-Hacer más: Agilizar la manera de trabajo en equipo y no esperar hasta el dia de la reunion para hacer tareas asignadas por muy rápidas o faciles que parezcan por qué no lo son.
+-Continuar haciendo: Tener las reuniones cada tercer día para completar las tareas del sprint y mamntener comunicación cadaque se hace una actualizacion al repositorio.
+-Dejar de hacer: Dejar pequeñas funcionalidades para despues ya que representar un considerable retraso.
+
+
