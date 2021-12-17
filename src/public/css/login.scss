@@ -21,6 +21,7 @@ $font-bold: "Montserrat", sans-serif;
     position: relative;
 	text-align: center;
 	font-family: $font-main;
+	user-select: none;
 	p {
 		font-size: 12px;
 		display: inline;
@@ -85,6 +86,7 @@ $font-bold: "Montserrat", sans-serif;
 			background: $redStrong;
 		}
 	}
+
 	a {
 		text-align: center;
 		font-size: 12px;
@@ -95,6 +97,25 @@ $font-bold: "Montserrat", sans-serif;
 		padding-bottom: 20px;
 	}
 
+	.keepSession {
+		//background: red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 20px;
+		label {
+			//background: steelblue;
+			display: block;
+			margin: 0;
+		}
+
+		input {
+			display: block;
+			width: auto;
+			margin: 0;
+			margin-right: 10px;
+		}
+	}
     // Estilos del mensaje de error
     .error-login {
         width: 100%;

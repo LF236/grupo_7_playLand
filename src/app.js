@@ -1,5 +1,6 @@
 require('colors');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const path = require('path');
 const app = express();
 const port = 3000;
@@ -11,6 +12,8 @@ app.use(session({ secret: 'play_land' }));
 const public_path = path.resolve(__dirname + '/public');
 app.use(express.static(public_path));
 
+// Seteamos el uso de cookies en el proyecto
+app.use(cookieParser());
 // Procces data of forms 
 app.use(express.urlencoded( {extended: false} ));
 app.use(express.json());
@@ -19,12 +22,28 @@ app.use(express.json());
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
+// Verificammos si no hay una cookie de sesión activa (El usuario dio clic en 'Recuerdame')
+app.use((req, res, next) => {
+    /* 
+        Si hay una cookie de sesión activa, creamos la variable de
+        sesión idUsuario con el valor de la cookie, así los controladores
+        sabrán que hay una sesión activa y podran trabajar de manera
+        correcta
+    */
+    if(req.cookies.idUsuario) {
+        //console.log('Hay una cookie de sesión activa'.rainbow);
+        req.session.idUsuario = req.cookies.idUsuario;
+    }
+    next();
+})
+
 // Configure routes
 const mainRoutes = require('./routes/mainRoutes.js');
 app.use('/', mainRoutes);
 
 // Set view template
 app.set('view engine', 'ejs');
+
 
 // 404 Error Define
 app.use((req, res, next) => {

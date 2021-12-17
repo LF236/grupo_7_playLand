@@ -1,6 +1,7 @@
 require('colors');
 const Productos = require("../models/Productos");
 const path = require('path');
+const bcryptjs = require('bcryptjs');
 const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = require("../helpers/interaccionDB");
 const getDataUserById = require('../helpers/getDataUserById');
 const products = new Productos();
@@ -66,10 +67,15 @@ const controller = {
             con el password que nos pasaron en el formulario
         */
         if (usuarioBandera) {
-            if (usuarioBandera.password == password) {
+            console.log(usuarioBandera.password);            
+            if (bcryptjs.compareSync(password, usuarioBandera.password)) {
                 console.log('ENTRASTE');
                 //console.log(usuarioBandera.id);
                 req.session.idUsuario = usuarioBandera.id;
+                // Si el usuario activo la opción de recordar sesión, creamos una cookie
+                if(req.body.keepSession) {
+                    res.cookie("idUsuario", usuarioBandera.id, { maxAge : 60000 })
+                }
                 return res.render('home', {
                     productsArr: products.listadoProductosArr,
                     "nombreUsuario": usuarioBandera.nombre,
@@ -83,7 +89,8 @@ const controller = {
                     "dataRecibida": {
                         email,
                         password
-                    }
+                    },
+                    "nombreUsuario": null,
                 })
             }
         }
@@ -94,7 +101,8 @@ const controller = {
                 "dataRecibida": {
                     email,
                     password
-                }
+                },
+                "nombreUsuario": null
             })
         }
     },
@@ -117,7 +125,7 @@ const controller = {
             nombre: req.body.firstName,
             apellidos: req.body.lastName,
             email: req.body.email,
-            password: req.body.loginPassword,
+            password: bcryptjs.hashSync(req.body.loginPassword, 12),
             imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
             editor: false
         }

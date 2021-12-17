@@ -4,7 +4,7 @@
   "nombre": "Luis Fernando",
   "apellidos": "Rodriguez Hernandez",
   "email": "fernandorodriguez236@gmail.com",
-  "password": "lf236",
+  "password": "$2a$12$SSoyt1/ER8dy7u0EtHrMmO3YaJ9z89fwiEhtcCJqTeapU8xZnwY7S",
   "imagen_perfil": "/img/profile_images/6c38a916-d325-4a11-98bb-665a32a01d1b/perfil_6c38a916-d325-4a11-98bb-665a32a01d1b",
   "editor": true
  },
@@ -13,7 +13,7 @@
   "nombre": "Silvia Elisa",
   "apellidos": "Gómez Hernández",
   "email": "elisa.gomezhdz@hotmail.com",
-  "password": "m7IwTtpz",
+  "password": "$2a$12$Y2kDJKRNXzSARPLXeuSgMOl8MMMzgHSTsz91XBxr8rArU.ZsxrLHu",
   "imagen_perfil": "/img/profile_images/5ac4a3b5-924b-4fee-85a5-15236d6ccfe4/perfil_5ac4a3b5-924b-4fee-85a5-15236d6ccfe4",
   "editor": true
  },
@@ -22,7 +22,7 @@
   "nombre": "Samara",
   "apellidos": "Zarco Goytortúa",
   "email": "samarazg20@gmail.com",
-  "password": "LMHkkP4ni7lU",
+  "password": "$2a$12$5beBSXvGy/lcyS9H3z8xFuJvMVweeHYADgtGdMkBr4SBWR.XcdpqW",
   "imagen_perfil": "/img/profile_images/30a492a4-853f-4b49-aaff-68f1af3f8b83/perfil_30a492a4-853f-4b49-aaff-68f1af3f8b83",
   "editor": true
  },
@@ -108,12 +108,12 @@
   "editor": false
  },
  {
-  "id": "4515217d-b874-4f65-8989-0e64999604f6",
+  "id": "84060b73-6ce7-49bf-81ec-dff021e4c3e6",
   "nombre": "Elon",
   "apellidos": "Musk",
   "email": "elon@gmail.com",
-  "password": "123",
-  "imagen_perfil": "/img/profile_images/4515217d-b874-4f65-8989-0e64999604f6/perfil_4515217d-b874-4f65-8989-0e64999604f6",
+  "password": "$2a$12$ZM3qMWar3cf92zw6.Aw30upJX18FdfsNjJ6P.6AXIOcBvN4Z0wFXO",
+  "imagen_perfil": "/img/profile_images/84060b73-6ce7-49bf-81ec-dff021e4c3e6/perfil_84060b73-6ce7-49bf-81ec-dff021e4c3e6",
   "editor": false
  }
 ]

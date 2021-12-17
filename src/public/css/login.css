@@ -8,6 +8,10 @@
   position: relative;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .login p {
@@ -93,6 +97,31 @@
   width: 100%;
   display: block;
   padding-bottom: 20px;
+}
+
+.login .keepSession {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+.login .keepSession label {
+  display: block;
+  margin: 0;
+}
+
+.login .keepSession input {
+  display: block;
+  width: auto;
+  margin: 0;
+  margin-right: 10px;
 }
 
 .login .error-login {

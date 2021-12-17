@@ -4,40 +4,46 @@
 <head>
     <!-- Head import -->
     <%- include('./partials/head.ejs'); %>
-    <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
         <!-- Login-->
-    <main class="login">
-        <h3>Log In</h3>
+        <main class="login">
+            <h3>Log In</h3>
 
-        <p>¿Eres nuevo?</p><a href="/register">Sign Up</a>
+            <p>¿Eres nuevo?</p><a href="/register">Sign Up</a>
 
-        <form method="POST" action="/login">
-            <!-- EMAIL INPUT -->
-            <label for="email">Email*</label>
-            <input type="email" name="email" id="email" value="<%= dataRecibida ? dataRecibida.email : '' %> ">
-            
-            <!-- PASSWORD INPUT -->
-            <label for="password">Contraseña*</label>
-            <input type="password" name="password" id="password">
-            <a href="#">¿Olvidaste tu contraseña?</a>
+            <form method="POST" action="/login">
+                <!-- EMAIL INPUT -->
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" value="<%= dataRecibida ? dataRecibida.email : '' %> ">
 
-            <input type="submit" value="Login">
-        </form>
-        <% if(errorMessage) { %>
-            <aside class="error-login">
-                <p><%= errorMessage %> </p>
-            </aside>    
-        <% } %>
-        
-    </main>
+                <!-- PASSWORD INPUT -->
+                <label for="password">Contraseña*</label>
+                <input type="password" name="password" id="password">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <div class="keepSession">
+                    <input type="checkbox" name="keepSession" id="keepSession">
+                    <label for="keepSession" checked="false">Recuerdame</label>                    
+                </div>
+                <input type="submit" value="Login">
+            </form>
+            <% if(errorMessage) { %>
+                <aside class="error-login">
+                    <p>
+                        <%= errorMessage %>
+                    </p>
+                </aside>
+                <% } %>
 
-    <!-- Footer import -->
-    <%- include('./partials/footer.ejs'); %>
-    <script src="/js/menu_animation.js"></script>
+        </main>
+
+        <!-- Footer import -->
+        <%- include('./partials/footer.ejs'); %>
+            <script src="/js/menu_animation.js"></script>
 </body>
+
 </html>
