@@ -2,6 +2,7 @@ require('colors');
 const Productos = require("../models/Productos");
 const path = require('path');
 const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
 const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = require("../helpers/interaccionDB");
 const getDataUserById = require('../helpers/getDataUserById');
 const products = new Productos();
@@ -67,14 +68,14 @@ const controller = {
             con el password que nos pasaron en el formulario
         */
         if (usuarioBandera) {
-            console.log(usuarioBandera.password);            
+            console.log(usuarioBandera.password);
             if (bcryptjs.compareSync(password, usuarioBandera.password)) {
                 console.log('ENTRASTE');
                 //console.log(usuarioBandera.id);
                 req.session.idUsuario = usuarioBandera.id;
                 // Si el usuario activo la opción de recordar sesión, creamos una cookie
-                if(req.body.keepSession) {
-                    res.cookie("idUsuario", usuarioBandera.id, { maxAge : 60000 })
+                if (req.body.keepSession) {
+                    res.cookie("idUsuario", usuarioBandera.id, { maxAge: 60000 })
                 }
                 return res.render('home', {
                     productsArr: products.listadoProductosArr,
@@ -112,6 +113,8 @@ const controller = {
         if (req.session.idUsuario == undefined) {
             return res.render('registro', {
                 "nombreUsuario": null,
+                "primerError": null,
+                "old": null
             });
         }
         // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos un error
@@ -119,23 +122,33 @@ const controller = {
     },
 
     registerCreateUser: (req, res) => {
-        const nameAvatar = req.files.avatar[0].filename;
-        let usuario_auxiliar = {
-            id: req.body.id_user,
-            nombre: req.body.firstName,
-            apellidos: req.body.lastName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.loginPassword, 12),
-            imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
-            editor: false
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            console.log('ENTRO')
+            const nameAvatar = req.files.avatar[0].filename;
+            let usuario_auxiliar = {
+                id: req.body.id_user,
+                nombre: req.body.firstName,
+                apellidos: req.body.lastName,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.loginPassword, 12),
+                imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
+                editor: false
+            }
+            let userData = getDataUsersJSON();
+            userData.push(usuario_auxiliar);
+            saveDBUsers(userData);
+            return res.render('mensaje-usuario-registrado', {
+                'email': usuario_auxiliar.email,
+                'nombreUsuario': null
+            })
         }
-        let userData = getDataUsersJSON();
-        userData.push(usuario_auxiliar);
-        saveDBUsers(userData);
-        res.render('mensaje-usuario-registrado', {
-            'email': usuario_auxiliar.email,
-            'nombreUsuario': null
-        })
+        const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
+        return res.render('registro', {
+            "nombreUsuario": null,
+            "primerError": primerError,
+            "old": req.body
+        });
     },
 
     // Método para mostrar el perfil del usuario
@@ -231,16 +244,16 @@ const controller = {
         // Verificamos si hay sesión antes de renderizar la vista
         auxProducts = products.listadoProductosArr;
         if (req.session.idUsuario == undefined) {
-            return res.render('busqueda-producto', { 
-                auxProducts, 
+            return res.render('busqueda-producto', {
+                auxProducts,
                 patronBusqueda: "Todos los productos",
                 "nombreUsuario": null,
             });
         }
         // Si la sesión esta activa, buscamos la información del usuario actual y la mandamos a la vista
         const usuarioBandera = getDataUserById(req.session.idUsuario);
-        return res.render('busqueda-producto', { 
-            auxProducts, 
+        return res.render('busqueda-producto', {
+            auxProducts,
             patronBusqueda: "Todos los productos",
             "nombreUsuario": usuarioBandera.nombre,
             "idUsuario": usuarioBandera.id

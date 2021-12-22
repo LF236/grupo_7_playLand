@@ -29,6 +29,14 @@
   display: none;
 }
 
+.registro #error-message-node-validation {
+  display: block;
+  color: #d90000;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .registro form {
   width: 90%;
   margin: auto;

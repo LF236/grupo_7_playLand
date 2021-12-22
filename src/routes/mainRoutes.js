@@ -5,6 +5,7 @@ const fs = require('fs');
 const { v4: uuid } = require('uuid');
 const path = require('path');
 const mainController = require('../controllers/mainController.js');
+const { validarRegistroUsuario } = require('../helpers/validarRegistroUsuario');
 const generaID = (req, res, next) =>{
     const id_aleatorio = uuid()
     req['id'] = id_aleatorio;
@@ -62,7 +63,7 @@ router.get('/login', mainController.login);
 router.post('/login', mainController.processLogin);
 
 router.get('/register', mainController.register);
-router.post('/register', upload.fields([ { name: 'avatar', maxCount: 1 } ]), mainController.registerCreateUser)
+router.post('/register', upload.fields([ { name: 'avatar', maxCount: 1 } ]), validarRegistroUsuario, mainController.registerCreateUser)
 router.get('/profile/:idUsuario', mainController.profile);
 
 router.get('/shoppingCar', mainController.shoppingCar);

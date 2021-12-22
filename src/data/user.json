@@ -108,12 +108,21 @@
   "editor": false
  },
  {
-  "id": "84060b73-6ce7-49bf-81ec-dff021e4c3e6",
+  "id": "e447d51c-f6db-471d-be9e-b2e4e04c73e7",
   "nombre": "Elon",
   "apellidos": "Musk",
   "email": "elon@gmail.com",
-  "password": "$2a$12$ZM3qMWar3cf92zw6.Aw30upJX18FdfsNjJ6P.6AXIOcBvN4Z0wFXO",
-  "imagen_perfil": "/img/profile_images/84060b73-6ce7-49bf-81ec-dff021e4c3e6/perfil_84060b73-6ce7-49bf-81ec-dff021e4c3e6",
+  "password": "$2a$12$ggHh/GumlVvdR3QZntkfxuGtyJvgaof/gVSkmLJgqS.naLGip39Ba",
+  "imagen_perfil": "/img/profile_images/e447d51c-f6db-471d-be9e-b2e4e04c73e7/perfil_e447d51c-f6db-471d-be9e-b2e4e04c73e7",
+  "editor": false
+ },
+ {
+  "id": "cee0d306-abeb-4c07-bf7b-61c6121cb749",
+  "nombre": "ICE",
+  "apellidos": "CUBE",
+  "email": "ice@gmail.com",
+  "password": "$2a$12$QdAbsUgG9qlnzxXwSGqbAuM6UvNseftB1rDI6Tv05ao17Ng0A3mFG",
+  "imagen_perfil": "/img/profile_images/cee0d306-abeb-4c07-bf7b-61c6121cb749/perfil_cee0d306-abeb-4c07-bf7b-61c6121cb749",
   "editor": false
  }
 ]

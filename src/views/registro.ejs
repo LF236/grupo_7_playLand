@@ -15,22 +15,25 @@
         <main class="registro">
             <h3 id="title_register">Sign up</h3>
             <h2 id="error-message">Mensaje Error</h2>
+            <% if(primerError) { %>
+                <h2 id="error-message-node-validation"><%= primerError.msg %> </h2>
+            <% } %>  
             <form method="POST" action="/register" enctype="multipart/form-data">
                 <label for="firstName">Nombre</label>
-                <input type="text" name="firstName" size="40" id="firstName">
+                <input type="text" name="firstName" size="40" id="firstName" value="<%= old && old.firstName %>">
 
                 <label for="lastName">Apellido</label>
-                <input type="text" name="lastName" size="40" id="lastName">
+                <input type="text" name="lastName" size="40" id="lastName" value="<%= old && old.lastName %>">
 
                 <label for="email">Correo electrónico</label>
-                <input type="email" name="email" size="40" id="email">
+                <input type="email" name="email" size="40" id="email" value="<%= old && old.email %>">
 
                 <label for="emailConfirm">Verificar correo electrónico</label>
-                <input type="email" name="emailConfirm" size="40" id="emailConfirm">
+                <input type="email" name="emailConfirm" size="40" id="emailConfirm" value="<%= old && old.emailConfirm %>">
 
                 <label for="loginPassword">Contraseña</label>
                 <input type="password" size="40" id="loginPassword" name="loginPassword"
-                    title="Letters and digits only (at least 6)">
+                    title="Letters and digits only (at least 6)" value="<%= old && old.password %>">
 
                 <label for="loginPasswordConfirm">Verificar contraseña</label>
                 <input type="password" size="40" id="loginPasswordConfirm" name="loginPasswordConfirm">
