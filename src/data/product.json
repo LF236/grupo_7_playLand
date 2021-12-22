@@ -701,5 +701,18 @@
 		"rating": "",
 		"description": "Consola de videojuegos de Sony",
 		"reviews": []
+	},
+	{
+		"nombre_producto": "hehehehe",
+		"id": "925bfd58-ea97-4178-8192-b2c1ecf78e04",
+		"main_image": "/img/products_img/925bfd58-ea97-4178-8192-b2c1ecf78e04/main_image.jpg",
+		"detail_image_1": "/img/products_img/925bfd58-ea97-4178-8192-b2c1ecf78e04/image_comple_gato-conectado.jpg",
+		"detail_image_2": "/img/products_img/925bfd58-ea97-4178-8192-b2c1ecf78e04/image_comple_218679049_1639279053081862_4217449771454593044_n.jpg",
+		"detail_image_3": "/img/products_img/925bfd58-ea97-4178-8192-b2c1ecf78e04/image_comple_E7ttaxYXoAESLll.jpeg",
+		"precio": "250",
+		"categoria": "anime",
+		"rating": "",
+		"description": "he eh e he he",
+		"reviews": []
 	}
 ]

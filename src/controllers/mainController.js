@@ -124,7 +124,7 @@ const controller = {
     registerCreateUser: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            console.log('ENTRO')
+            //console.log('ENTRO')
             const nameAvatar = req.files.avatar[0].filename;
             let usuario_auxiliar = {
                 id: req.body.id_user,
@@ -296,24 +296,39 @@ const controller = {
         const usuarioBandera = getDataUserById(req.session.idUsuario);
         return res.render('crear-producto', {
             "nombreUsuario": usuarioBandera.nombre,
-            "idUsuario": usuarioBandera.id
+            "idUsuario": usuarioBandera.id,
+            "primerError": null,
+            "old": null
         });
     },
 
     // Creamos un nuevo producto POST
     createNewProduct: (req, res) => {
-        // Almacenamos la ruta de la imagen principal
-        const route_delete_string = path.join(__dirname + '/../public')
-        let main_img_route = `${req.files.main_image[0].path}`.replace(route_delete_string, '');
-        const id_product = req.id;
-        // Recorremos el arreglo de imágenes secundarias y las asignamos a su respeciva variable
-        const arrRoutesImagenesComplementarias = ["", "", ""];
-        req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
-            arrRoutesImagenesComplementarias[i] = `${imgComplementaria.path}`.replace(route_delete_string, '');
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            // Almacenamos la ruta de la imagen principal
+            const route_delete_string = path.join(__dirname + '/../public')
+            let main_img_route = `${req.files.main_image[0].path}`.replace(route_delete_string, '');
+            const id_product = req.id;
+            // Recorremos el arreglo de imágenes secundarias y las asignamos a su respeciva variable
+            const arrRoutesImagenesComplementarias = ["", "", ""];
+            req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
+                arrRoutesImagenesComplementarias[i] = `${imgComplementaria.path}`.replace(route_delete_string, '');
+            });
+            const allProduct = products.crearProducto(id_product, req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0], arrRoutesImagenesComplementarias[1], arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
+            saveDBProducts(products.listadoProductosArr);
+            return res.redirect(`/detailproduct/${allProduct.id}`);
+        }
+
+        //console.log(errors.mapped());
+        const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('crear-producto', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id,
+            "primerError": primerError,
+            "old": req.body
         });
-        const allProduct = products.crearProducto(id_product, req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0], arrRoutesImagenesComplementarias[1], arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
-        saveDBProducts(products.listadoProductosArr);
-        return res.redirect(`/detailproduct/${allProduct.id}`);
     },
 
     // Actualizar DB de productos PUT 

@@ -23,6 +23,28 @@ const validarRegistroUsuario = [
         .custom((value, { req }) => req.files.avatar ? true : false).withMessage('Debes seleccionar una imagen')
 ];
 
+const validarCreacionProducto = [
+    check('nombre_producto')
+        .notEmpty().withMessage('Debes introducir un nombre para el producto').bail()
+        .isLength({ min: 2 }).withMessage('El nombre del producto debe ser más largo'),
+    check('description')
+        .notEmpty().withMessage('Debes agregar una descripción').bail()
+        .isLength({ min: 5 }).withMessage('La descripción debe ser más grande'),
+    check('players')
+        .notEmpty().withMessage('Debes agregar el número de jugadores').bail()
+        .isInt({ min: 1 }).withMessage('El número mínimo de jugadores es 1'),
+    check('precio')
+        .notEmpty().withMessage('Debes agregar un precio al producto').bail()
+        .isInt({ min: 1 }).withMessage('El precio del producto debe ser mayor a 0'),
+    check('categoria')
+        .notEmpty().withMessage('Debes seleccionar al menos una categoria'),
+    check('main_image')
+        .custom((value, { req }) => req.files.main_image ? true : false).withMessage('Debes agregar la imágen principal'),
+    check('imagenesComplementarias')
+        .custom((value, { req }) => req.files.imagenesComplementarias ? true: false).withMessage('Debes agregar al menos una imágen complementaria')
+];
+
 module.exports = {
-    validarRegistroUsuario
+    validarRegistroUsuario,
+    validarCreacionProducto
 }

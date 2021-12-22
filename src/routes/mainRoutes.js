@@ -5,7 +5,7 @@ const fs = require('fs');
 const { v4: uuid } = require('uuid');
 const path = require('path');
 const mainController = require('../controllers/mainController.js');
-const { validarRegistroUsuario } = require('../helpers/validarRegistroUsuario');
+const { validarRegistroUsuario, validarCreacionProducto } = require('../helpers/validarRegistroUsuario');
 const generaID = (req, res, next) =>{
     const id_aleatorio = uuid()
     req['id'] = id_aleatorio;
@@ -85,6 +85,7 @@ router.post('/products/createnew',
             maxCount: 1
         }
     ]),
+    validarCreacionProducto,
     mainController.createNewProduct);
 router.get('/products/:id/edit', mainController.editProduct);
 router.put('/products/:id', mainController.updateProduct);

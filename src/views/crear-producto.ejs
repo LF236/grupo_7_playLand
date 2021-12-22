@@ -15,11 +15,14 @@
         <form method="POST" action='/products/createnew' enctype="multipart/form-data">
             <h3>Detalle del Producto</h3>
             <h2 id="error-message">Mensaje Error</h2>
+            <% if(primerError) { %>
+                <h2 id="error-message-node-validation"><%= primerError.msg %> </h2>
+            <% } %>  
             <label for="nombre_producto">Nombre del producto</label>
-            <input required type="text" name="nombre_producto" id="nombre_producto">
+            <input required type="text" name="nombre_producto" id="nombre_producto" value="<%= old && old.nombre_producto %>">
 
             <label for="description">Descripción del producto</label>
-            <input required type="text" name="description" id="description">
+            <input required type="text" name="description" id="description" value="<%= old && old.description %>">
 
             <label for="main_image">Adjuntar imagen principal</label>
             <input type="file" name="main_image" accept=".jpeg,.jpg,.png" id="main_image">
@@ -43,11 +46,11 @@
             </div>
             
             <label for="players" class="players-label">Número de jugadores</label>
-            <input required type="number" name="players" value="" id="players">
+            <input required type="number" name="players" id="players" value="<%= old && old.players %>">
 
 
             <label for="precio">Precio</label>
-            <input required type="text" name="precio" id="precio">
+            <input required type="text" name="precio" id="precio" value="<%= old && old.precio %>">
 
             <input type="submit" value="Subir" class="submit-button" id="button-subir">
             <input type="reset" value="Eliminar" class="submit-button"> 
