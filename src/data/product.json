@@ -1,18 +1,18 @@
 [
 	{
-		"nombre_producto": "Juego De Mesa Novelty ¿Sabes Quién Es? Harry Potter",
+		"nombre_producto": "Juego De Mesa Novelty ¿Sabes Quién Es? Harry Potter ",
 		"id": "242fb2a2-1db2-4d21-ac24-852b95463c51",
 		"main_image": "/img/products_img/242fb2a2-1db2-4d21-ac24-852b95463c51/main_image.webp",
 		"detail_image_1": "/img/products_img/242fb2a2-1db2-4d21-ac24-852b95463c51/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/242fb2a2-1db2-4d21-ac24-852b95463c51/detail_image_2.webp",
 		"detail_image_3": null,
-		"precio": 349,
+		"precio": "349  ",
 		"categoria": [
-			"Películas",
-			"Libros"
+			"Libros",
+			"Películas"
 		],
 		"rating": 4.5,
-		"description": "2 Piezas de plástico,2 Bases de juego, 2 Fichas con 24 personajes para elegir",
+		"description": "2 Piezas de plástico,2 Bases de juego, 2 Fichas con 24 personajes para elegir  ",
 		"players": "4",
 		"reviews": [
 			{

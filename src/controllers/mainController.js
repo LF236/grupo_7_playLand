@@ -2,6 +2,7 @@ require('colors');
 const Productos = require("../models/Productos");
 const path = require('path');
 const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
 const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = require("../helpers/interaccionDB");
 const getDataUserById = require('../helpers/getDataUserById');
 const products = new Productos();
@@ -67,14 +68,14 @@ const controller = {
             con el password que nos pasaron en el formulario
         */
         if (usuarioBandera) {
-            console.log(usuarioBandera.password);            
+            console.log(usuarioBandera.password);
             if (bcryptjs.compareSync(password, usuarioBandera.password)) {
                 console.log('ENTRASTE');
                 //console.log(usuarioBandera.id);
                 req.session.idUsuario = usuarioBandera.id;
                 // Si el usuario activo la opción de recordar sesión, creamos una cookie
-                if(req.body.keepSession) {
-                    res.cookie("idUsuario", usuarioBandera.id, { maxAge : 60000 })
+                if (req.body.keepSession) {
+                    res.cookie("idUsuario", usuarioBandera.id, { maxAge: 60000 })
                 }
                 return res.render('home', {
                     productsArr: products.listadoProductosArr,
@@ -112,37 +113,61 @@ const controller = {
         if (req.session.idUsuario == undefined) {
             return res.render('registro', {
                 "nombreUsuario": null,
+                "primerError": null,
+                "old": null
             });
         }
-        // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos un error
-        return res.send('Hay una sesión activa, no puedes registrar un usuario nuevo')
+        // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos la vista de error
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('not-found', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id,
+            "messageError": "Ya hay una sesión activa",
+            "messageLink": "Regresar a la página principal",
+            "url": "/"
+        })
     },
 
     registerCreateUser: (req, res) => {
-        const nameAvatar = req.files.avatar[0].filename;
-        let usuario_auxiliar = {
-            id: req.body.id_user,
-            nombre: req.body.firstName,
-            apellidos: req.body.lastName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.loginPassword, 12),
-            imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
-            editor: false
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            //console.log('ENTRO')
+            const nameAvatar = req.files.avatar[0].filename;
+            let usuario_auxiliar = {
+                id: req.body.id_user,
+                nombre: req.body.firstName,
+                apellidos: req.body.lastName,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.loginPassword, 12),
+                imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
+                editor: false
+            }
+            let userData = getDataUsersJSON();
+            userData.push(usuario_auxiliar);
+            saveDBUsers(userData);
+            return res.render('mensaje-usuario-registrado', {
+                'email': usuario_auxiliar.email,
+                'nombreUsuario': null
+            })
         }
-        let userData = getDataUsersJSON();
-        userData.push(usuario_auxiliar);
-        saveDBUsers(userData);
-        res.render('mensaje-usuario-registrado', {
-            'email': usuario_auxiliar.email,
-            'nombreUsuario': null
-        })
+        const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
+        return res.render('registro', {
+            "nombreUsuario": null,
+            "primerError": primerError,
+            "old": req.body
+        });
     },
 
     // Método para mostrar el perfil del usuario
     profile: (req, res) => {
         // Si la sesión no se encuentra activa el usuario no tiene permisos para poder entrar
         if (req.session.idUsuario == undefined) {
-            res.send('NO PUEDES ENTRAR A ESTE SITION');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No hay una sesión activa, por favor inicie sesión",
+                "messageLink": "Ir al Login",
+                "url": "/login"
+            })
         }
         // Si si hay una sesión, obtenemos el ID que se manda a través de la URL
         const { idUsuario } = req.params;
@@ -231,16 +256,16 @@ const controller = {
         // Verificamos si hay sesión antes de renderizar la vista
         auxProducts = products.listadoProductosArr;
         if (req.session.idUsuario == undefined) {
-            return res.render('busqueda-producto', { 
-                auxProducts, 
+            return res.render('busqueda-producto', {
+                auxProducts,
                 patronBusqueda: "Todos los productos",
                 "nombreUsuario": null,
             });
         }
         // Si la sesión esta activa, buscamos la información del usuario actual y la mandamos a la vista
         const usuarioBandera = getDataUserById(req.session.idUsuario);
-        return res.render('busqueda-producto', { 
-            auxProducts, 
+        return res.render('busqueda-producto', {
+            auxProducts,
             patronBusqueda: "Todos los productos",
             "nombreUsuario": usuarioBandera.nombre,
             "idUsuario": usuarioBandera.id
@@ -253,7 +278,12 @@ const controller = {
     editProduct: (req, res) => {
         // Verificamos que haya una sesión activa, si no la hay mandar mensaje de error
         if (req.session.idUsuario == undefined) {
-            res.send('No tiene los permisos necesarios para esta operación');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No tienes permisos para estar aqui!",
+                "messageLink": "Regresar a la página principal",
+                "url": "/"
+            })
         }
         const idProduct = req.params.id;
         let auxProduct = null;
@@ -277,30 +307,50 @@ const controller = {
     createProduct: (req, res) => {
         // Verificamos si hay una sesión activa, si no la hay mandar mensaje de NO permisos
         if (req.session.idUsuario == undefined) {
-            return res.send('Si quiere agregar un producto para ser puesto a la venta favor de iniciar sesión');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "Si quiere agregar un producto para ser puesto a la venta por favor inicie sesión",
+                "messageLink": "Ir al Login",
+                "url": "/login"
+            })
         }
         // Si ya esta iniciada la sesión, buscar la información
         const usuarioBandera = getDataUserById(req.session.idUsuario);
         return res.render('crear-producto', {
             "nombreUsuario": usuarioBandera.nombre,
-            "idUsuario": usuarioBandera.id
+            "idUsuario": usuarioBandera.id,
+            "primerError": null,
+            "old": null
         });
     },
 
     // Creamos un nuevo producto POST
     createNewProduct: (req, res) => {
-        // Almacenamos la ruta de la imagen principal
-        const route_delete_string = path.join(__dirname + '/../public')
-        let main_img_route = `${req.files.main_image[0].path}`.replace(route_delete_string, '');
-        const id_product = req.id;
-        // Recorremos el arreglo de imágenes secundarias y las asignamos a su respeciva variable
-        const arrRoutesImagenesComplementarias = ["", "", ""];
-        req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
-            arrRoutesImagenesComplementarias[i] = `${imgComplementaria.path}`.replace(route_delete_string, '');
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            // Almacenamos la ruta de la imagen principal
+            const route_delete_string = path.join(__dirname + '/../public')
+            let main_img_route = `${req.files.main_image[0].path}`.replace(route_delete_string, '');
+            const id_product = req.id;
+            // Recorremos el arreglo de imágenes secundarias y las asignamos a su respeciva variable
+            const arrRoutesImagenesComplementarias = ["", "", ""];
+            req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
+                arrRoutesImagenesComplementarias[i] = `${imgComplementaria.path}`.replace(route_delete_string, '');
+            });
+            const allProduct = products.crearProducto(id_product, req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0], arrRoutesImagenesComplementarias[1], arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
+            saveDBProducts(products.listadoProductosArr);
+            return res.redirect(`/detailproduct/${allProduct.id}`);
+        }
+
+        //console.log(errors.mapped());
+        const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('crear-producto', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id,
+            "primerError": primerError,
+            "old": req.body
         });
-        const allProduct = products.crearProducto(id_product, req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0], arrRoutesImagenesComplementarias[1], arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
-        saveDBProducts(products.listadoProductosArr);
-        return res.redirect(`/detailproduct/${allProduct.id}`);
     },
 
     // Actualizar DB de productos PUT 
@@ -332,7 +382,12 @@ const controller = {
     deleteProduct: (req, res) => {
         // Verificamos si la sesión esta activa, si no mandamos un error
         if (req.session.idUsuario == undefined) {
-            res.send('No tienes privilegios para realizar esta operación');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No tienes permisos para estar aqui!",
+                "messageLink": "Regresar a la página principal",
+                "url": "/"
+            })
         }
         // Obtenemos el id
         const id = req.params.id;

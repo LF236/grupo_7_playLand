@@ -15,6 +15,7 @@ $font-bold: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .registro {
@@ -37,6 +38,14 @@ $font-bold: "Montserrat", sans-serif;
         margin-bottom: 20px;
         text-align: center;
         display: none;
+    }
+
+    #error-message-node-validation {
+        display: block;
+        color: $red;
+        margin: 10px 0;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     form {

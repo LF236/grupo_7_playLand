@@ -47,7 +47,12 @@ app.set('view engine', 'ejs');
 
 // 404 Error Define
 app.use((req, res, next) => {
-    res.status(404).render('not-found');
+    res.status(404).render('not-found', {
+        "nombreUsuario": null,
+        "messageError": "Lo sentimos, no se pudo encontrar la página que estás buscando",
+        "messageLink": "Regresar a la página principal",
+        "url": "/"
+    });
 });
 
 //Listening Server

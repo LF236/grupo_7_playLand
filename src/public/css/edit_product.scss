@@ -39,6 +39,14 @@ $font-bold: "Montserrat", sans-serif;
         display: none;
     }
 
+    #error-message-node-validation {
+        display: block;
+        color: $red;
+        margin: 10px 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
     form {
         width: 90%;
         margin: auto;
