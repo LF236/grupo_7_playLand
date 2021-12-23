@@ -23,18 +23,16 @@
 		]
 	},
 	{
-		"nombre_producto": "Star Wars Imperio Vs Rebelión",
+		"nombre_producto": "Star Wars Imperio Vs Rebelión ",
 		"id": "a608e133-7f7b-4b29-83a4-e96b8281db50",
 		"main_image": "/img/products_img/a608e133-7f7b-4b29-83a4-e96b8281db50/main_image.webp",
 		"detail_image_1": "/img/products_img/a608e133-7f7b-4b29-83a4-e96b8281db50/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/a608e133-7f7b-4b29-83a4-e96b8281db50/detail_image_2.webp",
 		"detail_image_3": null,
-		"precio": 689,
-		"categoria": [
-			"Películas"
-		],
+		"precio": "690 ",
+		"categoria": "Películas",
 		"rating": 4.3,
-		"description": "En Star Wars: Imperio vs. Rebelión los jugadores controlan los agentes y naves estelares de la Guerra Civil Galáctica. Reclutando para su causa a héroes como Luke Skywalker, Leia Organa y Darth Vader, cada bando deberá decidir su estrategia y superar en astucia a su oponente en los momentos cruciales del conflicto. ¡El destino de la galaxia está en tus manos! Un juego de cartas de aproximadamente 60 minutos de duración y exclusivo para 2 jugadores.",
+		"description": "En Star Wars: Imperio vs. Rebelión los jugadores controlan los agentes y naves estelares de la Guerra Civil Galáctica. Reclutando para su causa a héroes como Luke Skywalker, Leia Organa y Darth Vader, cada bando deberá decidir su estrategia y superar en astucia a su oponente en los momentos cruciales del conflicto. ¡El destino de la galaxia está en tus manos! Un juego de cartas de aproximadamente 60 minutos de duración y exclusivo para 2 jugadores. ",
 		"players": "2",
 		"reviews": [
 			{
