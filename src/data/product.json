@@ -23,7 +23,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Star Wars Imperio Vs Rebelión. Juego De Mesa En Español",
+		"nombre_producto": "Star Wars Imperio Vs Rebelión",
 		"id": "a608e133-7f7b-4b29-83a4-e96b8281db50",
 		"main_image": "/img/products_img/a608e133-7f7b-4b29-83a4-e96b8281db50/main_image.webp",
 		"detail_image_1": "/img/products_img/a608e133-7f7b-4b29-83a4-e96b8281db50/detail_image_1.webp",
@@ -45,40 +45,18 @@
 		]
 	},
 	{
-		"nombre_producto": "Ajedrez Figuras Star Wars",
-		"id": "a35c9235-3574-4f86-9524-e6e4d0af9eab",
-		"main_image": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/main_image.webp",
-		"detail_image_1": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_1.webp",
-		"detail_image_2": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_2.webp",
-		"detail_image_3": "/img/products_img/a35c9235-3574-4f86-9524-e6e4d0af9eab/detail_image_3.webp",
-		"precio": 1,
-		"categoria": [
-			"Películas"
-		],
-		"rating": 5,
-		"description": "¿Parte de la resistencia o del imperio? Toma tu lugar y juega estratégicamente con este incre­ble Ajedrez que aguarda por ti en Epicland. El increíble Ajedrez Figuras Star Wars es ideal para todo fan o coleccionista, con piezas de alta calidad inspiradas en tus personajes favoritos, ideal para una buena partida. ¡El destino de la galaxia está en tus manos!  No esperes más y llévate el tuyo, recuerda que los mejores juegos de mesa te espera en Epicland.  Especificaciones: 32 Piezas, 1 Tablero",
-		"players": "2",
-		"reviews": [
-			{
-				"rating": "",
-				"titulo": "",
-				"texto": ""
-			}
-		]
-	},
-	{
-		"nombre_producto": "Juego De Mesa Monopoly Sailor Moon | Basado En El Popular",
+		"nombre_producto": "Juego De Mesa Monopoly Sailor Moon",
 		"id": "b2e9659a-713e-4c85-8719-9ec41fabc6ec",
 		"main_image": "/img/products_img/b2e9659a-713e-4c85-8719-9ec41fabc6ec/main_image.webp",
 		"detail_image_1": "/img/products_img/b2e9659a-713e-4c85-8719-9ec41fabc6ec/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/b2e9659a-713e-4c85-8719-9ec41fabc6ec/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/b2e9659a-713e-4c85-8719-9ec41fabc6ec/detail_image_3.webp",
-		"precio": 3,
+		"precio": 380,
 		"categoria": [
 			"Anime"
 		],
 		"rating": 4.5,
-		"description": "Juego de mesa Monopoly Sailor Moon | Basado en el popular espectáculo de televisión anime | Monopoly coleccionable con token. Sailor Moon y sus amigos adornan las piezas del tradicional juego Monopoly. Gana este clásico juego de estrategia con el poder de Pretty Soldiers. Los colores rosa y pastel crean una vibrante tabla de juegos para satisfacer la paleta de colores de los fans de Sailor Moon. Incluye tokens personalizados con acabado de rosa con corazón cósmico compacto, cáliz de luna, varilla de luna en espiral, orbe de granate, espejo de agua profunda y espada espacial. 2-6 jugadores | Edades 8 + | Más de 60 minutos de tiempo de juego",
+		"description": "Sailor Moon y sus amigos adornan las piezas del tradicional juego Monopoly. Gana este clásico juego de estrategia con el poder de Pretty Soldiers. Los colores rosa y pastel crean una vibrante tabla de juegos para satisfacer la paleta de colores de los fans de Sailor Moon. Incluye tokens personalizados con acabado de rosa con corazón cósmico compacto, cáliz de luna, varilla de luna en espiral, orbe de granate, espejo de agua profunda y espada espacial.",
 		"players": "6",
 		"reviews": [
 			{
@@ -89,7 +67,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Jumanji Caja Madera Real Juego Mesa Cardinal Games Español",
+		"nombre_producto": "Jumanji Caja Madera Real",
 		"id": "8173355e-0a2d-455d-9153-5165ca365e9a",
 		"main_image": "/img/products_img/8173355e-0a2d-455d-9153-5165ca365e9a/main_image.webp",
 		"detail_image_1": "/img/products_img/8173355e-0a2d-455d-9153-5165ca365e9a/detail_image_1.webp",
@@ -111,7 +89,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Harry Potter: Hogwarts Battle Juego De Mesa",
+		"nombre_producto": "Harry Potter: Hogwarts Battle",
 		"id": "7758e6d4-aeff-4106-9db4-6d9663f2f56a",
 		"main_image": "/img/products_img/7758e6d4-aeff-4106-9db4-6d9663f2f56a/main_image.webp",
 		"detail_image_1": "/img/products_img/7758e6d4-aeff-4106-9db4-6d9663f2f56a/detail_image_1.webp",
@@ -124,7 +102,7 @@
 		],
 		"rating": 5,
 		"description": "Las fuerzas sdel mal amenazan con invadir el castillo de Hogwarts en Harry Potter: Hogwarts Battle, un juego cooperativo de construcción de mazos, y es hasta cuatro estudiantes garantizar la seguridad de la escuela al derrotar a los villanos y consolidar sus defensas; en el juego, los jugadores asumen el papel de un estudiante de Hogwarts: Harry, Ron, Hermione o Neville, cada uno con su propio mazo de cartas personal que se utiliza para adquirir recursos.",
-		"players": "3.9",
+		"players": "4",
 		"reviews": [
 			{
 				"rating": "",
@@ -134,7 +112,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Marvel Super Heroes - Juego De Memoria",
+		"nombre_producto": "Marvel Super Heroes Juego De Memoria",
 		"id": "ef61f214-a5a9-4d7f-859d-c3816d200329",
 		"main_image": "/img/products_img/ef61f214-a5a9-4d7f-859d-c3816d200329/main_image.webp",
 		"detail_image_1": "/img/products_img/ef61f214-a5a9-4d7f-859d-c3816d200329/detail_image_1.webp",
@@ -156,7 +134,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Turista Juego Marvel Universo De Super Heroes Original",
+		"nombre_producto": "Turista Marvel Universo De Super Heroes",
 		"id": "b6e28341-7d0e-4bcd-a423-7b4ce17f84cb",
 		"main_image": "/img/products_img/b6e28341-7d0e-4bcd-a423-7b4ce17f84cb/main_image.webp",
 		"detail_image_1": "/img/products_img/b6e28341-7d0e-4bcd-a423-7b4ce17f84cb/detail_image_1.webp",
@@ -166,9 +144,9 @@
 		"categoria": [
 			"Películas"
 		],
-		"rating": 5,
-		"description": "Contiene y tablero de cartón con 24 casillas de súper héroes que puedes comprar, 2 casillas POW donde se pelearan las batallas más épicas con 24 tarjetas Pow para que el reto sea variado y divertido. También contiene 20 tarjetas con poder recargado y las 6 fabulosas gemas del infinito que podrás utilizar para obtener los poderes del universo. 2 Dados, Billetes De Juguete Y 6 Increíbles Peones Que Se Moverán Durante El Juego Entre Las Casilla Elige Tu Favorito",
-		"players": "4.3",
+		"rating": 4.3,
+		"description": "Contiene y tablero de cartón con 24 casillas de súper héroes que puedes comprar, 2 casillas POW donde se pelearan las batallas más épicas con 24 tarjetas Pow para que el reto sea variado y divertido. También contiene 20 tarjetas con poder recargado y las 6 fabulosas gemas del infinito que podrás utilizar para obtener los poderes del universo. 2 Dados, Billetes De Juguete Y 6 Increíbles Peones Que Se Moverán Durante El Juego Entre Las Casilla",
+		"players": "6",
 		"reviews": [
 			{
 				"rating": "",
@@ -178,7 +156,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Spinmaster - Connor Reid 5 Minutos Marvel. En Caja, Nuevo!",
+		"nombre_producto": "Spinmaster Connor Reid 5 Minutos Marvel",
 		"id": "60a4e31e-0e3a-4702-bbf9-b3a74991734c",
 		"main_image": "/img/products_img/60a4e31e-0e3a-4702-bbf9-b3a74991734c/main_image.webp",
 		"detail_image_1": "/img/products_img/60a4e31e-0e3a-4702-bbf9-b3a74991734c/detail_image_1.webp",
@@ -200,7 +178,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Dominó Game Of Thrones Lujo Luxor Curpiel Juego Mesa Got",
+		"nombre_producto": "Dominó Game Of Thrones",
 		"id": "6a4f9192-c190-44e8-9bdd-72dd6d17f749",
 		"main_image": "/img/products_img/6a4f9192-c190-44e8-9bdd-72dd6d17f749/main_image.webp",
 		"detail_image_1": null,
@@ -222,13 +200,13 @@
 		]
 	},
 	{
-		"nombre_producto": "Risk Game Of Thrones Ed Deluxe 2 Mapas",
+		"nombre_producto": "Risk Game Of Thrones Ed Deluxe",
 		"id": "7ddb36db-04f9-47b2-afb5-99bf4c906fd6",
 		"main_image": "/img/products_img/7ddb36db-04f9-47b2-afb5-99bf4c906fd6/main_image.webp",
 		"detail_image_1": "/img/products_img/7ddb36db-04f9-47b2-afb5-99bf4c906fd6/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/7ddb36db-04f9-47b2-afb5-99bf4c906fd6/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/7ddb36db-04f9-47b2-afb5-99bf4c906fd6/detail_image_3.webp",
-		"precio": 3,
+		"precio": 980,
 		"categoria": [
 			"Series"
 		],
@@ -244,7 +222,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Ouija Stranger Things [ Edicion Especial ] Hasbro",
+		"nombre_producto": "Ouija Stranger Things",
 		"id": "77f799ce-74fa-4c77-80e4-aa325b50f140",
 		"main_image": "/img/products_img/77f799ce-74fa-4c77-80e4-aa325b50f140/main_image.webp",
 		"detail_image_1": "/img/products_img/77f799ce-74fa-4c77-80e4-aa325b50f140/detail_image_1.webp",
@@ -266,13 +244,13 @@
 		]
 	},
 	{
-		"nombre_producto": "El Padrino Imperio Corleone Juego De Mesa Original Español",
+		"nombre_producto": "El Padrino Imperio Corleone",
 		"id": "b868c23d-8ae3-49eb-8675-6329b4e98aaf",
 		"main_image": "/img/products_img/b868c23d-8ae3-49eb-8675-6329b4e98aaf/main_image.webp",
 		"detail_image_1": "/img/products_img/b868c23d-8ae3-49eb-8675-6329b4e98aaf/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/b868c23d-8ae3-49eb-8675-6329b4e98aaf/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/b868c23d-8ae3-49eb-8675-6329b4e98aaf/detail_image_3.webp",
-		"precio": 2,
+		"precio": 2000,
 		"categoria": [
 			"Películas",
 			"Libros"
@@ -289,7 +267,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Holmes Sherlock And Mycroft Juego De Mesa En Español",
+		"nombre_producto": "Holmes Sherlock And Mycroft",
 		"id": "c5abd305-4bc2-4f18-a24e-7eedb23344e0",
 		"main_image": "/img/products_img/c5abd305-4bc2-4f18-a24e-7eedb23344e0/main_image.webp",
 		"detail_image_1": "/img/products_img/c5abd305-4bc2-4f18-a24e-7eedb23344e0/detail_image_1.webp",
@@ -312,7 +290,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Juego Clue It",
+		"nombre_producto": "Clue It",
 		"id": "70a67e20-ffa9-4d68-aff2-548d56f3528f",
 		"main_image": "/img/products_img/70a67e20-ffa9-4d68-aff2-548d56f3528f/main_image.webp",
 		"detail_image_1": "/img/products_img/70a67e20-ffa9-4d68-aff2-548d56f3528f/detail_image_1.webp",
@@ -357,13 +335,13 @@
 		]
 	},
 	{
-		"nombre_producto": "Clue Edición Game of Thrones",
+		"nombre_producto": "Clue Game of Thrones",
 		"id": "52e8d594-6a28-4b49-90a9-b7ea322f418e",
 		"main_image": "/img/products_img/52e8d594-6a28-4b49-90a9-b7ea322f418e/main_image.webp",
 		"detail_image_1": "/img/products_img/52e8d594-6a28-4b49-90a9-b7ea322f418e/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/52e8d594-6a28-4b49-90a9-b7ea322f418e/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/52e8d594-6a28-4b49-90a9-b7ea322f418e/detail_image_3.webp",
-		"precio": 8,
+		"precio": 890,
 		"categoria": [
 			"Series",
 			"Libros"
@@ -380,13 +358,13 @@
 		]
 	},
 	{
-		"nombre_producto": "Fantasy Flight Esdla Viajes Por La Tierra Media Juego En Esp",
+		"nombre_producto": "Viajes Por La Tierra Media",
 		"id": "a4996729-71ab-45bc-9ec3-a182d36ec70e",
 		"main_image": "/img/products_img/a4996729-71ab-45bc-9ec3-a182d36ec70e/main_image.webp",
 		"detail_image_1": "/img/products_img/a4996729-71ab-45bc-9ec3-a182d36ec70e/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/a4996729-71ab-45bc-9ec3-a182d36ec70e/detail_image_2.webp",
 		"detail_image_3": null,
-		"precio": 3,
+		"precio": 450,
 		"categoria": [
 			"Películas",
 			"Libros"
@@ -403,13 +381,13 @@
 		]
 	},
 	{
-		"nombre_producto": "Ajedrez El Señor De Los Anillos 32 Piezas",
+		"nombre_producto": "Ajedrez El Señor De Los Anillos",
 		"id": "a8fd781a-ceb8-4eda-9fcc-7a1b43da5f07",
 		"main_image": "/img/products_img/a8fd781a-ceb8-4eda-9fcc-7a1b43da5f07/main_image.webp",
 		"detail_image_1": "/img/products_img/a8fd781a-ceb8-4eda-9fcc-7a1b43da5f07/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/a8fd781a-ceb8-4eda-9fcc-7a1b43da5f07/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/a8fd781a-ceb8-4eda-9fcc-7a1b43da5f07/detail_image_3.webp",
-		"precio": 1,
+		"precio": 1050,
 		"categoria": [
 			"Películas",
 			"Libros"
@@ -432,13 +410,13 @@
 		"detail_image_1": "/img/products_img/f2b8990b-7bcb-49ec-9e24-faf83afe4e50/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/f2b8990b-7bcb-49ec-9e24-faf83afe4e50/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/f2b8990b-7bcb-49ec-9e24-faf83afe4e50/detail_image_3.webp",
-		"precio": 1,
+		"precio": 1290,
 		"categoria": [
 			"Películas",
 			"Libros"
 		],
 		"rating": 4.9,
-		"description": "MONOPOLY GAME: EL SEÑOR DE LOS ANILLOS EDICIÓN: Proteja las tierras de la Tierra Media de los ejércitos de Mordor con este juego de Monopolio inspirado en la trilogía de película El Señor de los Anillos. ANILLO DE PODER: Controla el Anillo y obtén poderes especiales, pero ten cuidado. Cuanto más tiempo tenga un jugador el anillo, más peligroso se vuelve. Hacer rodar el ojo de Sauron puede hacer que alguien pague un alto precio. MIEMBROS DE LAS TÓKENAS DE CARACTERÍSTICAS DE FELLOWSHIP: Juega como Frodo, Gandalf, Sam, Aragorn, Legolas, Gimli, Pippin, Merry o Boromir. CAMINO PARA MONTAR DOOM: El jugador que tiene el anillo también mueve un Ring Tracker a lo largo de una línea de círculos en el tablero de juegos hacia Mount Doom. Pierde o regala el anillo y el rastreador vuelve a Iniciar",
+		"description": "Proteja las tierras de la Tierra Media de los ejércitos de Mordor con este juego de Monopolio inspirado en la trilogía de película El Señor de los Anillos. ANILLO DE PODER: Controla el Anillo y obtén poderes especiales, pero ten cuidado. Cuanto más tiempo tenga un jugador el anillo, más peligroso se vuelve. Hacer rodar el ojo de Sauron puede hacer que alguien pague un alto precio. MIEMBROS DE LAS TÓKENAS DE CARACTERÍSTICAS DE FELLOWSHIP: Juega como Frodo, Gandalf, Sam, Aragorn, Legolas, Gimli, Pippin, Merry o Boromir. CAMINO PARA MONTAR DOOM: El jugador que tiene el anillo también mueve un Ring Tracker a lo largo de una línea de círculos en el tablero de juegos hacia Mount Doom. Pierde o regala el anillo y el rastreador vuelve a Iniciar.",
 		"players": "6",
 		"reviews": [
 			{
@@ -449,7 +427,7 @@
 		]
 	},
 	{
-		"nombre_producto": "UNO Edición Anime: Juego de Cartas",
+		"nombre_producto": "UNO Edición Anime",
 		"id": "c587314b-ce0e-41cb-a9e1-65cdb1f08c58",
 		"main_image": "/img/products_img/c587314b-ce0e-41cb-a9e1-65cdb1f08c58/main_image.webp",
 		"detail_image_1": "/img/products_img/c587314b-ce0e-41cb-a9e1-65cdb1f08c58/detail_image_1.webp",
@@ -461,7 +439,7 @@
 			"Series"
 		],
 		"rating": 3.8,
-		"description": "Juego de cartas Uno, Dragón Ball, Demon Slayer, Naruto y One Piece",
+		"description": "Juego de cartas Uno, Dragón Ball, Demon Slayer, Naruto y One Piece.",
 		"players": "4",
 		"reviews": [
 			{
@@ -472,13 +450,13 @@
 		]
 	},
 	{
-		"nombre_producto": "Japanime Juegos Naruto: Ninja Arena Juegos De Mesa Completo",
+		"nombre_producto": "Japanime Juegos Naruto: Ninja Arena Juegos De Mesa",
 		"id": "1fe53b77-76cd-4076-b8b9-08be762623db",
 		"main_image": "/img/products_img/1fe53b77-76cd-4076-b8b9-08be762623db/main_image.webp",
 		"detail_image_1": "/img/products_img/1fe53b77-76cd-4076-b8b9-08be762623db/detail_image_1.webp",
 		"detail_image_2": null,
 		"detail_image_3": null,
-		"precio": 1,
+		"precio": 380,
 		"categoria": [
 			"Anime",
 			"Series"
@@ -507,7 +485,7 @@
 			"Series"
 		],
 		"rating": 3.6,
-		"description": "sta versión de Turista trae Goku y sus amigos, que te están esperando para comenzar una increíble aventura, lánzate a la aventura, enfrenta a temibles villanos y reúne todas las esferas del dragón. El Turista Dragon Ball Z es un juego de mesa asombroso que ningún seguidor de Dragon Ball Z podría perderse, perfecto para pasar una tarde disfrutando de este juego con tus amigos ¿Estás listo para la aventura?",
+		"description": "Esta versión de Turista trae Goku y sus amigos, que te están esperando para comenzar una increíble aventura, lánzate a la aventura, enfrenta a temibles villanos y reúne todas las esferas del dragón. El Turista Dragon Ball Z es un juego de mesa asombroso que ningún seguidor de Dragon Ball Z podría perderse, perfecto para pasar una tarde disfrutando de este juego con tus amigos ¿Estás listo para la aventura?.",
 		"players": "6",
 		"reviews": [
 			{
@@ -529,7 +507,7 @@
 			"Películas"
 		],
 		"rating": 3.2,
-		"description": "Introducete al mundo de Avatar y salva el árbol de los espíritus de las amenazas",
+		"description": "Introducete al mundo de Avatar y salva el árbol de los espíritus de las amenazas.",
 		"players": "4",
 		"reviews": [
 			{
@@ -540,7 +518,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Friends La Rueda Del Caos, Juego De Mesa De Spin Master",
+		"nombre_producto": "Friends La Rueda Del Caos",
 		"id": "a1cc394e-87aa-4741-ae60-457a66f1ae87",
 		"main_image": "/img/products_img/a1cc394e-87aa-4741-ae60-457a66f1ae87/main_image.webp",
 		"detail_image_1": "/img/products_img/a1cc394e-87aa-4741-ae60-457a66f1ae87/detail_image_1.webp",
@@ -551,7 +529,7 @@
 			"Series"
 		],
 		"rating": 3.4,
-		"description": "Basado en un episodio de la aclamada serie Friends, este divertido juego en palabras de Joey consiste en Gira la Rueda del Caos para subir la Escalera de la Oportunidad; pasas la Choza de Lodo, atraviesas el Anillo del Arco Iris para llegar al Mono Dorado, le sacas la cola y la pluma. Incluye: 1 tablero de juego, 1 rueda LED, 150 cartas, 6 fichas de movimiento, 58 fichas de puntos, 1 hoja de instrucciones",
+		"description": "Basado en un episodio de la aclamada serie Friends, este divertido juego en palabras de Joey consiste en Gira la Rueda del Caos para subir la Escalera de la Oportunidad; pasas la Choza de Lodo, atraviesas el Anillo del Arco Iris para llegar al Mono Dorado, le sacas la cola y la pluma. Incluye: 1 tablero de juego, 1 rueda LED, 150 cartas, 6 fichas de movimiento, 58 fichas de puntos, 1 hoja de instrucciones.",
 		"players": "6",
 		"reviews": [
 			{
@@ -562,7 +540,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Juego De Mesa, Oficial- Trivia Box Los Simpson- Novelty",
+		"nombre_producto": "Trivia Box Los Simpson",
 		"id": "7bfb6de3-2cf4-4555-b16a-6df7191b3ed9",
 		"main_image": "/img/products_img/7bfb6de3-2cf4-4555-b16a-6df7191b3ed9/main_image.webp",
 		"detail_image_1": "/img/products_img/7bfb6de3-2cf4-4555-b16a-6df7191b3ed9/detail_image_1.webp",
@@ -584,18 +562,18 @@
 		]
 	},
 	{
-		"nombre_producto": "Monopoly Los Simpson - Juego De Mesa Oficial - Hasbro",
+		"nombre_producto": "Monopoly Los Simpson",
 		"id": "8e74726e-6769-4157-9fa7-d79cb7713dd9",
 		"main_image": "/img/products_img/8e74726e-6769-4157-9fa7-d79cb7713dd9/main_image.webp",
 		"detail_image_1": "/img/products_img/8e74726e-6769-4157-9fa7-d79cb7713dd9/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/8e74726e-6769-4157-9fa7-d79cb7713dd9/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/8e74726e-6769-4157-9fa7-d79cb7713dd9/detail_image_3.webp",
-		"precio": 1,
+		"precio": 590,
 		"categoria": [
 			"Series"
 		],
 		"rating": 4.6,
-		"description": "Experimenta más de 30 años de episodios de Los Simpson y la emoción de hacer acuerdos, tomar riesgos y poseer todo en el Monopolio de los Simpsons.Disfruta de un juego que captura la esencia del humor, personajes y lugares únicos de Los Simpsons. 6 fichas coleccionables de peltre pintadas en oro con personajes clásicos de Simpsons - Homero como el conductor del monorraíl, Kang, Bart, Blinky, Ayudante de Santa, Jebediah Springfield. Las casas y hoteles han sido renombradas paradas de monorriel y estaciones de monorriel",
+		"description": "Experimenta más de 30 años de episodios de Los Simpson y la emoción de hacer acuerdos, tomar riesgos y poseer todo en el Monopolio de los Simpsons.Disfruta de un juego que captura la esencia del humor, personajes y lugares únicos de Los Simpsons. 6 fichas coleccionables de peltre pintadas en oro con personajes clásicos de Simpsons - Homero como el conductor del monorraíl, Kang, Bart, Blinky, Ayudante de Santa, Jebediah Springfield. Las casas y hoteles han sido renombradas paradas de monorriel y estaciones de monorriel.",
 		"players": "6",
 		"reviews": [
 			{
@@ -606,7 +584,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Exclusivo Juego De Cartas Disney Pesadilla Antes De Navidad",
+		"nombre_producto": "Juego De Cartas Disney Pesadilla Antes De Navidad",
 		"id": "dec1636e-1f5f-499b-8ce0-b7faaa6ebf39",
 		"main_image": "/img/products_img/dec1636e-1f5f-499b-8ce0-b7faaa6ebf39/main_image.webp",
 		"detail_image_1": "/img/products_img/dec1636e-1f5f-499b-8ce0-b7faaa6ebf39/detail_image_1.webp",
@@ -617,7 +595,7 @@
 			"Películas"
 		],
 		"rating": 3,
-		"description": "¡Una nueva línea de juegos de cartas presenta personajes queridos y Pop coleccionable! figuras de bolsillo. Juega cartas de personajes numeradas y de colores para hacer series y carreras. ¡Obtén un set para enganchar el poder especial de la figura del personaje que te ayuda a ganar! Combina varios juegos para agregar más cartas de personajes, más Pop figuras y más poderes para tu juego!",
+		"description": "Juega cartas de personajes numeradas y de colores para hacer series y carreras. ¡Obtén un set para enganchar el poder especial de la figura del personaje que te ayuda a ganar! Combina varios juegos para agregar más cartas de personajes, más Pop figuras y más poderes para tu juego.",
 		"players": "5",
 		"reviews": [
 			{
@@ -628,7 +606,7 @@
 		]
 	},
 	{
-		"nombre_producto": "Juego De Mesa Toy Story 6 En 1 Spin Master Disney Niños",
+		"nombre_producto": "Toy Story 6 En 1 Spin Master",
 		"id": "62526b05-3e67-4c23-b5ff-490fc8689834",
 		"main_image": "/img/products_img/62526b05-3e67-4c23-b5ff-490fc8689834/main_image.webp",
 		"detail_image_1": "/img/products_img/62526b05-3e67-4c23-b5ff-490fc8689834/detail_image_1.webp",
@@ -637,7 +615,7 @@
 		"precio": "443  ",
 		"categoria": "Películas",
 		"rating": 3.5,
-		"description": "Un juego que permite jugar a toda la familia. Tablero rígido con 63 casillas con 2 peones para armar 2 equipos de 3 hasta 15 jugadores en el que avanzarán en función a la cantidad de respuestas que contesten en el lapso de 1 minuto con ayuda del reloj de arena. Este juego de trivia y mímica incluye 90 tarjetas con los pósters originales de cada una de las películas de Pixar inclusive los dos lanzamientos del 2020: Onward y Soul.  ",
+		"description": "Un juego que permite jugar a toda la familia. Tablero rígido con 63 casillas con 2 peones para armar 2 equipos de 3 hasta 15 jugadores en el que avanzarán en función a la cantidad de respuestas que contesten en el lapso de 1 minuto con ayuda del reloj de arena. Este juego de trivia y mímica incluye 90 tarjetas con los pósters originales de cada una de las películas de Pixar inclusive los dos lanzamientos del 2020: Onward y Soul.",
 		"players": "4",
 		"reviews": [
 			{
@@ -648,13 +626,13 @@
 		]
 	},
 	{
-		"nombre_producto": "La Furia De Drácula Juego De Mesa En Español",
+		"nombre_producto": "La Furia De Drácula",
 		"id": "03c7958b-9441-4767-b993-41446646e492",
 		"main_image": "/img/products_img/03c7958b-9441-4767-b993-41446646e492/main_image.webp",
 		"detail_image_1": "/img/products_img/03c7958b-9441-4767-b993-41446646e492/detail_image_1.webp",
 		"detail_image_2": "/img/products_img/03c7958b-9441-4767-b993-41446646e492/detail_image_2.webp",
 		"detail_image_3": "/img/products_img/03c7958b-9441-4767-b993-41446646e492/detail_image_3.webp",
-		"precio": 2,
+		"precio": 450,
 		"categoria": [
 			"Libros"
 		],
@@ -670,29 +648,13 @@
 		]
 	},
 	{
-		"nombre_producto": "AYUWOKI",
-		"id": "e7569ece-e6cf-47c5-9682-4a79ff6f8f61",
-		"main_image": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/main_image.png",
-		"detail_image_1": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210505_200153.png",
-		"detail_image_2": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210217_072103.png",
-		"detail_image_3": "/img/products_img/e7569ece-e6cf-47c5-9682-4a79ff6f8f61/image_comple_Screenshot_20210217_072102.png",
-		"precio": "250",
-		"categoria": [
-			"peliculas",
-			"series"
-		],
-		"rating": "",
-		"description": "HEHEHEHEHEHEHE",
-		"reviews": []
-	},
-	{
 		"nombre_producto": "GameBoy SP",
 		"id": "cb1aaa58-7863-4a87-b7b0-8d921facfff0",
 		"main_image": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/main_image.jpg",
 		"detail_image_1": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_1.jpg",
 		"detail_image_2": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_2.jpeg",
 		"detail_image_3": "/img/products_img/cb1aaa58-7863-4a87-b7b0-8d921facfff0/image_comple_3.jpg",
-		"precio": "21",
+		"precio": "2100",
 		"categoria": "peliculas",
 		"rating": "",
 		"description": "Consola de videojuegos portatil",
