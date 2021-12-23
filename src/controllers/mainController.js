@@ -117,8 +117,15 @@ const controller = {
                 "old": null
             });
         }
-        // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos un error
-        return res.send('Hay una sesión activa, no puedes registrar un usuario nuevo')
+        // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos la vista de error
+        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        return res.render('not-found', {
+            "nombreUsuario": usuarioBandera.nombre,
+            "idUsuario": usuarioBandera.id,
+            "messageError": "Ya hay una sesión activa",
+            "messageLink": "Regresar a la página principal",
+            "url": "/"
+        })
     },
 
     registerCreateUser: (req, res) => {
@@ -155,7 +162,12 @@ const controller = {
     profile: (req, res) => {
         // Si la sesión no se encuentra activa el usuario no tiene permisos para poder entrar
         if (req.session.idUsuario == undefined) {
-            res.send('NO PUEDES ENTRAR A ESTE SITION');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No hay una sesión activa, por favor inicie sesión",
+                "messageLink": "Ir al Login",
+                "url": "/login"
+            })
         }
         // Si si hay una sesión, obtenemos el ID que se manda a través de la URL
         const { idUsuario } = req.params;
@@ -266,7 +278,12 @@ const controller = {
     editProduct: (req, res) => {
         // Verificamos que haya una sesión activa, si no la hay mandar mensaje de error
         if (req.session.idUsuario == undefined) {
-            res.send('No tiene los permisos necesarios para esta operación');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No tienes permisos para estar aqui!",
+                "messageLink": "Regresar a la página principal",
+                "url": "/"
+            })
         }
         const idProduct = req.params.id;
         let auxProduct = null;
@@ -290,7 +307,12 @@ const controller = {
     createProduct: (req, res) => {
         // Verificamos si hay una sesión activa, si no la hay mandar mensaje de NO permisos
         if (req.session.idUsuario == undefined) {
-            return res.send('Si quiere agregar un producto para ser puesto a la venta favor de iniciar sesión');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "Si quiere agregar un producto para ser puesto a la venta por favor inicie sesión",
+                "messageLink": "Ir al Login",
+                "url": "/login"
+            })
         }
         // Si ya esta iniciada la sesión, buscar la información
         const usuarioBandera = getDataUserById(req.session.idUsuario);
@@ -360,7 +382,12 @@ const controller = {
     deleteProduct: (req, res) => {
         // Verificamos si la sesión esta activa, si no mandamos un error
         if (req.session.idUsuario == undefined) {
-            res.send('No tienes privilegios para realizar esta operación');
+            return res.render('not-found', {
+                "nombreUsuario": null,
+                "messageError": "No tienes permisos para estar aqui!",
+                "messageLink": "Regresar a la página principal",
+                "url": "/"
+            })
         }
         // Obtenemos el id
         const id = req.params.id;

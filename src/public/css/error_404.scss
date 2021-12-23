@@ -13,6 +13,7 @@ $font-bold: "Montserrat", sans-serif;
 
 main {
     width: 100%;
+    user-select: none;
     .error-404 {
         //background-color: steelblue;
         width: 85%;

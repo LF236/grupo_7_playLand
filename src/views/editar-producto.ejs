@@ -4,98 +4,66 @@
 <head>
     <!-- Head import -->
     <%- include('./partials/head.ejs'); %>
-    <link href="/css/edit_product.css" rel="stylesheet">
-    <title>Playland</title>
+        <link href="/css/edit_product.css" rel="stylesheet">
+        <title>Playland</title>
 </head>
 
 <body>
     <!-- Header import -->
     <%- include('./partials/header.ejs'); %>
+        <main class="edit">
+            <form method="POST" action="/products/<%= auxProduct.id %>?_method=PUT">
+                <h3>Detalle del Producto</h3>
 
-    <main class="edit">
+                <label for="namePro">Nombre del producto</label>
+                <input required type="text" name="namePro" id="namePro" value="<%= auxProduct.nombre_producto %> ">
 
-        <!-- Tabla de registro -->
+                <label for="descripcionProducto">Descripción del producto</label>
+                <input required type="text" name="descripcionProducto" id="descripcionProducto"
+                    value="<%= auxProduct.description %> ">
 
-        <form method="POST" action="/products/<%= auxProduct.id %>?_method=PUT">
-            <h3>Detalle del Producto</h3>
-            <table>
+                <label for="imagenPrincipal">Adjuntar imagen principal</label>
+                <input type="file" name="imagenPrincipal" id="imagenPrincipal" accept=".jpeg,.jpg,.png" />
 
-                <tr>
-                    <td>
-                        <p>Nombre del producto</p><br>
-                        <input required type="text" name="namePro" value="<%= auxProduct.nombre_producto %> ">
-                    </td>
-                </tr>
+                <label for="imagenesComplementarias">Adjuntar imágenes complementarias </label>
+                <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple
+                    id="imagenesComplementarias" />
 
-                <tr>
-                    <td>
-                        <p>Descripción del producto</p><br>
-                        <input required type="text" name="descripcionProducto" value="<%= auxProduct.description %> ">
-                    </td>
-                </tr>
+                <label class="categoria-label">Elegir categorías del producto</label>
+                <div class="check-productos">
+                    <% const lista_categorias=["Libros", "Películas" , "Series" , "Anime" ] %>
+                    <% lista_categorias.forEach(categoria=> { %>
+                        <% if(auxProduct.categoria.includes(categoria)) {%>
+                            <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoria %>"
+                                id="<% categoria.toLowerCase() %> ">
+                            <label for="anime">
+                                <%= categoria %>
+                            </label><br>
+                        <% } else {%>
+                                <input type="checkbox" name="categoriaProducto" value="<%= categoria %>"
+                                    id="<% categoria.toLowerCase() %> ">
+                                <label for="anime">
+                                    <%= categoria %>
+                                </label><br>
+                        <% } %>
+                    <% }) %>
+                </div>
 
-                <tr>
-                    <td>
-                        <p>Adjuntar imagen principal</p><br>
-                        <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" />
-                    </td>
-                </tr>
+                <label for="numeroJugadores" class="players-label">Número de jugadores</label>
+                <input required type="number" name="numeroJugadores" id="numeroJugadores"
+                    value="<%= auxProduct.players %>">
 
-                <tr>
-                    <td>
-                        <p>Adjuntar imágenes complementarias </p><br>
-                        <input type="file" name="imagenPrincipal" accept=".jpeg,.jpg,.png" multiple />
-                    </td>
-                </tr>
+                <label for="precio">Precio</label>
+                <input required type="text" name="precio" value="<%= auxProduct.precio %> " id="precio">
 
-                <tr>
-                    <td>
-                        <p>Elegir categorías del producto</p><br>
-                        <% const lista_categorias = ["Libros", "Películas", "Series", "Anime"] %> 
-                        <% lista_categorias.forEach(categoria => {  %> 
-                            <% if(auxProduct.categoria.includes(categoria)) {%>
-                                <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoria %>" id="<% categoria.toLowerCase() %> ">
-                                <label for="anime"><%= categoria %> </label><br>
-                            <% } else {%>
-                                <input type="checkbox" name="categoriaProducto"  value="<%= categoria %>" id="<% categoria.toLowerCase() %> ">
-                                <label for="anime"><%= categoria %> </label><br>
-                            <% } %>   
-                        <% }) %> 
-                    </td>
-                </tr>
+                <input type="submit" value="Subir" class="submit-button">
+            </form>
 
-                <tr>
-                    <td>
-                        <p>Número de jugadores</p><br>
-                        <input required type="number" name="numeroJugadores" value="<%= auxProduct.players %>">
-                    </td>
-                </tr>
+            <form method="POST" action="/products/<%= auxProduct.id %>?_method=delete">                
+                <td><input type="submit" value="Eliminar" class="submit-button"></td>                   
+            </form>
+        </main>
 
-                <tr>
-                    <td>
-                        <p>Precio</p><br>
-                        <input required type="text" name="precio" value="<%= auxProduct.precio %> ">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><input type="submit" value="Subir" class="submit-button"></td>
-                </tr>
-                
-                
-                
-            </table>
-        </form>
-
-        <form method="POST" action="/products/<%= auxProduct.id %>?_method=delete">
-            <table>
-                <tr>
-                    <td><input type="submit" value="Eliminar" class="submit-button"></td>
-                </tr>
-            </table>
-        </form>
-    </main>
-    
     <!-- Footer import -->
     <%- include('./partials/footer.ejs'); %>
     <!-- Colocacion de Scripts -->
