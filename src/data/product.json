@@ -657,5 +657,170 @@
 		"rating": "",
 		"description": "Consola de videojuegos portatil",
 		"reviews": []
+	},
+	{
+		"nombre_producto": "Ajedrez Rick and Morty",
+		"id": "d21754bc-b793-4c21-ab75-3261c5a6833a",
+		"main_image": "/img/products_img/d21754bc-b793-4c21-ab75-3261c5a6833a/main_image.jpg",
+		"detail_image_1": "/img/products_img/d21754bc-b793-4c21-ab75-3261c5a6833a/image_comple_Ajedrez_RyM1.jpg",
+		"detail_image_2": "/img/products_img/d21754bc-b793-4c21-ab75-3261c5a6833a/image_comple_Ajedrez_RyM2.jpg",
+		"detail_image_3": "/img/products_img/d21754bc-b793-4c21-ab75-3261c5a6833a/image_comple_Ajedrez_RyM3.jpg",
+		"precio": "1500",
+		"categoria": "series",
+		"rating": "",
+		"description": "Es la versión interdimensional del clásico juego de estrategia para dos jugadores, inspirado en Rick and Morty de Cartoon Network Incluye 32 piezas de vinilo de plástico esculpidas a todo color, personalizadas de favoritos de los fans en versiones buenas contra malvadas: Rick y Morty como Rey y Reina, Summer y Beth como obispos posapocalípticos y mitólogos, el Sr. Meeseeks como peones y más.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "CLUE Harry Potter",
+		"id": "da69c7a9-ed5c-4ce2-b649-91963f005a3b",
+		"main_image": "/img/products_img/da69c7a9-ed5c-4ce2-b649-91963f005a3b/main_image.jpg",
+		"detail_image_1": "/img/products_img/da69c7a9-ed5c-4ce2-b649-91963f005a3b/image_comple_clue_hp1.jpg",
+		"detail_image_2": "/img/products_img/da69c7a9-ed5c-4ce2-b649-91963f005a3b/image_comple_clue_hp2.jpg",
+		"detail_image_3": "/img/products_img/da69c7a9-ed5c-4ce2-b649-91963f005a3b/image_comple_clue_hp3.jpg",
+		"precio": "850",
+		"categoria": [
+			"libros",
+			"peliculas"
+		],
+		"rating": "",
+		"description": "En este juego Harry Potter Edition of the Clue, un estudiante ha desaparecido de la Escuela Hogwarts de brujería y magia. ¿Quién puede resolver la desaparición misteriosa? Los niños juegan como Harry, Ron, Hermione, Ginny, Luna o Neville, y tratan de descubrir quién lo hizo, qué hechizo o objeto se utilizó y dónde ocurrió el ataque.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Juego de Jenga: Edición Super Mario",
+		"id": "8ab83d60-aa7d-4e00-8c5d-b36457bb2795",
+		"main_image": "/img/products_img/8ab83d60-aa7d-4e00-8c5d-b36457bb2795/main_image.jpg",
+		"detail_image_1": "/img/products_img/8ab83d60-aa7d-4e00-8c5d-b36457bb2795/image_comple_jenga_mario1.jpg",
+		"detail_image_2": "/img/products_img/8ab83d60-aa7d-4e00-8c5d-b36457bb2795/image_comple_jenga_mario2.jpg",
+		"detail_image_3": "/img/products_img/8ab83d60-aa7d-4e00-8c5d-b36457bb2795/image_comple_jenga_mario3.jpg",
+		"precio": "590",
+		"categoria": "anime",
+		"rating": "",
+		"description": "Inspirado en los queridos videojuegos Super Mario, este juego de Jenga: Edición Super Mario te permite asaltar la torre con Mario, Luigi, Peach o Toad. Cada personaje tiene su propia tarjeta de personaje para utilizar como referencia durante el juego. Los jugadores ganan puntos y recolectan monedas mientras apilan, escalan, roban y derrotan a Bowser.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Breaking Bad",
+		"id": "71ed4278-b173-458f-8d01-94dcfa0cb9e3",
+		"main_image": "/img/products_img/71ed4278-b173-458f-8d01-94dcfa0cb9e3/main_image.jpg",
+		"detail_image_1": "/img/products_img/71ed4278-b173-458f-8d01-94dcfa0cb9e3/image_comple_monopoly_brba1.jpg",
+		"detail_image_2": "/img/products_img/71ed4278-b173-458f-8d01-94dcfa0cb9e3/image_comple_monopoly_brba2.jpg",
+		"detail_image_3": "/img/products_img/71ed4278-b173-458f-8d01-94dcfa0cb9e3/image_comple_monopoly_brba3.jpg",
+		"precio": "980",
+		"categoria": "series",
+		"rating": "",
+		"description": "Los jugadores querrán \"pisar ligeramente\" para comprar, vender y comerciar propiedades para ser el último en esta versión arriesgada de Monopoly: Breaking Bad - basado en la serie exitosa de AMC",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Friends",
+		"id": "327684ac-b9ef-47ab-8142-0a2a995610e3",
+		"main_image": "/img/products_img/327684ac-b9ef-47ab-8142-0a2a995610e3/main_image.jpg",
+		"detail_image_1": "/img/products_img/327684ac-b9ef-47ab-8142-0a2a995610e3/image_comple_monopoly_friends1.jpg",
+		"detail_image_2": "/img/products_img/327684ac-b9ef-47ab-8142-0a2a995610e3/image_comple_monopoly_friends2.jpg",
+		"detail_image_3": "/img/products_img/327684ac-b9ef-47ab-8142-0a2a995610e3/image_comple_monopoly_friends3.jpg",
+		"precio": "550",
+		"categoria": "series",
+		"rating": "",
+		"description": "Prepárate para un montón de diversión con este monopolio: Juego de mesa Friends the TV Series Edition con lugares, personajes y frases inspirados en la legendaria serie de televisión. Muévete por el tablero como Ross, Rachel, Phoebe, Mónica, Joey o Chandler, y descubre momentos emblemáticos de Amigos. ",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Jurassic Park ",
+		"id": "d0cb5d9e-bf0c-4c1b-a445-8541df993440",
+		"main_image": "/img/products_img/d0cb5d9e-bf0c-4c1b-a445-8541df993440/main_image.jpg",
+		"detail_image_1": "/img/products_img/d0cb5d9e-bf0c-4c1b-a445-8541df993440/image_comple_monopoly_jurassic1.jpg",
+		"detail_image_2": "/img/products_img/d0cb5d9e-bf0c-4c1b-a445-8541df993440/image_comple_monopoly_jurassic2.jpg",
+		"detail_image_3": "/img/products_img/d0cb5d9e-bf0c-4c1b-a445-8541df993440/image_comple_monopoly_jurassic3.jpg",
+		"precio": "1000",
+		"categoria": "peliculas",
+		"rating": "",
+		"description": "Retoma el control de los recintos de los dinosaurios y otras áreas, pero ten cuidado con el tiranosaurio; ¡no obedece ninguna regla! Construye vayas para proteger a los recintos de los ataques y gana dinero al cobrar renta, pero prepárate para las propiedades dañadas. Activa la puerta para oír el tema musical de la película Jurassic Park o un rugido de dinosaurio, lo cual determinará cuánto dinero recibirás. El último jugador con dinero cuando los demás se hayan ido a la quiebra será el ganador. El juego también termina si el tiranosaurio daña todas las propiedades antes que estas puedan ser protegidas por vayas o reparadas.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Pac-Man Arcade",
+		"id": "5128e002-1cb9-4be0-8cee-a9ab14074a73",
+		"main_image": "/img/products_img/5128e002-1cb9-4be0-8cee-a9ab14074a73/main_image.jpg",
+		"detail_image_1": "/img/products_img/5128e002-1cb9-4be0-8cee-a9ab14074a73/image_comple_monopoly_pacman1.jpg",
+		"detail_image_2": "/img/products_img/5128e002-1cb9-4be0-8cee-a9ab14074a73/image_comple_monopoly_pacman2.jpg",
+		"detail_image_3": "/img/products_img/5128e002-1cb9-4be0-8cee-a9ab14074a73/image_comple_monopoly_pacman3.jpg",
+		"precio": "550",
+		"categoria": "anime",
+		"rating": "",
+		"description": "En el Monopoly con tema de Pac-Man, los jugadores juegan Pac-Man en el arcade, que también es una unidad bancaria en la que se compran, venden o roban niveles, entre otras acciones. Los jugadores recorren el tablero mientras evitan al fantasma para comprar niveles y conseguir puntos. Cada vez que un jugador pase por la Salida, juega una minipartida de Pac-Man. Acumula puntos mientras todo queda registrado en el arcade, sin necesidad de utilizar dinero. ¡El jugador que reúna más puntos gana!",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Pixar",
+		"id": "90b78941-326d-43bd-aa2c-37ab5895dcd8",
+		"main_image": "/img/products_img/90b78941-326d-43bd-aa2c-37ab5895dcd8/main_image.jpg",
+		"detail_image_1": "/img/products_img/90b78941-326d-43bd-aa2c-37ab5895dcd8/image_comple_monopoly_pixar1.jpg",
+		"detail_image_2": "/img/products_img/90b78941-326d-43bd-aa2c-37ab5895dcd8/image_comple_monopoly_pixar2.jpg",
+		"detail_image_3": "/img/products_img/90b78941-326d-43bd-aa2c-37ab5895dcd8/image_comple_monopoly_pixar3.jpg",
+		"precio": "550",
+		"categoria": "peliculas",
+		"rating": "",
+		"description": "Los fans pueden explorar lugares de algunas películas favoritas como Disney y Pixar's Up, The Incredibles, Toy Story, Buscando a Nemo y más. El juego cuenta con ilustraciones de personajes caprichosos y fichas de Monopoly, incluyendo la guitarra de Hector de Coco, el Boot from Wall-E, la Casa de Carl's de Up, el camión Pizza Planet de Toy Story, y el icónico Pixar Ball y Lamp.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly Queen",
+		"id": "645ba997-b6d8-48d1-9c6b-cb1ef7da2131",
+		"main_image": "/img/products_img/645ba997-b6d8-48d1-9c6b-cb1ef7da2131/main_image.jpg",
+		"detail_image_1": "/img/products_img/645ba997-b6d8-48d1-9c6b-cb1ef7da2131/image_comple_monopoly_queen1.jpg",
+		"detail_image_2": "/img/products_img/645ba997-b6d8-48d1-9c6b-cb1ef7da2131/image_comple_monopoly_queen2.jpg",
+		"detail_image_3": "/img/products_img/645ba997-b6d8-48d1-9c6b-cb1ef7da2131/image_comple_monopoly_queen3.jpg",
+		"precio": "1200",
+		"categoria": "peliculas",
+		"rating": "",
+		"description": "Compra, vende e intercambia tu camino por todo el mundo coleccionando lugares que Queen realizó, incluyendo Wembley Stadium, Hyde Park, The Forum Los Ángeles, y muchos más",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Monopoly The Child Mandalorian",
+		"id": "8a15b0a1-8c7c-4d75-9190-49c564d74c55",
+		"main_image": "/img/products_img/8a15b0a1-8c7c-4d75-9190-49c564d74c55/main_image.jpg",
+		"detail_image_1": "/img/products_img/8a15b0a1-8c7c-4d75-9190-49c564d74c55/image_comple_monopoly_sw1.jpg",
+		"detail_image_2": "/img/products_img/8a15b0a1-8c7c-4d75-9190-49c564d74c55/image_comple_monopoly_sw2.jpg",
+		"detail_image_3": "/img/products_img/8a15b0a1-8c7c-4d75-9190-49c564d74c55/image_comple_monopoly_sw3.jpg",
+		"precio": "850",
+		"categoria": [
+			"peliculas",
+			"series"
+		],
+		"rating": "",
+		"description": "Imagina que viajas por la galaxia con el Niño, cariñosamente conocido como \"Bebé Yoda\". Este juego de mesa Monopoly: Star Wars cuenta con diseño y temas inspirados en la serie de televisión de acción real The Mandalorian, transmitida por Disney Plus. Recorre el tablero con el token del Niño, comprando y vendiendo escondites y casas de reunión, y sigue las instrucciones de las tarjetas de Camtono y de Puck de Recompensa.",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Operando Star War Chewbacca",
+		"id": "bc734b20-5bc0-4797-a62a-4a8a3a1e1e93",
+		"main_image": "/img/products_img/bc734b20-5bc0-4797-a62a-4a8a3a1e1e93/main_image.jpg",
+		"detail_image_1": "/img/products_img/bc734b20-5bc0-4797-a62a-4a8a3a1e1e93/image_comple_operando_sw1.jpg",
+		"detail_image_2": "/img/products_img/bc734b20-5bc0-4797-a62a-4a8a3a1e1e93/image_comple_operando_sw2.jpg",
+		"detail_image_3": "/img/products_img/bc734b20-5bc0-4797-a62a-4a8a3a1e1e93/image_comple_operando_sw3.jpg",
+		"precio": "850",
+		"categoria": "peliculas",
+		"rating": "",
+		"description": "Imagina a Chewbacca tratando de descansar en la bahía médica en el Halcón Milenario después de un tiempo estresante reparando el hipermotor. De repente, los Porgs comienzan a jugar en su cabello, causando todo tipo de travesuras. Los jugadores usan las pinzas para atrapar a estos bichos molestos y eliminar cualquier otro peligro para el cabello que puedan encontrar. ¡Pero ten cuidado! Tocar los lados de las aberturas con las pinzas apagará el timbre y luego será el turno del siguiente jugador. ",
+		"reviews": []
+	},
+	{
+		"nombre_producto": "Scrabble Harry Potter",
+		"id": "2827412e-7c6a-427b-9062-e0273012709b",
+		"main_image": "/img/products_img/2827412e-7c6a-427b-9062-e0273012709b/main_image.jpg",
+		"detail_image_1": "/img/products_img/2827412e-7c6a-427b-9062-e0273012709b/image_comple_scrabble_hp1.jpg",
+		"detail_image_2": "/img/products_img/2827412e-7c6a-427b-9062-e0273012709b/image_comple_scrabble_hp2.jpg",
+		"detail_image_3": "/img/products_img/2827412e-7c6a-427b-9062-e0273012709b/image_comple_scrabble_hp3.jpg",
+		"precio": "1000",
+		"categoria": [
+			"libros",
+			"peliculas"
+		],
+		"rating": "",
+		"description": "Un toque encantador en el tradicional juego de palabras, esta edición de World of Harry Potter de Scrabble pone a prueba tu conocimiento del Mundo Mago. Juega estratégicamente las palabras regulares y tus palabras favoritas de Harry Potter para obtener una puntuación alta. Personaliza tu juego con cartas de Harry Potter y cartas de bonificación mágica para anotar aún más alto y ganar el juego.",
+		"reviews": []
 	}
 ]
