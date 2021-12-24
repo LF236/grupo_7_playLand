@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+//Declaración de variables
+$red: #d90000;
+$blue: #009ee0;
+$green: #00b117;
+$yellow: #ffd100;
+$dark: #000000;
+$gray: #d1d1d1;
+$grayStrong: #3e3e3e;
+$carouselHeight: 320px;
+$font-main: "Montserrat", sans-serif;
+$font-bold: "Montserrat", sans-serif;
+//Vars Css Pure
+:root {
+    --positionNow: 0%;
+}
+
+//General Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: $font-main;
+}
+
+//Desing of the header
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+    .header-top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        padding-bottom: 40px;
+        background-color: $dark;
+        color: #fff;
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            margin-bottom: 30px;
+            input[type="text"] {
+                width: 80%;
+                display: block;
+                margin: auto;
+                border: 0;
+                padding: 18px;
+                border-radius: 20px;
+                
+            }
+
+            input[type="text"]::placeholder {
+                color: $red;
+                font-size: 1.1rem;
+                
+                
+            }
+        }
+
+        span {
+            color: #fff;
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            margin: 0 20px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .session {
+            display: none;
+        }
+    }
+
+    nav {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        top: 0;
+        z-index: 100;
+
+        background-color: rgba($grayStrong, 0.9);
+
+        //Icon X
+        .icon-close-menu {
+            padding: 20px;
+            padding-left: 40px;
+            
+            color: #fff;
+            cursor: pointer;
+            span {
+                display: inline-block;
+                transition: all 0.2s;
+                &:hover {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .session {
+            width: 100%;
+            padding: 20px;
+            padding-left: 40px;
+            display: flex;
+            .icon-user {
+                padding: 2px;
+                border-radius: 20px;
+                margin-right: 5px;
+                background-color: $gray;
+                color: $dark;
+                display: block;
+                font-size: 1.2rem;
+            }
+
+            a {
+                font-size: 0.8rem;
+                text-decoration: none;
+                color: #fff;
+                font-family: $font-main;
+            }
+
+            &:hover {
+                background: rgba($grayStrong, 1);
+            }
+        }
+
+        ul {
+            li {
+               
+                padding: 20px;
+                list-style: none;
+                a {
+                    padding-left: 20px;
+                    text-decoration: none;
+                    color: #fff;
+                }
+                transition: all 0.1s;
+                &:hover {
+                    background: rgba($grayStrong, 1);
+                }
+            }
+
+            .actual_page {
+                a {
+                    color: $red;
+                }
+            }
+        }
+    }
+    //Animación para aparecer el menu
+    & .menu_animate {
+        transform: translateX(0);
+    }
+
+    //version movil
+    @media (min-width: 361px) {
+        .header-top {
+            justify-content: space-around;
+            //Eliminamos los iconos
+            padding-bottom: 0;
+            span {
+                display: none;
+            }
+
+            //
+            form {
+                width: 16%;
+                input[type="text"] {
+                    width: 80%;
+                    padding: 10px 12px;
+                    border-radius: 20px;
+                }
+
+                input[type="text"]::placeholder {
+                    font-size: 1rem;
+                }
+            }
+
+            .logo {
+                width: 50%;
+                //background: red;
+                justify-content: center;
+                img {
+                    width: 80%;
+                }
+            }
+
+            .session {
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon-user {
+                    padding: 2px;
+                    border-radius: 20px;
+                    margin-right: 5px;
+                    background-color: $gray;
+                    color: $dark;
+                    display: block;
+                    font-size: 1.2rem;
+                }
+
+                a {
+                    font-size: 0.8rem;
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                .carr {
+                    margin-left: 20px;
+                }
+            }
+            .carr {
+                display: block;
+            }
+        }
+
+        nav {
+            transform: translateX(0);
+            background: $dark;
+            padding-bottom: 25px;
+            font-size: 1.1rem;
+            position: relative;
+            top: 0;
+            height: initial;
+            ul {
+                display: flex;
+                justify-content: center;
+                margin-right: 10%;
+            }
+            //Nav para movil, eliminamos las cosas que no necesitamos en desktop
+            .icon-close-menu {
+                display: none;
+            }
+
+            .session {
+                display: none;
+            }
+        }
+    }
+
+    //Version desktop
+    @media (min-width: 769px) {
+        .header-top {
+            .logo {
+                img {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+.carousel {
+    width: 100%;
+    height: $carouselHeight;
+    position: relative;
+    .carousel-content-images {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-flow: column wrap;
+
+        transition: all 1s;
+        transform: translateX(var(--positionNow));
+        .carousel-content-images-item {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.2s;
+        }
+    }
+
+    .carousel-content {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            .images-i {
+                span {
+                    font-size: 1em;
+                    color: #fff;
+                    transition: all 0.2s;
+                }
+
+                #images-i-element-1 {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+    //Version desktop
+    @media (min-width: 769px) {
+        height: 550px;
+
+        .carousel-content {
+            .title {
+                font-size: 3em;
+            }
+
+            .images-i {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+
+    .new-products {
+        width: 85%;
+        margin: auto;
+        //background: steelblue;
+        margin-top: 60px;
+        h3 {
+            font-size: 2em;
+            text-align: center;
+            color: $red;
+            font-weight: 600;
+        }
+        .new-products-item {
+            margin-top: 50px;
+
+            img {
+                width: 100%;
+                display: block;
+                transition: all .5s;
+            }
+
+            a {
+                &:hover img{
+                    transform: scale(0.9);
+                }
+            }
+            .new-products-content {
+                color: black;
+                font-size: 20px;
+                margin-top: 20px;
+                .new-products-content-price {
+                    color: $red;
+                    font-weight: bold;
+                    margin-top: 5px;
+                }
+
+                .new-products-content-button {
+                    width: 100%;
+                    padding: 15px;
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 30px;
+                    background: $red;
+                    font-size: 15px;
+                    cursor: pointer;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .new-products-button-more {
+            display: block;
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 15px;
+            border-radius: 30px;
+            text-align: center;
+            color: $red;
+            cursor: pointer;
+            border: 5px solid $red;
+            font-weight: 600;
+        }
+    }
+
+    .about {
+        margin-top: 60px;
+        width: 100%;
+        background: $red;
+
+        img {
+            width: 100%;
+        }
+
+        .about-content {
+            margin-top: 40px;
+            h3 {
+                color: #fff;
+                text-align: center;
+                font-size: 22px;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+                text-align: center;
+                padding: 10px 50px;
+                line-height: 2em;
+                color: #fff;
+            }
+        }
+    }
+
+    .shipping {
+        background-color: $blue;
+    }
+
+    .star-wars {
+        width: 85%;
+        margin: auto;
+        margin-top: 50px;
+        h3 {
+            text-align: center;
+            font-size: 1.5em;
+            color: $red;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        .star-wars-item {
+            img {
+                display: block;
+                margin: auto;
+                width: 220px;
+                height: 220px;
+            }
+            .star-wars-item-content {
+                width: 100%;
+                padding-top: 20px;
+                p {
+                    text-align: center;
+                    font-size: 18px;
+                    margin: 8px;
+                    font-family: $font-main;
+                    margin-bottom: 20px;
+                }
+
+                .star-wars-item-button {
+                    width: 75%;
+                    max-width: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    margin-bottom: 50px;
+                    padding: 18px;
+                    border-radius: 50px;
+                    background: $red;
+                    color: #fff;
+                    font-weight: 600;
+                    font-family: $font-main;
+                    
+                }
+            }
+        }
+    }
+
+    //version Escritorio
+    @media (min-width: 720px) {
+        .new-products {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            h3 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .new-products-item {
+                width: 30%;
+            }
+
+            .new-products-button-more {
+                width: 40%;
+            }
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            img {
+                width: 50%;
+            }
+
+            .about-content {
+                width: 50%;
+                margin: 0;
+            }
+        }
+
+        .star-wars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            h3 {
+                width: 100%;
+            }
+
+            .star-wars-item-content {
+                width: 33%;
+            }
+        }
+    }
+}
+
+footer {
+    background: #111;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 70%;
+        padding: 30px 0;
+        margin: auto;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        width: 100%;
+        font-size: 1.5em;
+        span {
+            margin: 10px;
+        }
+    }
+
+    .copy {
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    //version Escritorio
+    @media (min-width: 720px) {
+        padding: 0 20px;
+        img {
+            width: 20%;
+
+            margin: 0;
+        }
+        .footer-icons {
+            justify-content: flex-start;
+        }
+
+        .copy {
+            justify-content: flex-start;
+        }
+    }
+}
