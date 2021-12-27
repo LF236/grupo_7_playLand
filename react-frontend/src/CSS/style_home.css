@@ -409,6 +409,7 @@ main {
 main .new-products {
   width: 85%;
   margin: auto;
+  background: steelblue;
   margin-top: 60px;
 }
 
@@ -636,8 +637,6 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: fixed;
-  bottom: 0;
 }
 
 footer img {
