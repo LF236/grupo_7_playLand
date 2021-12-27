@@ -554,6 +554,8 @@ footer {
     background: #111;
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
+    bottom: 0;
     img {
         width: 70%;
         padding: 30px 0;

@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import '../CSS/style_home.css'
 import Header from './partials/Header';
-
+import Footer from './partials/Footer';
 const AppRouter = () => {
     return(
         <>
@@ -15,6 +15,10 @@ const AppRouter = () => {
                 <header>
                     <Header />
                 </header>
+                
+                <footer>
+                    <Footer />
+                </footer>
             </Router>
         </>
     )
