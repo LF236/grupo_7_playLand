@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import '../../ICONS/style.css';
 import '../../JS/menu_animation';
@@ -25,7 +25,7 @@ const Header = () => {
                     <span className="icon icon-add_shopping_cart carr"></span>
                 </div>
             </div>
-
+   
             {/* Menú para dispositivos moviles */}
             <nav id="menu">
                 {/* Este icono de x y la sección "session" solo es para el diseño movil */}

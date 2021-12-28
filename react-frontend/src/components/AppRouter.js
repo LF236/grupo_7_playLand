@@ -10,6 +10,7 @@ import '../CSS/style_home.css'
 import Header from './partials/Header';
 import Footer from './partials/Footer';
 import Home from './Home';
+import NotFound from './NotFound';
 const AppRouter = () => {
     return(
         <>
@@ -21,6 +22,7 @@ const AppRouter = () => {
                 <main>
                     <Routes>
                         <Route exact path="/" element={ <Home /> } />
+                        <Route exact path="/test" element={ <NotFound /> } />
                     </Routes>
                 </main>
 
