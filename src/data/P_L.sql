@@ -48,12 +48,12 @@ DROP TABLE IF EXISTS `Product_User`;
 CREATE TABLE `Product_User` (
   `id` varchar(36) NOT NULL,
   `product_id` varchar(36) NOT NULL,
-  `category_id` varchar(36) NOT NULL,
+  `user_id` varchar(36) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `product_id` (`product_id`),
-  KEY `category_id` (`category_id`),
+  KEY `user_id` (`user_id`),
   CONSTRAINT `product_user_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `Products` (`id`),
-  CONSTRAINT `product_user_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `Category` (`id`)
+  CONSTRAINT `product_user_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -256,4 +256,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-23 23:52:26
+-- Dump completed on 2021-12-30  1:00:53
