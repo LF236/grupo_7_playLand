@@ -8,17 +8,33 @@ const getDataUserById = require('../helpers/getDataUserById');
 const products = new Productos();
 const dataProducts = getDataProductsJSON();
 const db = require('../database/models');
+const Sequelize = require('sequelize');
+const op = Sequelize.Op;
 if (dataProducts) {
     products.cargarProductosDesdeArray(dataProducts);
 }
 
 const controller = {
     // Mostramos la página principal del sitio
-    home: (req, res) => {
+    home: async (req, res) => {
         console.log(req.session.idUsuario);
+        // Buscamos la data en la base
+        let productsArr = await db.Product.findAll({
+            raw: true,
+            limit: 6
+        });
+        let productsStarWars = await db.Product.findAll({
+            raw:true,
+            where: {
+                name: {
+                    [op.like]: `%star%`
+                }
+            }            
+        })
         if (req.session.idUsuario == undefined) {
             return res.render('home', {
-                productsArr: products.listadoProductosArr,
+                productsArr: productsArr,
+                productsStarWars: productsStarWars,
                 "nombreUsuario": null,
             });
         }
@@ -27,7 +43,8 @@ const controller = {
         console.log(usuarioBandera);
         // Renderizamos con la sesión del usuario
         return res.render('home', {
-            productsArr: products.listadoProductosArr,
+            productsArr,
+            productsStarWars,
             "nombreUsuario": usuarioBandera.nombre,
             "idUsuario": usuarioBandera.id
         })
@@ -46,7 +63,7 @@ const controller = {
     },
 
     // Método para procesar el Login
-    processLogin: (req, res) => {
+    processLogin: async (req, res) => {
         // Obtenemos el email y el password del formulario     
         const { email, password } = req.body;
         // Obtenemos la lista de todos los usuarios, leyendo el archivo que por el momento usamos como base de datos
@@ -77,8 +94,21 @@ const controller = {
                 if (req.body.keepSession) {
                     res.cookie("idUsuario", usuarioBandera.id, { maxAge: 60000 })
                 }
+                let productsArr = await db.Product.findAll({
+                    raw: true,
+                    limit: 6
+                });
+                let productsStarWars = await db.Product.findAll({
+                    raw:true,
+                    where: {
+                        name: {
+                            [op.like]: `%star%`
+                        }
+                    }            
+                })
                 return res.render('home', {
-                    productsArr: products.listadoProductosArr,
+                    productsArr: productsArr,
+                    productsStarWars,
                     "nombreUsuario": usuarioBandera.nombre,
                     "idUsuario": usuarioBandera.id
                 });
@@ -194,15 +224,13 @@ const controller = {
     },
 
     // Vista al dar clic en el producto y cargar su data
-    detailproduct: (req, res) => {
+    detailproduct: async (req, res) => {
         const idProducto = req.params.id;
         let detProduct = null;
-        products.listadoProductosArr.forEach(product => {
-            if (product.id == idProducto) {
-                detProduct = product;
-            }
-        })
-
+        detProduct = await db.Product.findByPk(idProducto, {
+            raw: true
+        });
+   
         /* 
             Verificamos si no hay una sesión activa, si no hay renderizamos la vista de manera normal
             pasando el nombreUsuario con el valor de null
@@ -224,17 +252,17 @@ const controller = {
     },
 
     // Vista de busqueda de productos a parte de la barra de busqueda --->PENDIENTE
-    searchProduct: (req, res) => {
+    searchProduct: async (req, res) => {
         const patronBusqueda = req.query.search;
         let auxProducts = [];
         if (patronBusqueda) {
-            products.listadoProductosArr.forEach(producto => {
-                if (producto.nombre_producto.includes(patronBusqueda)) {
-                    auxProducts.push(producto);
-                }
-                if (producto.categoria.includes(patronBusqueda)) {
-                    auxProducts.push(producto);
-                }
+            auxProducts = await db.Product.findAll({
+                raw:true,
+                where: {
+                    name: {
+                        [op.like]: `%${patronBusqueda}%`
+                    }
+                }            
             })
             // Verificamos si hay sesión antes de renderizar la vista
             if (req.session.idUsuario == undefined) {
@@ -254,7 +282,10 @@ const controller = {
             });
         }
         // Verificamos si hay sesión antes de renderizar la vista
-        auxProducts = products.listadoProductosArr;
+        auxProducts = await db.Product.findAll({
+            raw: true,
+        });
+
         if (req.session.idUsuario == undefined) {
             return res.render('busqueda-producto', {
                 auxProducts,
@@ -275,7 +306,7 @@ const controller = {
     // CRUD - Products
 
     // Obtener formulario para editar un producto ---> LISTO
-    editProduct: (req, res) => {
+    editProduct: async (req, res) => {
         // Verificamos que haya una sesión activa, si no la hay mandar mensaje de error
         if (req.session.idUsuario == undefined) {
             return res.render('not-found', {
@@ -287,11 +318,9 @@ const controller = {
         }
         const idProduct = req.params.id;
         let auxProduct = null;
-        products.listadoProductosArr.forEach(product => {
-            if (product.id == idProduct) {
-                auxProduct = product;
-            }
-        })
+        auxProduct = await db.Product.findByPk(idProduct, {
+            raw: true
+        });        
 
         // Obtenemos la información del usuario activo actual
         const usuarioBandera = getDataUserById(req.session.idUsuario);

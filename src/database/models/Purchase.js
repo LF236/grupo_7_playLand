@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         order_status: {
-            type: DataTypes.ENUM,
+            type: DataTypes.ENUM('PENDIENTE','ENVIADO','ENTREGADO','CANCELADO'),
             allowNull: true
         }
 

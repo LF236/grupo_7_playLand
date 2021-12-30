@@ -31,11 +31,11 @@
             <h2><%= patronBusqueda %> </h2>
             <% auxProducts.forEach(product => { %> 
                 <article class="result-search-item">
-                    <img src="<%= product.main_image %>" alt="<%= product.name %>">
+                    <img src="<%= product.image %>" alt="<%= product.name %>">
                     <div class="result-search-item-content">
                         <div class="result-search-item-content-description">
-                            <p><%= product.nombre_producto %></p>
-                            <p>$<%= product.precio %>.00</p>
+                            <p><%= product.name %></p>
+                            <p>$<%= product.price %>.00</p>
                             <p class="seller">Vendedor: Luis Fernando</p>
                         </div>
                         
