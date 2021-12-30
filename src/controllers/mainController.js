@@ -7,7 +7,7 @@ const { getDataProductsJSON, saveDBProducts, getDataUsersJSON, saveDBUsers } = r
 const getDataUserById = require('../helpers/getDataUserById');
 const products = new Productos();
 const dataProducts = getDataProductsJSON();
-
+const db = require('../database/models');
 if (dataProducts) {
     products.cargarProductosDesdeArray(dataProducts);
 }
@@ -402,10 +402,9 @@ const controller = {
         });
     },
 
-    test: (req, res) => {
-        res.render('mensaje-usuario-registrado', {
-            'email': 'correoFernanoPrueba@gmail.com'
-        })
+    test: async (req, res) => {
+        const listaProductos = await db.Product.findAll();
+        res.send(listaProductos);
     }
 
 };
