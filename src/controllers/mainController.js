@@ -29,7 +29,7 @@ const controller = {
                 name: {
                     [op.like]: `%star%`
                 }
-            }            
+            }
         })
         if (req.session.idUsuario == undefined) {
             return res.render('home', {
@@ -64,13 +64,13 @@ const controller = {
 
     // Método para procesar el Login
     processLogin: async (req, res) => {
-        // Obtenemos el email y el password del formulario     
+        // Obtenemos el email y el password del formulario
         const { email, password } = req.body;
         // Obtenemos la lista de todos los usuarios, leyendo el archivo que por el momento usamos como base de datos
         const usuarios = getDataUsersJSON();
         // Declaramos una bandera, para saber si el usuario ha sido encontrado o no
-        /* 
-            Recorremos el arreglo, buscando al usuario en base al email del formulario, si se encuentra 
+        /*
+            Recorremos el arreglo, buscando al usuario en base al email del formulario, si se encuentra
             rompemos el ciclo
         */
         let usuarioBandera = null;
@@ -104,7 +104,7 @@ const controller = {
                         name: {
                             [op.like]: `%star%`
                         }
-                    }            
+                    }
                 })
                 return res.render('home', {
                     productsArr: productsArr,
@@ -203,8 +203,8 @@ const controller = {
         const { idUsuario } = req.params;
         // Buscamos toda la información del usuario a través del ID
         const usuarioBandera = getDataUserById(req.session.idUsuario);
-        /* 
-            Renderizamos la vista correspondiente, añadiendo el objeto infoPerfilUsuario 
+        /*
+            Renderizamos la vista correspondiente, añadiendo el objeto infoPerfilUsuario
             a la estructura original
         */
         return res.render('profile', {
@@ -230,8 +230,8 @@ const controller = {
         detProduct = await db.Product.findByPk(idProducto, {
             raw: true
         });
-   
-        /* 
+
+        /*
             Verificamos si no hay una sesión activa, si no hay renderizamos la vista de manera normal
             pasando el nombreUsuario con el valor de null
         */
@@ -262,7 +262,7 @@ const controller = {
                     name: {
                         [op.like]: `%${patronBusqueda}%`
                     }
-                }            
+                }
             })
             // Verificamos si hay sesión antes de renderizar la vista
             if (req.session.idUsuario == undefined) {
@@ -319,8 +319,12 @@ const controller = {
         const idProduct = req.params.id;
         let auxProduct = null;
         auxProduct = await db.Product.findByPk(idProduct, {
-            raw: true
-        });        
+            include: [
+                {
+                    association: "categorias"
+                }
+            ],
+        });
 
         // Obtenemos la información del usuario activo actual
         const usuarioBandera = getDataUserById(req.session.idUsuario);
@@ -382,7 +386,7 @@ const controller = {
         });
     },
 
-    // Actualizar DB de productos PUT 
+    // Actualizar DB de productos PUT
     updateProduct: (req, res) => {
         let nuevoProductoActualizado = {
             nombre_producto: req.body.namePro,
@@ -432,8 +436,19 @@ const controller = {
     },
 
     test: async (req, res) => {
-        const listaProductos = await db.Product.findAll();
+        const listaProductos = await db.Product.findAll({
+            include: [
+                {
+                    association: "categorias"
+                }
+            ],
+            // where: {
+            //     id: '03c7958b-9441-4767-b993-41446646e492'
+            // }
+        });
+        console.log(listaProductos);
         res.send(listaProductos);
+        
     }
 
 };

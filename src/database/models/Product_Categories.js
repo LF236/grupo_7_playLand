@@ -8,12 +8,20 @@ module.exports = (sequelize, DataTypes) => {
 
         product_id: {
             type: DataTypes.UUID,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'Product',
+                key: 'id'
+            }
         },
 
         category_id:{
             type: DataTypes.UUID,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'Category', 
+                key: 'id'
+            }
         }
     };
 
@@ -22,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const ProductCat = sequelize.define("Product_Categories", cols, config);
+    const Product_Categories = sequelize.define("Product_Categories", cols, config);
 
-    return ProductCat;
+    return Product_Categories;
 }

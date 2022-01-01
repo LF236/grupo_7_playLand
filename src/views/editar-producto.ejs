@@ -30,24 +30,30 @@
                     id="imagenesComplementarias" />
 
                 <label class="categoria-label">Elegir categorías del producto</label>
+                <!-- Checboxes -->
                 <div class="check-productos">
-                    <% const lista_categorias=["Libros", "Películas" , "Series" , "Anime" ] %>
-                    <% lista_categorias.forEach(categoria=> { %>
-                        <% if(auxProduct.categoria.includes(categoria)) {%>
-                            <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoria %>"
-                                id="<% categoria.toLowerCase() %> ">
-                            <label for="anime">
-                                <%= categoria %>
-                            </label><br>
-                        <% } else {%>
-                                <input type="checkbox" name="categoriaProducto" value="<%= categoria %>"
-                                    id="<% categoria.toLowerCase() %> ">
+                    <% const lista_categorias=["libros", "películas" , "anime" , "series" ] %>
+                    <% lista_categorias.forEach(categoriaLista=> { %>
+                        <% for(let categoria of auxProduct.categorias) {  %>
+                            <% if(categoria.name.includes(categoriaLista)) {%>
+                                <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoriaLista %>"
+                                id="<% categoriaLista.toLowerCase() %> ">
                                 <label for="anime">
-                                    <%= categoria %>
+                                    <%= categoriaLista %>
                                 </label><br>
-                        <% } %>
-                    <% }) %>
+                                <% break %> 
+                            <% } else {%>
+                                <input type="checkbox" name="categoriaProducto" value="<%= categoriaLista %>"
+                                    id="<% categoriaLista.toLowerCase() %> ">
+                                <label for="anime">
+                                    <%= categoriaLista %>
+                                </label><br>
+                            <% } %>
+                        <% } %> 
+                    <% }) %> 
                 </div>
+
+                
 
                 <label for="numeroJugadores" class="players-label">Número de jugadores</label>
                 <input required type="number" name="numeroJugadores" id="numeroJugadores"
