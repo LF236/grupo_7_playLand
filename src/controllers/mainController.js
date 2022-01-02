@@ -1,4 +1,5 @@
 require('colors');
+const { v4: uuid } = require('uuid');
 const Productos = require("../models/Productos");
 const path = require('path');
 const bcryptjs = require('bcryptjs');
@@ -24,7 +25,7 @@ const controller = {
             limit: 6
         });
         let productsStarWars = await db.Product.findAll({
-            raw:true,
+            raw: true,
             where: {
                 name: {
                     [op.like]: `%star%`
@@ -96,7 +97,7 @@ const controller = {
                     limit: 6
                 });
                 let productsStarWars = await db.Product.findAll({
-                    raw:true,
+                    raw: true,
                     where: {
                         name: {
                             [op.like]: `%star%`
@@ -148,7 +149,7 @@ const controller = {
         let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
             raw: true
         });
-        
+
         return res.render('not-found', {
             "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id,
@@ -258,7 +259,7 @@ const controller = {
         let auxProducts = [];
         if (patronBusqueda) {
             auxProducts = await db.Product.findAll({
-                raw:true,
+                raw: true,
                 where: {
                     name: {
                         [op.like]: `%${patronBusqueda}%`
@@ -396,28 +397,70 @@ const controller = {
     },
 
     // Actualizar DB de productos PUT
-    updateProduct: (req, res) => {
-        let nuevoProductoActualizado = {
-            nombre_producto: req.body.namePro,
-            id: req.params.id,
-            main_image: "",
-            detail_image_1: "",
-            detail_image_2: "",
-            detail_image_3: "",
-            precio: req.body.precio,
-            categoria: req.body.categoriaProducto,
-            description: req.body.descripcionProducto,
-            players: req.body.numeroJugadores,
+    updateProduct: async (req, res) => {
+        const id = req.params.id;
+        const name = req.body.namePro;
+        const price = req.body.precio;
+        const description = req.body.descripcionProducto;
+        // IMAGENES QUE NO HEMOS PROCESADO....
+        const players = req.body.numeroJugadores;
+        const categoriasReq = req.body.categoriaProducto;
+        let categoriasIdReq = [];
+        console.log(req.body);
+        // Obtenemos al lista de categorias de la base
+        const categoriasDb = await db.Category.findAll({
+            raw: true
+        });
+
+        console.log(categoriasDb);
+        console.log(categoriasReq);
+        if (categoriasReq != undefined) {
+            categoriasDb.forEach(categoriaDb => {
+                if (categoriasReq.includes(categoriaDb.name)) {
+                    categoriasIdReq.push(categoriaDb.id);
+                }
+            });
         }
 
-        //console.log(nuevoProductoActualizado);
-        if (products.actualizarListaProductos(nuevoProductoActualizado)) {
-            saveDBProducts(products.listadoProductosArr);
-            return res.redirect(`/detailproduct/${req.params.id}`);
-        }
 
+        // Eliminamos todas las relaciones entre el producto y su categoria de la tabla "Product_categories"
+        await db.Product_Categories.destroy({
+            where: {
+                product_id: id
+            }
+        });
 
-        res.send('Fallo :c')
+        // Actualizamos la información del producto en la tabla "Products"
+        await db.Product.update(
+            {
+                name: name,
+                price: price,
+                description: description,
+                players: players
+            },
+            {
+                where: { id: id }
+            }
+        );
+
+        // Agregamos las nuevas relaciones entre el producto y sus categorias
+        let promesasUpdateCategories = [];
+
+        categoriasIdReq.forEach(categoriaIdReq => {
+            promesasUpdateCategories.push(
+                db.Product_Categories.create({
+                    id: uuid(),
+                    product_id: id,
+                    category_id: categoriaIdReq
+                })
+            );
+        });
+
+        Promise.all(promesasUpdateCategories)
+            .then(resultado => {
+                console.log(req.body);
+                return res.redirect(`/detailproduct/${req.params.id}`);
+            })
     },
 
     // Eliminar producto de la DB ---> REVISAR
@@ -445,11 +488,19 @@ const controller = {
     },
 
     test: async (req, res) => {
-        const userList = await db.User.findAll({
+        const categoriasReq = ['anime', 'series'];
+        let categoriasIdReq = [];
+        const categoriasDb = await db.Category.findAll({
             raw: true
+        })
+        categoriasDb.forEach(categoriaDb => {
+            if (categoriasReq.includes(categoriaDb.name)) {
+                categoriasIdReq.push(categoriaDb.id);
+            }
+
         });
-        res.send(userList);
-        
+        console.log(categoriasIdReq);
+        res.send(categoriasDb);
     }
 
 };
