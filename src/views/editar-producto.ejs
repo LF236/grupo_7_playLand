@@ -16,7 +16,7 @@
                 <h3>Detalle del Producto</h3>
 
                 <label for="namePro">Nombre del producto</label>
-                <input required type="text" name="namePro" id="namePro" value="<%= auxProduct.nombre_producto %> ">
+                <input required type="text" name="namePro" id="namePro" value="<%= auxProduct.name %> ">
 
                 <label for="descripcionProducto">Descripción del producto</label>
                 <input required type="text" name="descripcionProducto" id="descripcionProducto"
@@ -32,25 +32,36 @@
                 <label class="categoria-label">Elegir categorías del producto</label>
                 <!-- Checboxes -->
                 <div class="check-productos">
-                    <% const lista_categorias=["libros", "películas" , "anime" , "series" ] %>
-                    <% lista_categorias.forEach(categoriaLista=> { %>
-                        <% for(let categoria of auxProduct.categorias) {  %>
-                            <% if(categoria.name.includes(categoriaLista)) {%>
-                                <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoriaLista %>"
-                                id="<% categoriaLista.toLowerCase() %> ">
-                                <label for="anime">
-                                    <%= categoriaLista %>
-                                </label><br>
-                                <% break %> 
-                            <% } else {%>
-                                <input type="checkbox" name="categoriaProducto" value="<%= categoriaLista %>"
-                                    id="<% categoriaLista.toLowerCase() %> ">
-                                <label for="anime">
-                                    <%= categoriaLista %>
-                                </label><br>
-                            <% } %>
+                    <% const lista_categorias=["libros", "películas" , "anime" , "series" ]; %>
+                    <% let noTiene = []; %> 
+                    <% let siTiene = []; %> 
+                    <% auxProduct.categorias.forEach(categoria => { %> 
+                        <% let nombre = categoria.name; %> 
+                        <% for(let elementoLista of lista_categorias) { %> 
+                            <% if(elementoLista.includes(nombre)) { %> 
+                                <% siTiene.push(elementoLista); %> 
+                                <% break; %> 
+                            <% } %>                                                     
+                        <% } %> 
+                    <% }) %>
+                    <% noTiene = lista_categorias.filter(categoria => { %> 
+                        <% if(!siTiene.includes(categoria)) { %>
+                            <% return categoria; %> 
                         <% } %> 
                     <% }) %> 
+                    <% siTiene.forEach(categoria => { %> 
+                        <input type="checkbox" name="categoriaProducto" checked="on" value="<%= categoria %>" id="<%= categoria %>">
+                        <label for="<%= categoria %>">
+                            <%= categoria %>
+                        </label><br>
+                    <% }) %>
+                    <% noTiene.forEach(categoria => { %> 
+                        <input type="checkbox" name="categoriaProducto" value="<%= categoria %>" id="<%= categoria %>">
+                        <label for="<%= categoria %>">
+                            <%= categoria %>
+                        </label><br>
+                    <% }) %>
+                    
                 </div>
 
                 
@@ -60,7 +71,7 @@
                     value="<%= auxProduct.players %>">
 
                 <label for="precio">Precio</label>
-                <input required type="text" name="precio" value="<%= auxProduct.precio %> " id="precio">
+                <input required type="text" name="precio" value="<%= auxProduct.price %> " id="precio">
 
                 <input type="submit" value="Subir" class="submit-button">
             </form>

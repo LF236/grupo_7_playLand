@@ -39,13 +39,15 @@ const controller = {
             });
         }
         // Si ya esta iniciada la sesión, buscar la información
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         console.log(usuarioBandera);
         // Renderizamos con la sesión del usuario
         return res.render('home', {
             productsArr,
             productsStarWars,
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id
         })
 
@@ -67,24 +69,19 @@ const controller = {
         // Obtenemos el email y el password del formulario
         const { email, password } = req.body;
         // Obtenemos la lista de todos los usuarios, leyendo el archivo que por el momento usamos como base de datos
-        const usuarios = getDataUsersJSON();
-        // Declaramos una bandera, para saber si el usuario ha sido encontrado o no
-        /*
-            Recorremos el arreglo, buscando al usuario en base al email del formulario, si se encuentra
-            rompemos el ciclo
-        */
-        let usuarioBandera = null;
-        for (let usuario of usuarios) {
-            if (usuario.email == email) {
-                usuarioBandera = usuario;
-                break;
+        let usuarioBandera = await db.User.findAll({
+            raw: true,
+            where: {
+                email: email
             }
-        }
+        });
+        // Declaramos una bandera, para saber si el usuario ha sido encontrado o no
         /*
             Si el usuarioBandera en diferente a NULL, ahora comparamos el password del usuario encontrado en la DB
             con el password que nos pasaron en el formulario
         */
-        if (usuarioBandera) {
+        if (usuarioBandera.length > 0) {
+            usuarioBandera = usuarioBandera[0];
             console.log(usuarioBandera.password);
             if (bcryptjs.compareSync(password, usuarioBandera.password)) {
                 console.log('ENTRASTE');
@@ -109,7 +106,7 @@ const controller = {
                 return res.render('home', {
                     productsArr: productsArr,
                     productsStarWars,
-                    "nombreUsuario": usuarioBandera.nombre,
+                    "nombreUsuario": usuarioBandera.name,
                     "idUsuario": usuarioBandera.id
                 });
             }
@@ -125,7 +122,7 @@ const controller = {
                 })
             }
         }
-        // Si el usuarioBandera es NULL quiere decir que el correo no se encontro en la base de datos
+        // Si el usuarioBandera es un arreglo vacio
         else {
             res.render('login', {
                 "errorMessage": 'Correo Electronico No Registrado',
@@ -138,7 +135,7 @@ const controller = {
         }
     },
 
-    register: (req, res) => {
+    register: async (req, res) => {
         // Verificamos que no haya una sesión activa, para no mandar el nombre del usuario a la vista
         if (req.session.idUsuario == undefined) {
             return res.render('registro', {
@@ -148,9 +145,12 @@ const controller = {
             });
         }
         // Si hay una sesión activa, obviamente el proceso de registro queda descartado y mandamos la vista de error
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
+        
         return res.render('not-found', {
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id,
             "messageError": "Ya hay una sesión activa",
             "messageLink": "Regresar a la página principal",
@@ -189,7 +189,7 @@ const controller = {
     },
 
     // Método para mostrar el perfil del usuario
-    profile: (req, res) => {
+    profile: async (req, res) => {
         // Si la sesión no se encuentra activa el usuario no tiene permisos para poder entrar
         if (req.session.idUsuario == undefined) {
             return res.render('not-found', {
@@ -199,24 +199,23 @@ const controller = {
                 "url": "/login"
             })
         }
-        // Si si hay una sesión, obtenemos el ID que se manda a través de la URL
-        const { idUsuario } = req.params;
         // Buscamos toda la información del usuario a través del ID
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         /*
             Renderizamos la vista correspondiente, añadiendo el objeto infoPerfilUsuario
             a la estructura original
         */
         return res.render('profile', {
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": "Hola",
             "infoPerfilUsuario": {
-                'img': usuarioBandera.imagen_perfil,
+                'img': usuarioBandera.image,
                 'email': usuarioBandera.email
             }
         })
     },
-
 
     // Inciar con la carga del shopping car --->PENDIENTE
     shoppingCar: (req, res) => {
@@ -242,10 +241,12 @@ const controller = {
             })
         }
         // Si la sesión esta activa, buscamos la información del usuario y la mandamos al hacer el render
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         return res.render('detalleproducto', {
             detProduct,
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id
         })
 
@@ -273,11 +274,13 @@ const controller = {
                 });
             }
             // Si la sesión esta activa, hacemos la busqueda del usuario correspondiente
-            const usuarioBandera = getDataUserById(req.session.idUsuario);
+            let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+                raw: true
+            });
             return res.render('busqueda-producto', {
                 auxProducts,
                 patronBusqueda,
-                "nombreUsuario": usuarioBandera.nombre,
+                "nombreUsuario": usuarioBandera.name,
                 "idUsuario": usuarioBandera.id
             });
         }
@@ -294,11 +297,13 @@ const controller = {
             });
         }
         // Si la sesión esta activa, buscamos la información del usuario actual y la mandamos a la vista
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         return res.render('busqueda-producto', {
             auxProducts,
             patronBusqueda: "Todos los productos",
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id
         });
     },
@@ -327,17 +332,19 @@ const controller = {
         });
 
         // Obtenemos la información del usuario activo actual
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         return res.render('editar-producto', {
             auxProduct,
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id
         });
         //
     },
 
     //Formulario para CREAR un producto
-    createProduct: (req, res) => {
+    createProduct: async (req, res) => {
         // Verificamos si hay una sesión activa, si no la hay mandar mensaje de NO permisos
         if (req.session.idUsuario == undefined) {
             return res.render('not-found', {
@@ -348,9 +355,11 @@ const controller = {
             })
         }
         // Si ya esta iniciada la sesión, buscar la información
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
         return res.render('crear-producto', {
-            "nombreUsuario": usuarioBandera.nombre,
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id,
             "primerError": null,
             "old": null
@@ -436,18 +445,10 @@ const controller = {
     },
 
     test: async (req, res) => {
-        const listaProductos = await db.Product.findAll({
-            include: [
-                {
-                    association: "categorias"
-                }
-            ],
-            // where: {
-            //     id: '03c7958b-9441-4767-b993-41446646e492'
-            // }
+        const userList = await db.User.findAll({
+            raw: true
         });
-        console.log(listaProductos);
-        res.send(listaProductos);
+        res.send(userList);
         
     }
 

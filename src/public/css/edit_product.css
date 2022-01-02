@@ -50,6 +50,7 @@
 }
 
 .edit form label[for="main_image"],
+.edit form label[for="imagenPrincipal"],
 .edit form label[for="imagenesComplementarias"] {
   width: 50%;
   height: 50px;
@@ -75,6 +76,7 @@
 }
 
 .edit form label[for="main_image"]:hover,
+.edit form label[for="imagenPrincipal"]:hover,
 .edit form label[for="imagenesComplementarias"]:hover {
   background: #a00000;
 }
