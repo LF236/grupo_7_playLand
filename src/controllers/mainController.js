@@ -409,23 +409,6 @@ const controller = {
             // Verificamos que la variable dentro del request exista
             if (req.body.categoria != undefined) {
                 console.log(typeof (req.body.categoria));
-                // Si se recibe una sola categoria se hace una sola promesa (agregamos al arreglo)
-
-                // if(typeof(req.body.categoria) === "string") {
-                //     console.log("agregamos un solo elemeto");
-                //     categoriasDb.forEach(categoriaDb => {
-                //         if (req.body.categoria.includes(categoriaDb.name)) {
-                //             categoriasIdReq.push(categoriaDb.id);
-                //         }
-                //     });
-                //     console.log(categoriasIdReq);
-                //     // promesasUpdateCategories.push(
-                //     //     db.Product_Categories.create({
-
-                //     //     })
-                //     // );
-                // }
-
                 categoriasDb.forEach(categoriaDb => {
                     if (req.body.categoria.includes(categoriaDb.name)) {
                         categoriasIdReq.push(categoriaDb.id);
@@ -448,19 +431,16 @@ const controller = {
                     .then(resultado => {
                         return res.redirect(`/detailproduct/${id_product}`);
                     })
-                // req.body.categoria.forEach(nombreCategoriaReq => {
-                //     console.log(nombreCategoriaReq);
-                // })
-                //return res.redirect(`/detailproduct/${id_product}`);
-                //return res.send('AYUWOKI');
             }
 
         } else {
             //console.log(errors.mapped());
             const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
-            const usuarioBandera = getDataUserById(req.session.idUsuario);
+            let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+                raw: true
+            });
             return res.render('crear-producto', {
-                "nombreUsuario": usuarioBandera.nombre,
+                "nombreUsuario": usuarioBandera.name,
                 "idUsuario": usuarioBandera.id,
                 "primerError": primerError,
                 "old": req.body
@@ -536,7 +516,7 @@ const controller = {
     },
 
     // Eliminar producto de la DB ---> REVISAR
-    deleteProduct: (req, res) => {
+    deleteProduct: async (req, res) => {
         // Verificamos si la sesión esta activa, si no mandamos un error
         if (req.session.idUsuario == undefined) {
             return res.render('not-found', {
@@ -548,15 +528,31 @@ const controller = {
         }
         // Obtenemos el id
         const id = req.params.id;
-        products.eliminarProductoDeLaLista(id);
-        //Salvamos la DB
-        saveDBProducts(products.listadoProductosArr);
+        console.log(id);
         // Buscamos la información del usuario activo
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
-        res.render('deleted-product', {
-            "nombreUsuario": usuarioBandera.nombre,
+        let usuarioBandera = await db.User.findByPk(req.session.idUsuario, {
+            raw: true
+        });
+        
+        // Elimanos las relaciones entre el producto y sus categorias
+        await db.Product_Categories.destroy({
+            where: {
+                product_id: id
+            }
+        });
+
+        // Eliminamos el producto de la DB
+        await db.Product.destroy({
+            where: {
+                id: id
+            }
+        });
+        return res.render('deleted-product', {
+            "nombreUsuario": usuarioBandera.name,
             "idUsuario": usuarioBandera.id
         });
+
+        //res.send('Se elimino');
     },
 
     test: async (req, res) => {
