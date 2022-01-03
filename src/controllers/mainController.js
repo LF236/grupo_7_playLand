@@ -159,25 +159,30 @@ const controller = {
         })
     },
 
-    registerCreateUser: (req, res) => {
+    registerCreateUser: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            //console.log('ENTRO')
+            // Creamos la estructura de un Usuario para la DB
             const nameAvatar = req.files.avatar[0].filename;
-            let usuario_auxiliar = {
-                id: req.body.id_user,
-                nombre: req.body.firstName,
-                apellidos: req.body.lastName,
-                email: req.body.email,
-                password: bcryptjs.hashSync(req.body.loginPassword, 12),
-                imagen_perfil: `/img/profile_images/${req.body.id_user}/${nameAvatar}`,
-                editor: false
-            }
-            let userData = getDataUsersJSON();
-            userData.push(usuario_auxiliar);
-            saveDBUsers(userData);
+            const id = req.body.id_user;
+            const email = req.body.email;
+            const password = bcryptjs.hashSync(req.body.loginPassword, 12);
+            const name = req.body.firstName;
+            const last_name = req.body.lastName;
+            const image = `/img/profile_images/${req.body.id_user}/${nameAvatar}`;
+
+            // Guardamos el usuario dentro de la BD
+            await db.User.create({
+                id: id,
+                email: email,
+                password: password,
+                name: name,
+                last_name: last_name,
+                image: image
+            });
+
             return res.render('mensaje-usuario-registrado', {
-                'email': usuario_auxiliar.email,
+                'email': req.body.email,
                 'nombreUsuario': null
             })
         }
@@ -368,7 +373,7 @@ const controller = {
     },
 
     // Creamos un nuevo producto POST
-    createNewProduct: (req, res) => {
+    createNewProduct: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             // Almacenamos la ruta de la imagen principal
@@ -380,20 +385,87 @@ const controller = {
             req.files.imagenesComplementarias.forEach((imgComplementaria, i) => {
                 arrRoutesImagenesComplementarias[i] = `${imgComplementaria.path}`.replace(route_delete_string, '');
             });
-            const allProduct = products.crearProducto(id_product, req.body.nombre_producto, main_img_route, arrRoutesImagenesComplementarias[0], arrRoutesImagenesComplementarias[1], arrRoutesImagenesComplementarias[2], req.body.precio, req.body.categoria, "", req.body.description, req.body.players);
-            saveDBProducts(products.listadoProductosArr);
-            return res.redirect(`/detailproduct/${allProduct.id}`);
-        }
 
-        //console.log(errors.mapped());
-        const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
-        const usuarioBandera = getDataUserById(req.session.idUsuario);
-        return res.render('crear-producto', {
-            "nombreUsuario": usuarioBandera.nombre,
-            "idUsuario": usuarioBandera.id,
-            "primerError": primerError,
-            "old": req.body
-        });
+            await db.Product.create({
+                id: id_product,
+                name: req.body.nombre_producto,
+                price: req.body.precio,
+                description: req.body.description,
+                image: main_img_route,
+                descImgI: arrRoutesImagenesComplementarias[0],
+                descImgII: arrRoutesImagenesComplementarias[1],
+                descImgIII: arrRoutesImagenesComplementarias[2],
+                idCategory: "",
+                players: req.body.players,
+                rating: 0
+            });
+            console.log(req.body);
+            // Almacenamos las relaciones entre el producto y sus diferentes categorias
+            const categoriasDb = await db.Category.findAll({
+                raw: true
+            });
+            let categoriasIdReq = [];
+            let promesasUpdateCategories = [];
+            // Verificamos que la variable dentro del request exista
+            if (req.body.categoria != undefined) {
+                console.log(typeof (req.body.categoria));
+                // Si se recibe una sola categoria se hace una sola promesa (agregamos al arreglo)
+
+                // if(typeof(req.body.categoria) === "string") {
+                //     console.log("agregamos un solo elemeto");
+                //     categoriasDb.forEach(categoriaDb => {
+                //         if (req.body.categoria.includes(categoriaDb.name)) {
+                //             categoriasIdReq.push(categoriaDb.id);
+                //         }
+                //     });
+                //     console.log(categoriasIdReq);
+                //     // promesasUpdateCategories.push(
+                //     //     db.Product_Categories.create({
+
+                //     //     })
+                //     // );
+                // }
+
+                categoriasDb.forEach(categoriaDb => {
+                    if (req.body.categoria.includes(categoriaDb.name)) {
+                        categoriasIdReq.push(categoriaDb.id);
+                    }
+                });
+
+                categoriasIdReq.forEach(categoriaIdReq => {
+                    console.log(categoriaIdReq);
+                    promesasUpdateCategories.push(
+                        db.Product_Categories.create({
+                            id: uuid(),
+                            product_id: id_product,
+                            category_id: categoriaIdReq
+                        })
+                    );
+                })
+
+                // Ejecutamos el arreglo de promesas
+                Promise.all(promesasUpdateCategories)
+                    .then(resultado => {
+                        return res.redirect(`/detailproduct/${id_product}`);
+                    })
+                // req.body.categoria.forEach(nombreCategoriaReq => {
+                //     console.log(nombreCategoriaReq);
+                // })
+                //return res.redirect(`/detailproduct/${id_product}`);
+                //return res.send('AYUWOKI');
+            }
+
+        } else {
+            //console.log(errors.mapped());
+            const primerError = errors.mapped()[`${Object.entries(errors.mapped())[0][0]}`];
+            const usuarioBandera = getDataUserById(req.session.idUsuario);
+            return res.render('crear-producto', {
+                "nombreUsuario": usuarioBandera.nombre,
+                "idUsuario": usuarioBandera.id,
+                "primerError": primerError,
+                "old": req.body
+            });
+        }
     },
 
     // Actualizar DB de productos PUT
