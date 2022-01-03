@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+:root {
+  --positionNow: 0%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+header .header-top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0;
+  padding-bottom: 40px;
+  background-color: #000000;
+  color: #fff;
+}
+
+header .header-top form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+
+header .header-top form input[type="text"] {
+  width: 80%;
+  display: block;
+  margin: auto;
+  border: 0;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+header .header-top form input[type="text"]::-webkit-input-placeholder {
+  color: #d90000;
+  font-size: 1.1rem;
+}
+
+header .header-top form input[type="text"]:-ms-input-placeholder {
+  color: #d90000;
+  font-size: 1.1rem;
+}
+
+header .header-top form input[type="text"]::-ms-input-placeholder {
+  color: #d90000;
+  font-size: 1.1rem;
+}
+
+header .header-top form input[type="text"]::placeholder {
+  color: #d90000;
+  font-size: 1.1rem;
+}
+
+header .header-top span {
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+header .header-top .logo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  margin: 0 20px;
+}
+
+header .header-top .logo img {
+  width: 100%;
+}
+
+header .header-top .session {
+  display: none;
+}
+
+header nav {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(62, 62, 62, 0.9);
+}
+
+header nav .icon-close-menu {
+  padding: 20px;
+  padding-left: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav .icon-close-menu span {
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+header nav .icon-close-menu span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header nav .session {
+  width: 100%;
+  padding: 20px;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .session .icon-user {
+  padding: 2px;
+  border-radius: 20px;
+  margin-right: 5px;
+  background-color: #d1d1d1;
+  color: #000000;
+  display: block;
+  font-size: 1.2rem;
+}
+
+header nav .session a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+header nav .session:hover {
+  background: #3e3e3e;
+}
+
+header nav ul li {
+  padding: 20px;
+  list-style: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+header nav ul li a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav ul li:hover {
+  background: #3e3e3e;
+}
+
+header nav ul .actual_page a {
+  color: #d90000;
+}
+
+header .menu_animate {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media (min-width: 361px) {
+  header .header-top {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-bottom: 0;
+  }
+  header .header-top span {
+    display: none;
+  }
+  header .header-top form {
+    width: 16%;
+  }
+  header .header-top form input[type="text"] {
+    width: 80%;
+    padding: 10px 12px;
+    border-radius: 20px;
+  }
+  header .header-top form input[type="text"]::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  header .header-top form input[type="text"]:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  header .header-top form input[type="text"]::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  header .header-top form input[type="text"]::placeholder {
+    font-size: 1rem;
+  }
+  header .header-top .logo {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .header-top .logo img {
+    width: 80%;
+  }
+  header .header-top .session {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header-top .session .icon-user {
+    padding: 2px;
+    border-radius: 20px;
+    margin-right: 5px;
+    background-color: #d1d1d1;
+    color: #000000;
+    display: block;
+    font-size: 1.2rem;
+  }
+  header .header-top .session a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  header .header-top .session .carr {
+    margin-left: 20px;
+  }
+  header .header-top .carr {
+    display: block;
+  }
+  header nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    background: #000000;
+    padding-bottom: 25px;
+    font-size: 1.1rem;
+    position: relative;
+    top: 0;
+    height: initial;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 10%;
+  }
+  header nav .icon-close-menu {
+    display: none;
+  }
+  header nav .session {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  header .header-top .logo img {
+    width: 40%;
+  }
+}
+
+.carousel {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.carousel .carousel-content-images {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(var(--positionNow));
+          transform: translateX(var(--positionNow));
+}
+
+.carousel .carousel-content-images .carousel-content-images-item {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.carousel .carousel-content {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.carousel .carousel-content .title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.carousel .carousel-content .buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.carousel .carousel-content .buttons .images-i span {
+  font-size: 1em;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.carousel .carousel-content .buttons .images-i #images-i-element-1 {
+  color: #ffd100;
+}
+
+@media (min-width: 769px) {
+  .carousel {
+    height: 550px;
+  }
+  .carousel .carousel-content .title {
+    font-size: 3em;
+  }
+  .carousel .carousel-content .images-i {
+    font-size: 1.5em;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main .new-products {
+  width: 85%;
+  margin: auto;
+  background: steelblue;
+  margin-top: 60px;
+}
+
+main .new-products h3 {
+  font-size: 2em;
+  text-align: center;
+  color: #d90000;
+  font-weight: 600;
+}
+
+main .new-products .new-products-item {
+  margin-top: 50px;
+}
+
+main .new-products .new-products-item img {
+  width: 100%;
+  display: block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .new-products .new-products-item a:hover img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+main .new-products .new-products-item .new-products-content {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main .new-products .new-products-item .new-products-content .new-products-content-price {
+  color: #d90000;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+main .new-products .new-products-item .new-products-content .new-products-content-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  background: #d90000;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+main .new-products .new-products-button-more {
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 30px;
+  text-align: center;
+  color: #d90000;
+  cursor: pointer;
+  border: 5px solid #d90000;
+  font-weight: 600;
+}
+
+main .about {
+  margin-top: 60px;
+  width: 100%;
+  background: #d90000;
+}
+
+main .about img {
+  width: 100%;
+}
+
+main .about .about-content {
+  margin-top: 40px;
+}
+
+main .about .about-content h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+main .about .about-content p {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 50px;
+  line-height: 2em;
+  color: #fff;
+}
+
+main .shipping {
+  background-color: #009ee0;
+}
+
+main .star-wars {
+  width: 85%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+main .star-wars h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #d90000;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+main .star-wars .star-wars-item img {
+  display: block;
+  margin: auto;
+  width: 220px;
+  height: 220px;
+}
+
+main .star-wars .star-wars-item .star-wars-item-content {
+  width: 100%;
+  padding-top: 20px;
+}
+
+main .star-wars .star-wars-item .star-wars-item-content p {
+  text-align: center;
+  font-size: 18px;
+  margin: 8px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+main .star-wars .star-wars-item .star-wars-item-content .star-wars-item-button {
+  width: 75%;
+  max-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 18px;
+  border-radius: 50px;
+  background: #d90000;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 720px) {
+  main .new-products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .new-products h3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .new-products .new-products-item {
+    width: 30%;
+  }
+  main .new-products .new-products-button-more {
+    width: 40%;
+  }
+  main .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .about img {
+    width: 50%;
+  }
+  main .about .about-content {
+    width: 50%;
+    margin: 0;
+  }
+  main .star-wars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .star-wars h3 {
+    width: 100%;
+  }
+  main .star-wars .star-wars-item-content {
+    width: 33%;
+  }
+}
+
+footer {
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer img {
+  width: 70%;
+  padding: 30px 0;
+  margin: auto;
+}
+
+footer .footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+footer .footer-icons span {
+  margin: 10px;
+}
+
+footer .copy {
+  color: #fff;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 720px) {
+  footer {
+    padding: 0 20px;
+  }
+  footer img {
+    width: 20%;
+    margin: 0;
+  }
+  footer .footer-icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .copy {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=style_home.css.map */
