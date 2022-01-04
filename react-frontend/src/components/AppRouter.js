@@ -11,6 +11,9 @@ import Header from './partials/Header';
 import Footer from './partials/Footer';
 import Home from './Home';
 import NotFound from './NotFound';
+import Registro from './Registro';
+import ShoppingCar from './ShoppingCar';
+import Profile from './Profile';
 const AppRouter = () => {
     return(
         <>
@@ -22,7 +25,7 @@ const AppRouter = () => {
                 <main>
                     <Routes>
                         <Route exact path="/" element={ <Home /> } />
-                        <Route exact path="/test" element={ <NotFound /> } />
+                        <Route exact path="/testt" element={ <NotFound /> } />
                     </Routes>
                 </main>
 

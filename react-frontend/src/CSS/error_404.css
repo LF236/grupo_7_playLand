@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+main {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .error-404 {
+  width: 85%;
+  margin: auto;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .error-404 .error-404-content {
+  width: 100%;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .error-404 .error-404-content h1 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #d90000;
+}
+
+main .error-404 .error-404-content p {
+  font-size: 1rem;
+}
+
+main .error-404 .error-404-content a {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 10px 12px;
+  margin: 15px 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: #009ee0;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .error-404 .error-404-content a:hover {
+  border-color: #d90000;
+}
+
+main .error-404 .image {
+  width: 100%;
+}
+
+main .error-404 .image img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 590px) {
+  main .error-404 .error-404-content {
+    width: 50%;
+  }
+  main .error-404 .error-404-content h1 {
+    font-size: 8rem;
+  }
+  main .error-404 .error-404-content h1.effect {
+    -webkit-animation: iconsMove 1s 1;
+            animation: iconsMove 1s 1;
+  }
+  main .error-404 .error-404-content a {
+    padding: 15px 15px;
+    font-size: 1.3rem;
+    border: 5px solid transparent;
+  }
+  main .error-404 .error-404-content a:hover {
+    border-color: #d90000;
+  }
+  a:hover main .error-404 .error-404-contenth1 {
+    background: blue;
+  }
+  main .error-404 .image {
+    width: 50%;
+  }
+  main .error-404 .image img {
+    display: block;
+  }
+  main .error-404 .image img.effect {
+    -webkit-animation: iconsMove 1s 1;
+            animation: iconsMove 1s 1;
+  }
+}
+
+@-webkit-keyframes iconsMove {
+  20% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes iconsMove {
+  20% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+/*# sourceMappingURL=error_404.css.map */
