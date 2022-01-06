@@ -569,8 +569,12 @@ const controller = {
         });
         console.log(categoriasIdReq);
         res.send(categoriasDb);
-    }
+    },
 
+    testPost: (req, res) => {
+        console.log(req);
+        res.send('Recibidos');
+    }
 };
 
 module.exports = controller;

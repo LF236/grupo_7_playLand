@@ -93,4 +93,5 @@ router.delete('/products/:id', mainController.deleteProduct);
 
 
 router.get('/test', mainController.test);
+router.post('/test', mainController.testPost);
 module.exports = router;

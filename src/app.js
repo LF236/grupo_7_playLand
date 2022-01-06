@@ -3,8 +3,11 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 4000;
+const cors = require('cors');
 
+// CORS
+app.use(cors());
 // Configuracion para el uso de sesion
 const session = require('express-session');
 app.use(session({ secret: 'play_land' }));
@@ -40,6 +43,7 @@ app.use((req, res, next) => {
 // Configure routes
 const mainRoutes = require('./routes/mainRoutes.js');
 app.use('/', mainRoutes);
+
 
 // Set view template
 app.set('view engine', 'ejs');
